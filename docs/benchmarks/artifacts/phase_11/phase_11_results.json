@@ -1,0 +1,398 @@
+{
+  "metadata": {
+    "phase": "11",
+    "title": "Nonlinear Adaptive State & Selective Retention Benchmark",
+    "date": "October 2026",
+    "dimension": 8,
+    "sequence_length": 512,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "delays": [
+      16,
+      64,
+      256
+    ],
+    "scaling_dims": [
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "models": [
+      "Naive",
+      "FrozenLinear",
+      "FrozenMLP",
+      "GRU",
+      "LSTM",
+      "OnlineRidge",
+      "NonlinearOnlineRidge",
+      "FixedDelta",
+      "AdaptiveDelta",
+      "SafeAdaptiveDelta",
+      "SelfReferential",
+      "SafeSelfReferential",
+      "Selective_fixed_high",
+      "Selective_fixed_low",
+      "Selective_adaptive",
+      "Selective_oracle"
+    ]
+  },
+  "param_counts": {
+    "Naive": 0,
+    "FrozenLinear": 72,
+    "FrozenMLP": 76,
+    "GRU": 96,
+    "LSTM": 120,
+    "OnlineRidge": 64,
+    "NonlinearOnlineRidge": 0,
+    "FixedDelta": 64,
+    "AdaptiveDelta": 64,
+    "SafeAdaptiveDelta": 64,
+    "SelfReferential": 66,
+    "SafeSelfReferential": 66,
+    "Selective_fixed_high": 0,
+    "Selective_fixed_low": 0,
+    "Selective_adaptive": 0,
+    "Selective_oracle": 0
+  },
+  "state_mem_bytes": {
+    "Naive": 0,
+    "FrozenLinear": 288,
+    "FrozenMLP": 304,
+    "GRU": 384,
+    "LSTM": 480,
+    "OnlineRidge": 256,
+    "NonlinearOnlineRidge": 1536,
+    "FixedDelta": 256,
+    "AdaptiveDelta": 256,
+    "SafeAdaptiveDelta": 256,
+    "SelfReferential": 264,
+    "SafeSelfReferential": 264,
+    "Selective_fixed_high": 256,
+    "Selective_fixed_low": 256,
+    "Selective_adaptive": 256,
+    "Selective_oracle": 256
+  },
+  "task_a": {
+    "Naive": {
+      "mean_error": 1.4331461091534703,
+      "std_error": 0.049839271456105116,
+      "first_passage": 0.0,
+      "sustained": 28.6,
+      "adaptation_energy": 0.0,
+      "latency_us_per_token": 69.90478515831455,
+      "adaptation_efficiency": 0.0
+    },
+    "FrozenLinear": {
+      "mean_error": 1.4328904409404086,
+      "std_error": 0.04818629043453269,
+      "first_passage": 0.0,
+      "sustained": 6.8,
+      "adaptation_energy": 0.0,
+      "latency_us_per_token": 59.17384453368868,
+      "adaptation_efficiency": 255.6682130616661
+    },
+    "FrozenMLP": {
+      "mean_error": 4.671137516451472,
+      "std_error": 0.9928938888539439,
+      "first_passage": 0.8,
+      "sustained": 32.4,
+      "adaptation_energy": 0.0,
+      "latency_us_per_token": 55.75296251549844,
+      "adaptation_efficiency": 0.0
+    },
+    "GRU": {
+      "mean_error": 6.355501435575894,
+      "std_error": 0.3913205084370071,
+      "first_passage": 0.8,
+      "sustained": 42.8,
+      "adaptation_energy": 2.759224903350554,
+      "latency_us_per_token": 63.69020194938457,
+      "adaptation_efficiency": 0.0
+    },
+    "LSTM": {
+      "mean_error": 6.2228368300008885,
+      "std_error": 0.8627399121796123,
+      "first_passage": 0.8,
+      "sustained": 41.6,
+      "adaptation_energy": 1.7531316417581262,
+      "latency_us_per_token": 75.4158855500009,
+      "adaptation_efficiency": 0.0
+    },
+    "OnlineRidge": {
+      "mean_error": 0.8258521563164971,
+      "std_error": 0.024224479235433118,
+      "first_passage": 15.0,
+      "sustained": 73.0,
+      "adaptation_energy": 8.49241228061673,
+      "latency_us_per_token": 40.13562813725002,
+      "adaptation_efficiency": 0.071510174171937
+    },
+    "NonlinearOnlineRidge": {
+      "mean_error": 0.8677786718583598,
+      "std_error": 0.023665889668433818,
+      "first_passage": 6.4,
+      "sustained": 45.0,
+      "adaptation_energy": 764.9180534042018,
+      "latency_us_per_token": 53.43821601968557,
+      "adaptation_efficiency": 0.0007391215752326277
+    },
+    "FixedDelta": {
+      "mean_error": 0.9521149163045406,
+      "std_error": 0.01282248444451765,
+      "first_passage": 0.0,
+      "sustained": 3.2,
+      "adaptation_energy": 0.038421525683941346,
+      "latency_us_per_token": 30.423535150703174,
+      "adaptation_efficiency": 12.519509956368541
+    },
+    "AdaptiveDelta": {
+      "mean_error": 0.9688968421966176,
+      "std_error": 0.009902521025765868,
+      "first_passage": 0.0,
+      "sustained": 0.0,
+      "adaptation_energy": 0.015836425164587005,
+      "latency_us_per_token": 31.915673429239177,
+      "adaptation_efficiency": 29.31343082175561
+    },
+    "SafeAdaptiveDelta": {
+      "mean_error": 0.9628241742120502,
+      "std_error": 0.011447350924730386,
+      "first_passage": 0.0,
+      "sustained": 0.0,
+      "adaptation_energy": 0.023714969835863887,
+      "latency_us_per_token": 35.45947304814945,
+      "adaptation_efficiency": 19.831444305102266
+    },
+    "SelfReferential": {
+      "mean_error": 0.9356952215682119,
+      "std_error": 0.0166659134059041,
+      "first_passage": 0.6,
+      "sustained": 15.4,
+      "adaptation_energy": 0.09799666131900012,
+      "latency_us_per_token": 58.197282424998775,
+      "adaptation_efficiency": 5.0761506028798555
+    },
+    "SafeSelfReferential": {
+      "mean_error": 0.9319385147728918,
+      "std_error": 0.017504462992226136,
+      "first_passage": 0.6,
+      "sustained": 19.2,
+      "adaptation_energy": 0.11870156022863224,
+      "latency_us_per_token": 59.00125352127361,
+      "adaptation_efficiency": 4.222382343019441
+    },
+    "Selective_fixed_high": {
+      "mean_error": 0.9285419299857697,
+      "std_error": 0.015312407046694355,
+      "first_passage": 0.6,
+      "sustained": 11.0,
+      "adaptation_energy": 0.242342620399867,
+      "latency_us_per_token": 44.73396835464882,
+      "adaptation_efficiency": 2.0821847025933824
+    },
+    "Selective_fixed_low": {
+      "mean_error": 0.9923235607709628,
+      "std_error": 0.00138651243475991,
+      "first_passage": 0.0,
+      "sustained": 0.0,
+      "adaptation_energy": 0.32180918669750785,
+      "latency_us_per_token": 50.50483359809732,
+      "adaptation_efficiency": 1.3698216110134132
+    },
+    "Selective_adaptive": {
+      "mean_error": 0.9937326939952531,
+      "std_error": 0.000876274996977078,
+      "first_passage": 0.0,
+      "sustained": 0.0,
+      "adaptation_energy": 0.34603010901686565,
+      "latency_us_per_token": 47.88826484514175,
+      "adaptation_efficiency": 1.2698667943661681
+    },
+    "Selective_oracle": {
+      "mean_error": 0.9239692580549782,
+      "std_error": 0.01628982523027259,
+      "first_passage": 0.6,
+      "sustained": 32.6,
+      "adaptation_energy": 1.3114582667544765,
+      "latency_us_per_token": 41.64967500059902,
+      "adaptation_efficiency": 0.388252127996757
+    }
+  },
+  "task_b": {
+    "Naive": {
+      "adapt_error_b": 1.4364890307907436,
+      "forgetting": 0.059320946352820945,
+      "negative_transfer": 0.006054235407156572
+    },
+    "FrozenLinear": {
+      "adapt_error_b": 1.390861797346565,
+      "forgetting": -0.025052087134270585,
+      "negative_transfer": 0.0
+    },
+    "FrozenMLP": {
+      "adapt_error_b": 4.484534193557794,
+      "forgetting": 0.0408216908120167,
+      "negative_transfer": 0.12888974709035841
+    },
+    "GRU": {
+      "adapt_error_b": 6.1327326657148244,
+      "forgetting": 0.006748072465998511,
+      "negative_transfer": -0.532825673451795
+    },
+    "LSTM": {
+      "adapt_error_b": 6.683516759592931,
+      "forgetting": 0.05908576270950618,
+      "negative_transfer": -0.43358943796900373
+    },
+    "OnlineRidge": {
+      "adapt_error_b": 0.8613695809541181,
+      "forgetting": 0.8116007509709398,
+      "negative_transfer": 0.09847230939472414
+    },
+    "NonlinearOnlineRidge": {
+      "adapt_error_b": 0.8554166793334316,
+      "forgetting": 0.7346348375235783,
+      "negative_transfer": -0.006443152151302045
+    },
+    "FixedDelta": {
+      "adapt_error_b": 1.0503357903931794,
+      "forgetting": 0.1421231149971999,
+      "negative_transfer": 0.1121408765879974
+    },
+    "AdaptiveDelta": {
+      "adapt_error_b": 1.0354281646042387,
+      "forgetting": 0.08370859039465346,
+      "negative_transfer": 0.07218956028198475
+    },
+    "SafeAdaptiveDelta": {
+      "adapt_error_b": 1.03966891822237,
+      "forgetting": 0.10501055522217118,
+      "negative_transfer": 0.08418886480503351
+    },
+    "SelfReferential": {
+      "adapt_error_b": 1.051316537978725,
+      "forgetting": 0.2273246897530182,
+      "negative_transfer": 0.13872495881219046
+    },
+    "SafeSelfReferential": {
+      "adapt_error_b": 1.0512934675017713,
+      "forgetting": 0.24937549644282972,
+      "negative_transfer": 0.14579950076538858
+    },
+    "Selective_fixed_high": {
+      "adapt_error_b": 0.9597821178459535,
+      "forgetting": 0.23304405053236255,
+      "negative_transfer": 0.048891264697706306
+    },
+    "Selective_fixed_low": {
+      "adapt_error_b": 0.9925827043380696,
+      "forgetting": 0.007306284569706856,
+      "negative_transfer": 0.00012865340998615692
+    },
+    "Selective_adaptive": {
+      "adapt_error_b": 0.9938383595328123,
+      "forgetting": 0.004882107012129188,
+      "negative_transfer": 0.0001145923573794283
+    },
+    "Selective_oracle": {
+      "adapt_error_b": 0.8749129681118571,
+      "forgetting": 0.21905434735045617,
+      "negative_transfer": 0.0019640383206761757
+    }
+  },
+  "task_c": {
+    "Naive": {
+      "16": 1.0094165938023996,
+      "64": 1.004891516909297,
+      "256": 1.0266579790958692
+    },
+    "FrozenLinear": {
+      "16": 1.5831820533873233,
+      "64": 1.5831820533873233,
+      "256": 1.5831820533873233
+    },
+    "FrozenMLP": {
+      "16": 1.066384228410464,
+      "64": 1.2262856628782484,
+      "256": 1.2314780825058802
+    },
+    "GRU": {
+      "16": 1.950669870661058,
+      "64": 1.5866553266273176,
+      "256": 1.66387842345229
+    },
+    "LSTM": {
+      "16": 1.7936548315417653,
+      "64": 1.4743634868492026,
+      "256": 1.499699462425738
+    },
+    "OnlineRidge": {
+      "16": 1.0318459052824758,
+      "64": 1.0263207725395938,
+      "256": 1.0974566710908404
+    },
+    "NonlinearOnlineRidge": {
+      "16": 0.9956109554651803,
+      "64": 0.9983227789833133,
+      "256": 1.032523412782489
+    },
+    "FixedDelta": {
+      "16": 1.03439051644667,
+      "64": 1.0337414730201362,
+      "256": 1.0359577480232258
+    },
+    "AdaptiveDelta": {
+      "16": 1.0346905245287998,
+      "64": 1.0343470201567846,
+      "256": 1.0351454128717257
+    },
+    "SafeAdaptiveDelta": {
+      "16": 1.0346579613385152,
+      "64": 1.0342368959067918,
+      "256": 1.035242039461256
+    },
+    "SelfReferential": {
+      "16": 1.0341856498804076,
+      "64": 1.0332525957117897,
+      "256": 1.0368254521139264
+    },
+    "SafeSelfReferential": {
+      "16": 1.034118728439557,
+      "64": 1.0331065182250554,
+      "256": 1.037111639584275
+    },
+    "Selective_fixed_high": {
+      "16": 1.0000610578368918,
+      "64": 0.9995056094912625,
+      "256": 1.0044598660438087
+    },
+    "Selective_fixed_low": {
+      "16": 1.000039508325282,
+      "64": 0.9996285956814989,
+      "256": 1.0000436366303092
+    },
+    "Selective_adaptive": {
+      "16": 0.9998813806883217,
+      "64": 0.9993903076857011,
+      "256": 0.9999361744010452
+    },
+    "Selective_oracle": {
+      "16": 1.0001043428033838,
+      "64": 1.0000663708788775,
+      "256": 1.0058046599928478
+    }
+  },
+  "ablations": {
+    "adaptive_state_on": 0.9937326939952531,
+    "adaptive_state_off": 1.0,
+    "nonlinear_features_on": 0.9937326939952531,
+    "nonlinear_features_off": 0.9936345141916683
+  }
+}

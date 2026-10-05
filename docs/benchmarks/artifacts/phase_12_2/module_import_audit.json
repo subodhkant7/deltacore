@@ -1,0 +1,598 @@
+{
+  "audit_phase": "12.2",
+  "total_modules_audited": 84,
+  "import_ok_count": 84,
+  "import_error_count": 0,
+  "success_rate": 1.0,
+  "verdict": "ALL_MODULES_IMPORT_OK",
+  "modules": [
+    {
+      "module": "deltacore",
+      "file_path": "deltacore/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks",
+      "file_path": "deltacore/benchmarks/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.__main__",
+      "file_path": "deltacore/benchmarks/__main__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.baselines",
+      "file_path": "deltacore/benchmarks/baselines/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.baselines.base",
+      "file_path": "deltacore/benchmarks/baselines/base.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.baselines.factory",
+      "file_path": "deltacore/benchmarks/baselines/factory.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.baselines.wrappers",
+      "file_path": "deltacore/benchmarks/baselines/wrappers.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.cli",
+      "file_path": "deltacore/benchmarks/cli.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.metrics",
+      "file_path": "deltacore/benchmarks/metrics/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.metrics.accuracy",
+      "file_path": "deltacore/benchmarks/metrics/accuracy.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.metrics.energy",
+      "file_path": "deltacore/benchmarks/metrics/energy.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.metrics.recovery",
+      "file_path": "deltacore/benchmarks/metrics/recovery.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.reporting",
+      "file_path": "deltacore/benchmarks/reporting/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.reporting.report",
+      "file_path": "deltacore/benchmarks/reporting/report.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.reporting.statistics",
+      "file_path": "deltacore/benchmarks/reporting/statistics.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.reporting.visualization",
+      "file_path": "deltacore/benchmarks/reporting/visualization.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.runners",
+      "file_path": "deltacore/benchmarks/runners/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.runners.determinism",
+      "file_path": "deltacore/benchmarks/runners/determinism.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.runners.suite",
+      "file_path": "deltacore/benchmarks/runners/suite.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.runners.timing",
+      "file_path": "deltacore/benchmarks/runners/timing.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.schemas",
+      "file_path": "deltacore/benchmarks/schemas/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.schemas.config",
+      "file_path": "deltacore/benchmarks/schemas/config.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.schemas.result",
+      "file_path": "deltacore/benchmarks/schemas/result.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.tasks",
+      "file_path": "deltacore/benchmarks/tasks/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.tasks.adaptation_budget",
+      "file_path": "deltacore/benchmarks/tasks/adaptation_budget.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.tasks.base",
+      "file_path": "deltacore/benchmarks/tasks/base.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.tasks.conflicting_targets",
+      "file_path": "deltacore/benchmarks/tasks/conflicting_targets.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.tasks.distribution_shift",
+      "file_path": "deltacore/benchmarks/tasks/distribution_shift.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.tasks.key_interference",
+      "file_path": "deltacore/benchmarks/tasks/key_interference.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.tasks.stability_stress",
+      "file_path": "deltacore/benchmarks/tasks/stability_stress.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.benchmarks.tasks.stationary_recall",
+      "file_path": "deltacore/benchmarks/tasks/stationary_recall.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.diagnostics",
+      "file_path": "deltacore/diagnostics/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.diagnostics.adaptation",
+      "file_path": "deltacore/diagnostics/adaptation.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.diagnostics.scans",
+      "file_path": "deltacore/diagnostics/scans.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.diagnostics.self_reference",
+      "file_path": "deltacore/diagnostics/self_reference.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.diagnostics.stability",
+      "file_path": "deltacore/diagnostics/stability.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.memory",
+      "file_path": "deltacore/memory/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.memory.associative",
+      "file_path": "deltacore/memory/associative.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.memory.five_memory",
+      "file_path": "deltacore/memory/five_memory.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.memory.read",
+      "file_path": "deltacore/memory/read.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory",
+      "file_path": "deltacore/observatory/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.__main__",
+      "file_path": "deltacore/observatory/__main__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.analysis",
+      "file_path": "deltacore/observatory/analysis.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.cli",
+      "file_path": "deltacore/observatory/cli.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.events",
+      "file_path": "deltacore/observatory/events.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.fingerprint",
+      "file_path": "deltacore/observatory/fingerprint.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.loader",
+      "file_path": "deltacore/observatory/loader.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.nonlinear_plots",
+      "file_path": "deltacore/observatory/nonlinear_plots.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.plots",
+      "file_path": "deltacore/observatory/plots.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.replay",
+      "file_path": "deltacore/observatory/replay.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.report",
+      "file_path": "deltacore/observatory/report.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.schema",
+      "file_path": "deltacore/observatory/schema.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.spatiotemporal_plots",
+      "file_path": "deltacore/observatory/spatiotemporal_plots.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.observatory.streaming_plots",
+      "file_path": "deltacore/observatory/streaming_plots.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.scans",
+      "file_path": "deltacore/scans/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.scans.adaptive",
+      "file_path": "deltacore/scans/adaptive.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.scans.affine",
+      "file_path": "deltacore/scans/affine.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.scans.boundary_chunked",
+      "file_path": "deltacore/scans/boundary_chunked.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.scans.chunked",
+      "file_path": "deltacore/scans/chunked.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.scans.delta_affine",
+      "file_path": "deltacore/scans/delta_affine.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.scans.prefix",
+      "file_path": "deltacore/scans/prefix.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.scans.sequential",
+      "file_path": "deltacore/scans/sequential.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.spatial",
+      "file_path": "deltacore/spatial/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.spatial.coordinates",
+      "file_path": "deltacore/spatial/coordinates.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.spatial.directional",
+      "file_path": "deltacore/spatial/directional.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.spatial.fusion",
+      "file_path": "deltacore/spatial/fusion.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.spatial.operator",
+      "file_path": "deltacore/spatial/operator.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.spatial.routes",
+      "file_path": "deltacore/spatial/routes.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.stability",
+      "file_path": "deltacore/stability/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.stability.controllers",
+      "file_path": "deltacore/stability/controllers.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.streaming",
+      "file_path": "deltacore/streaming/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.streaming.metrics",
+      "file_path": "deltacore/streaming/metrics.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.streaming.models",
+      "file_path": "deltacore/streaming/models.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.streaming.nonlinear_regimes",
+      "file_path": "deltacore/streaming/nonlinear_regimes.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.streaming.regimes",
+      "file_path": "deltacore/streaming/regimes.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.streaming.spatiotemporal_regimes",
+      "file_path": "deltacore/streaming/spatiotemporal_regimes.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.updates",
+      "file_path": "deltacore/updates/__init__.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.updates.adaptive_delta",
+      "file_path": "deltacore/updates/adaptive_delta.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.updates.controllers",
+      "file_path": "deltacore/updates/controllers.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.updates.delta",
+      "file_path": "deltacore/updates/delta.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.updates.dynamics_memory",
+      "file_path": "deltacore/updates/dynamics_memory.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.updates.five_memory",
+      "file_path": "deltacore/updates/five_memory.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.updates.hebbian",
+      "file_path": "deltacore/updates/hebbian.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    },
+    {
+      "module": "deltacore.updates.self_referential",
+      "file_path": "deltacore/updates/self_referential.py",
+      "status": "IMPORT_OK",
+      "exception_type": null,
+      "exception_message": null
+    }
+  ]
+}

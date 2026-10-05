@@ -1,0 +1,97 @@
+{
+  "inventory_metadata": {
+    "phase": "12.2",
+    "timestamp": "2026-10-05T08:13:00Z",
+    "root_cause_summary": {
+      "ENVIRONMENT_MISMATCH": 1,
+      "DYNAMIC_FRAMEWORK_TYPING": 10,
+      "LEGACY_TELEMETRY_SCALAR_CONVERSION": 24,
+      "STRICT_OPTIONAL_HANDLING": 10,
+      "LEGACY_UNION_RETURN": 9,
+      "TYPE_VARIANCE_OR_STUBS": 4,
+      "REAL_SOURCE_DEFECTS": 0
+    }
+  },
+  "diagnostics": [
+    {
+      "file": "deltacore/updates/delta.py",
+      "line": 12,
+      "ide_diagnostic": "Cannot find module \"torch\"",
+      "terminal_reproduction": "Reproducible ONLY when running under /usr/bin/python3, /opt/homebrew/bin/python3, or python (command not found). NOT reproducible under project Python 3.13 where torch 2.6.0 is installed.",
+      "type_checker": "mypy passes line 12 cleanly without error when executed with canonical interpreter.",
+      "runtime_import": "IMPORT_OK (python3 -c 'import deltacore.updates.delta' exits 0 cleanly).",
+      "root_cause": "ENVIRONMENT_MISMATCH",
+      "resolution": "Configure canonical .venv in workspace root and add standard [tool.pyright] configuration in pyproject.toml."
+    },
+    {
+      "file": "deltacore/streaming/models.py",
+      "line": 662,
+      "ide_diagnostic": "\"Tensor\" not callable / unsupported operand types for + (\"Tensor\" and Module)",
+      "terminal_reproduction": "mypy deltacore/streaming/models.py",
+      "type_checker": "error: Unsupported operand types for + (\"Tensor\" and Module) [operator]",
+      "runtime_import": "IMPORT_OK",
+      "root_cause": "DYNAMIC_FRAMEWORK_TYPING",
+      "resolution": "self.register_buffer('M', ...) treated as Tensor | Module by static stubs; annotate self.M: torch.Tensor."
+    },
+    {
+      "file": "deltacore/streaming/models.py",
+      "line": 998,
+      "ide_diagnostic": "Argument 1 to \"zeros_\" has incompatible type \"Tensor | None\"; expected \"Tensor\"",
+      "terminal_reproduction": "mypy deltacore/streaming/models.py",
+      "type_checker": "error: Argument 1 to \"zeros_\" has incompatible type \"Tensor | None\"; expected \"Tensor\" [arg-type]",
+      "runtime_import": "IMPORT_OK",
+      "root_cause": "DYNAMIC_FRAMEWORK_TYPING",
+      "resolution": "nn.Conv2d initialized with bias=True guarantees non-None; add assert or cast."
+    },
+    {
+      "file": "deltacore/updates/five_memory.py",
+      "line": 239,
+      "ide_diagnostic": "Incompatible types in assignment (expression has type \"float\", variable has type \"Tensor\")",
+      "terminal_reproduction": "mypy deltacore/updates/five_memory.py",
+      "type_checker": "error: Incompatible types in assignment [assignment]",
+      "runtime_import": "IMPORT_OK",
+      "root_cause": "LEGACY_TELEMETRY_SCALAR_CONVERSION",
+      "resolution": "Wrap scalar norm values in torch.tensor() or type telemetry dict values as float | Tensor."
+    },
+    {
+      "file": "deltacore/scans/boundary_chunked.py",
+      "line": 202,
+      "ide_diagnostic": "Incompatible types in assignment (expression has type \"float\", variable has type \"Tensor\")",
+      "terminal_reproduction": "mypy deltacore/scans/boundary_chunked.py",
+      "type_checker": "error: Incompatible types in assignment [assignment]",
+      "runtime_import": "IMPORT_OK",
+      "root_cause": "LEGACY_TELEMETRY_SCALAR_CONVERSION",
+      "resolution": "Legacy Phase 4 chunking telemetry; wrap scalars or update dict typing."
+    },
+    {
+      "file": "deltacore/scans/adaptive.py",
+      "line": 130,
+      "ide_diagnostic": "Item \"AssociativeMemory\" of \"Tensor | AssociativeMemory\" has no attribute \"ndim\"",
+      "terminal_reproduction": "mypy deltacore/scans/adaptive.py",
+      "type_checker": "error: Item \"AssociativeMemory\" of \"Tensor | AssociativeMemory\" has no attribute \"ndim\" [union-attr]",
+      "runtime_import": "IMPORT_OK",
+      "root_cause": "LEGACY_UNION_RETURN",
+      "resolution": "Narrow type via isinstance(state, torch.Tensor) before attribute access."
+    },
+    {
+      "file": "deltacore/observatory/analysis.py",
+      "line": 134,
+      "ide_diagnostic": "Argument 1 to \"isfinite\" has incompatible type \"float | None\"",
+      "terminal_reproduction": "mypy deltacore/observatory/analysis.py",
+      "type_checker": "error: Argument 1 to \"isfinite\" has incompatible type \"float | None\" [arg-type]",
+      "runtime_import": "IMPORT_OK",
+      "root_cause": "STRICT_OPTIONAL_HANDLING",
+      "resolution": "Filter or assert metric is not None before passing to math.isfinite."
+    },
+    {
+      "file": "deltacore/observatory/cli.py",
+      "line": 157,
+      "ide_diagnostic": "Argument \"plot_paths\" has incompatible type \"dict[str, Path]\"; expected \"dict[str, Path | str] | None\"",
+      "terminal_reproduction": "mypy deltacore/observatory/cli.py",
+      "type_checker": "error: dict is invariant -- consider using Mapping [arg-type]",
+      "runtime_import": "IMPORT_OK",
+      "root_cause": "TYPE_VARIANCE_OR_STUBS",
+      "resolution": "Update function signature parameter type annotation to Mapping[str, Path | str]."
+    }
+  ]
+}

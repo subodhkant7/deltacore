@@ -1,0 +1,117 @@
+{
+  "shortcut_audits": {
+    "family_a": {
+      "sequence_length": 360,
+      "feature_dim": 32,
+      "num_classes": 6,
+      "transition_timing": [
+        120,
+        240
+      ],
+      "class_counts": [
+        56,
+        68,
+        56,
+        72,
+        39,
+        69
+      ],
+      "class_balance_ratio": 0.5416666666666666,
+      "norm_max_min_ratio": 1.0000001685874111,
+      "var_max_min_ratio": 1.1090700414002417,
+      "max_single_feature_1d_acc": 0.36944442987442017,
+      "best_1d_dim": 3,
+      "pairwise_2d_acc": 0.5305555462837219,
+      "max_regime_correlation": 0.09186497135765652,
+      "energy_matched": true,
+      "variance_matched": true,
+      "no_feature_leak": true,
+      "no_regime_leak": true,
+      "passed_shortcut_audit": true
+    },
+    "family_b": {
+      "sequence_length": 360,
+      "feature_dim": 32,
+      "num_classes": 6,
+      "transition_timing": [
+        120,
+        240
+      ],
+      "class_counts": [
+        63,
+        58,
+        54,
+        73,
+        45,
+        67
+      ],
+      "class_balance_ratio": 0.6164383561643836,
+      "norm_max_min_ratio": 1.0000001685874111,
+      "var_max_min_ratio": 1.4049693795156086,
+      "max_single_feature_1d_acc": 0.4305555522441864,
+      "best_1d_dim": 0,
+      "pairwise_2d_acc": 0.5472221970558167,
+      "max_regime_correlation": 0.13586474331936277,
+      "energy_matched": true,
+      "variance_matched": true,
+      "no_feature_leak": true,
+      "no_regime_leak": true,
+      "passed_shortcut_audit": true
+    },
+    "family_c": {
+      "sequence_length": 360,
+      "feature_dim": 32,
+      "num_classes": 6,
+      "transition_timing": [
+        120,
+        240
+      ],
+      "class_counts": [
+        53,
+        71,
+        56,
+        66,
+        49,
+        65
+      ],
+      "class_balance_ratio": 0.6901408450704225,
+      "norm_max_min_ratio": 1.0000000842937056,
+      "var_max_min_ratio": 2.4870007251629835,
+      "max_single_feature_1d_acc": 0.39722222089767456,
+      "best_1d_dim": 4,
+      "pairwise_2d_acc": 0.5166666507720947,
+      "max_regime_correlation": 0.20792148864532625,
+      "energy_matched": true,
+      "variance_matched": true,
+      "no_feature_leak": true,
+      "no_regime_leak": true,
+      "passed_shortcut_audit": true
+    }
+  },
+  "all_shortcut_audits_passed": true,
+  "label_shuffle": {
+    "per_seed_accuracies": [
+      0.18055555555555555,
+      0.18611111111111112,
+      0.225,
+      0.15,
+      0.16944444444444445
+    ],
+    "mean_accuracy": 0.18222222222222223,
+    "std_accuracy": 0.024695678634325414,
+    "chance_theoretical": 0.16666666666666666,
+    "collapsed_to_chance": true
+  },
+  "feature_permutation_invariance": {
+    "per_seed_absolute_differences": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_difference": 0.0,
+    "mean_difference": 0.0,
+    "permutation_invariant": true
+  }
+}

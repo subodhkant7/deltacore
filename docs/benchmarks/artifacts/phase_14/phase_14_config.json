@@ -1,0 +1,44 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "dataset_config": {
+    "dataset_name": "ERA5_NorthAtlantic_European_T2m",
+    "version": "ERA5.2020_2021.synoptic",
+    "download_source": "https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels",
+    "license": "Copernicus C3S Open Licence / CC-BY 4.0 International",
+    "resolution": "small",
+    "height": 8,
+    "width": 8,
+    "channels": 1,
+    "total_timesteps": 360,
+    "train_split": 150,
+    "val_split": 200,
+    "test_split": 360,
+    "shift_start": 245,
+    "shift_peak": 275,
+    "shift_end": 315,
+    "stride": 1,
+    "horizon": 1,
+    "seed": 42,
+    "missing_rate": 0.03,
+    "apply_missing_mask": true
+  },
+  "leakage_audit": {
+    "disjoint_train_val": true,
+    "disjoint_val_test": true,
+    "disjoint_train_test": true,
+    "train_timestamps_count": 150,
+    "val_timestamps_count": 50,
+    "test_timestamps_count": 160,
+    "mean_train": 9.202556610107422,
+    "std_train": 6.873798370361328,
+    "future_target_identical_timesteps": 0,
+    "sha256_checksum": "d6c81763eb296ba326284738276627041ec9e3dd2111ff4df539eaf7a8842d23",
+    "leakage_audit_passed": true
+  }
+}

@@ -1,0 +1,672 @@
+[
+  {
+    "seed": 0,
+    "controller_training": {
+      "steps": 30,
+      "w_init": [
+        -0.5,
+        0.0,
+        -0.5,
+        -0.5
+      ],
+      "b_init": [
+        1.0
+      ],
+      "w_trained": [
+        0.8132809400558472,
+        1.4418452978134155,
+        0.7922928929328918,
+        0.8198958039283752
+      ],
+      "b_trained": [
+        2.3431692123413086
+      ],
+      "param_delta": 4.029387712478638,
+      "training_loss_before": 0.0030689958948642015,
+      "training_loss_after": 0.002801063936203718,
+      "mean_grad_norm": 9.195586077718569e-05
+    },
+    "models": {
+      "UsefulBaseline_SafeAdaptiveDelta": {
+        "relative_error_continuous": 0.9513993183521348,
+        "relative_error_reset": 0.9513657583802952,
+        "delta_retention": 3.355997183951409e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 1.1297851072158664,
+        "mean_update_norm": 0.006436022396974331,
+        "mean_retention_alpha": 1.0
+      },
+      "Selective_fixed_high": {
+        "relative_error_continuous": 0.9497029772654288,
+        "relative_error_reset": 0.949679267892611,
+        "delta_retention": 2.3709372817815044e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.42198768799426034,
+        "mean_update_norm": 0.016183060207140443,
+        "mean_retention_alpha": 0.99
+      },
+      "Selective_fixed_low": {
+        "relative_error_continuous": 0.9713517406382115,
+        "relative_error_reset": 0.9713512650920518,
+        "delta_retention": 4.755461596728239e-07,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.031957934793607014,
+        "mean_update_norm": 0.015095561796852845,
+        "mean_retention_alpha": 0.7
+      },
+      "Selective_adaptive": {
+        "relative_error_continuous": 0.9812051929368896,
+        "relative_error_reset": 0.9812049211962268,
+        "delta_retention": 2.717406627494867e-07,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.017479656445162268,
+        "mean_update_norm": 0.017046018882277286,
+        "mean_retention_alpha": 0.3748103785328567
+      },
+      "Selective_oracle": {
+        "relative_error_continuous": 0.9490842237765336,
+        "relative_error_reset": 0.9490738296961865,
+        "delta_retention": 1.0394080347086998e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.26216943404394105,
+        "mean_update_norm": 0.018243963420605885,
+        "mean_retention_alpha": 0.98828125
+      },
+      "Selective_state_adaptive_trained": {
+        "relative_error_continuous": 0.9495412236359757,
+        "relative_error_reset": 0.9495213186324353,
+        "delta_retention": 1.9905003540432453e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.2799498947262009,
+        "mean_update_norm": 0.016459306305449672,
+        "mean_retention_alpha": 0.9687296932810084
+      },
+      "P12_Selective_state_adaptive_untrained_dim8": {
+        "relative_error_continuous": 0.9936324369220288,
+        "relative_error_reset": 0.9936324369220288,
+        "delta_retention": 0.0,
+        "gate_status": "NO_USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.015919010588413413,
+        "mean_update_norm": 0.006352768920519019,
+        "mean_retention_alpha": 0.7924454777937225
+      },
+      "P12_Selective_fixed_high_dim8": {
+        "relative_error_continuous": 0.9818294491742039,
+        "relative_error_reset": 0.9818253730642639,
+        "delta_retention": 4.076109940021055e-06,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.32178392619243823,
+        "mean_update_norm": 0.008352930997943986,
+        "mean_retention_alpha": 0.99
+      }
+    }
+  },
+  {
+    "seed": 1,
+    "controller_training": {
+      "steps": 30,
+      "w_init": [
+        -0.5,
+        0.0,
+        -0.5,
+        -0.5
+      ],
+      "b_init": [
+        1.0
+      ],
+      "w_trained": [
+        0.805611252784729,
+        1.42922043800354,
+        0.786831796169281,
+        0.8120678663253784
+      ],
+      "b_trained": [
+        2.3322134017944336
+      ],
+      "param_delta": 4.001436233520508,
+      "training_loss_before": 0.0030418196693062782,
+      "training_loss_after": 0.0028017829172313213,
+      "mean_grad_norm": 8.271307278846507e-05
+    },
+    "models": {
+      "UsefulBaseline_SafeAdaptiveDelta": {
+        "relative_error_continuous": 0.9523547341725649,
+        "relative_error_reset": 0.952444462246009,
+        "delta_retention": -8.972807344409528e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 1.1115058383438736,
+        "mean_update_norm": 0.006414487555193116,
+        "mean_retention_alpha": 1.0
+      },
+      "Selective_fixed_high": {
+        "relative_error_continuous": 0.9514085976962334,
+        "relative_error_reset": 0.9514863165370341,
+        "delta_retention": -7.771884080065572e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.40949336771154776,
+        "mean_update_norm": 0.016163173113454832,
+        "mean_retention_alpha": 0.99
+      },
+      "Selective_fixed_low": {
+        "relative_error_continuous": 0.972632664662444,
+        "relative_error_reset": 0.9726332105366551,
+        "delta_retention": -5.458742110553416e-07,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.03171095958291131,
+        "mean_update_norm": 0.015238515004033198,
+        "mean_retention_alpha": 0.7
+      },
+      "Selective_adaptive": {
+        "relative_error_continuous": 0.9829323557454045,
+        "relative_error_reset": 0.982932423979681,
+        "delta_retention": -6.823427645130664e-08,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.017559544277638714,
+        "mean_update_norm": 0.01768495848377819,
+        "mean_retention_alpha": 0.375530315679498
+      },
+      "Selective_oracle": {
+        "relative_error_continuous": 0.9506533124909462,
+        "relative_error_reset": 0.9506808109043287,
+        "delta_retention": -2.7498413382454068e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.24963868133979267,
+        "mean_update_norm": 0.01818270340195138,
+        "mean_retention_alpha": 0.98828125
+      },
+      "Selective_state_adaptive_trained": {
+        "relative_error_continuous": 0.9514409407432391,
+        "relative_error_reset": 0.9515013963121147,
+        "delta_retention": -6.0455568875572574e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.25644381476263334,
+        "mean_update_norm": 0.016314057680883565,
+        "mean_retention_alpha": 0.9673949019525854
+      },
+      "P12_Selective_state_adaptive_untrained_dim8": {
+        "relative_error_continuous": 0.9939923131358284,
+        "relative_error_reset": 0.9939923813701047,
+        "delta_retention": -6.823427634028434e-08,
+        "gate_status": "NO_USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.015205675358291027,
+        "mean_update_norm": 0.005729308698084712,
+        "mean_retention_alpha": 0.7929588579404163
+      },
+      "P12_Selective_fixed_high_dim8": {
+        "relative_error_continuous": 0.9825925490490155,
+        "relative_error_reset": 0.9826166357485788,
+        "delta_retention": -2.4086699563330427e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.3115887440217193,
+        "mean_update_norm": 0.0077361026289963775,
+        "mean_retention_alpha": 0.99
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "controller_training": {
+      "steps": 30,
+      "w_init": [
+        -0.5,
+        0.0,
+        -0.5,
+        -0.5
+      ],
+      "b_init": [
+        1.0
+      ],
+      "w_trained": [
+        0.803111732006073,
+        1.4285435676574707,
+        0.7816933989524841,
+        0.8083502650260925
+      ],
+      "b_trained": [
+        2.331589698791504
+      ],
+      "param_delta": 3.994925022125244,
+      "training_loss_before": 0.0031214815098792315,
+      "training_loss_after": 0.0028528659604489803,
+      "mean_grad_norm": 9.236948159620321e-05
+    },
+    "models": {
+      "UsefulBaseline_SafeAdaptiveDelta": {
+        "relative_error_continuous": 0.9483238605754152,
+        "relative_error_reset": 0.9483372174414916,
+        "delta_retention": -1.3356866076397189e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 1.1254741607699543,
+        "mean_update_norm": 0.006245132031907439,
+        "mean_retention_alpha": 1.0
+      },
+      "Selective_fixed_high": {
+        "relative_error_continuous": 0.9461125800238958,
+        "relative_error_reset": 0.9461312796364029,
+        "delta_retention": -1.8699612507111496e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.42012864592834376,
+        "mean_update_norm": 0.016003563033564205,
+        "mean_retention_alpha": 0.99
+      },
+      "Selective_fixed_low": {
+        "relative_error_continuous": 0.9697120389817739,
+        "relative_error_reset": 0.9697113540142828,
+        "delta_retention": 6.849674911713066e-07,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.03222549246305546,
+        "mean_update_norm": 0.014915129296256687,
+        "mean_retention_alpha": 0.7
+      },
+      "Selective_adaptive": {
+        "relative_error_continuous": 0.9809146822987208,
+        "relative_error_reset": 0.9809143398149752,
+        "delta_retention": 3.424837455856533e-07,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.01751398868609722,
+        "mean_update_norm": 0.016935248514640185,
+        "mean_retention_alpha": 0.378126378840534
+      },
+      "Selective_oracle": {
+        "relative_error_continuous": 0.9454063785405713,
+        "relative_error_reset": 0.9453754865067227,
+        "delta_retention": 3.089203384865069e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.2580321305642593,
+        "mean_update_norm": 0.01805424641692647,
+        "mean_retention_alpha": 0.98828125
+      },
+      "Selective_state_adaptive_trained": {
+        "relative_error_continuous": 0.9460631938677875,
+        "relative_error_reset": 0.9460790166168318,
+        "delta_retention": -1.5822749044325235e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.26619514623484974,
+        "mean_update_norm": 0.016189765716852378,
+        "mean_retention_alpha": 0.9673952046761983
+      },
+      "P12_Selective_state_adaptive_untrained_dim8": {
+        "relative_error_continuous": 0.9960927399405161,
+        "relative_error_reset": 0.9960927399405161,
+        "delta_retention": 0.0,
+        "gate_status": "NO_USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.01247487576058877,
+        "mean_update_norm": 0.004660617697300618,
+        "mean_retention_alpha": 0.7939413565329825
+      },
+      "P12_Selective_fixed_high_dim8": {
+        "relative_error_continuous": 0.9878471012826495,
+        "relative_error_reset": 0.9878545674283026,
+        "delta_retention": -7.466145653056699e-06,
+        "gate_status": "NO_USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.26461419953557197,
+        "mean_update_norm": 0.006433262794644179,
+        "mean_retention_alpha": 0.99
+      }
+    }
+  },
+  {
+    "seed": 3,
+    "controller_training": {
+      "steps": 30,
+      "w_init": [
+        -0.5,
+        0.0,
+        -0.5,
+        -0.5
+      ],
+      "b_init": [
+        1.0
+      ],
+      "w_trained": [
+        0.7820305824279785,
+        1.413551688194275,
+        0.7613781690597534,
+        0.7892062067985535
+      ],
+      "b_trained": [
+        2.316061019897461
+      ],
+      "param_delta": 3.9418673515319824,
+      "training_loss_before": 0.0032096689101308584,
+      "training_loss_after": 0.0029247968923300505,
+      "mean_grad_norm": 9.794886367065677e-05
+    },
+    "models": {
+      "UsefulBaseline_SafeAdaptiveDelta": {
+        "relative_error_continuous": 0.9518027942182704,
+        "relative_error_reset": 0.9518395204413796,
+        "delta_retention": -3.672622310924023e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 1.1188421845436096,
+        "mean_update_norm": 0.006466981019388796,
+        "mean_retention_alpha": 1.0
+      },
+      "Selective_fixed_high": {
+        "relative_error_continuous": 0.9510491911986254,
+        "relative_error_reset": 0.9510864625233764,
+        "delta_retention": -3.727132475095374e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.41100586694665253,
+        "mean_update_norm": 0.016255308111340128,
+        "mean_retention_alpha": 0.99
+      },
+      "Selective_fixed_low": {
+        "relative_error_continuous": 0.9715809214970508,
+        "relative_error_reset": 0.9715809214970508,
+        "delta_retention": 0.0,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.031855809019285614,
+        "mean_update_norm": 0.015276682239158821,
+        "mean_retention_alpha": 0.7
+      },
+      "Selective_adaptive": {
+        "relative_error_continuous": 0.9814131242214416,
+        "relative_error_reset": 0.9814130560837363,
+        "delta_retention": 6.813770525582186e-08,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.017595725460697223,
+        "mean_update_norm": 0.017425186193970425,
+        "mean_retention_alpha": 0.37559891332057305
+      },
+      "Selective_oracle": {
+        "relative_error_continuous": 0.9503672009071582,
+        "relative_error_reset": 0.9503971814974514,
+        "delta_retention": -2.9980590293243736e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.25231310088195724,
+        "mean_update_norm": 0.018279332687485644,
+        "mean_retention_alpha": 0.98828125
+      },
+      "Selective_state_adaptive_trained": {
+        "relative_error_continuous": 0.9511078577628129,
+        "relative_error_reset": 0.9511348402940769,
+        "delta_retention": -2.6982531263985976e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.24910709397931896,
+        "mean_update_norm": 0.01636556951342527,
+        "mean_retention_alpha": 0.9658787475008225
+      },
+      "P12_Selective_state_adaptive_untrained_dim8": {
+        "relative_error_continuous": 0.9955169478232797,
+        "relative_error_reset": 0.9955170159609849,
+        "delta_retention": -6.813770514479955e-08,
+        "gate_status": "NO_USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.013345459779285664,
+        "mean_update_norm": 0.005132821531880823,
+        "mean_retention_alpha": 0.7928831801079838
+      },
+      "P12_Selective_fixed_high_dim8": {
+        "relative_error_continuous": 0.986535103659935,
+        "relative_error_reset": 0.9865502302304922,
+        "delta_retention": -1.5126570557133512e-05,
+        "gate_status": "NO_USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.2802525256120134,
+        "mean_update_norm": 0.006949388536213519,
+        "mean_retention_alpha": 0.99
+      }
+    }
+  },
+  {
+    "seed": 4,
+    "controller_training": {
+      "steps": 30,
+      "w_init": [
+        -0.5,
+        0.0,
+        -0.5,
+        -0.5
+      ],
+      "b_init": [
+        1.0
+      ],
+      "w_trained": [
+        0.8089023232460022,
+        1.4389747381210327,
+        0.7834725379943848,
+        0.8132362365722656
+      ],
+      "b_trained": [
+        2.341527223587036
+      ],
+      "param_delta": 4.0165534019470215,
+      "training_loss_before": 0.0031702336855232716,
+      "training_loss_after": 0.0028725096490234137,
+      "mean_grad_norm": 0.00010227944403595757
+    },
+    "models": {
+      "UsefulBaseline_SafeAdaptiveDelta": {
+        "relative_error_continuous": 0.9564485855137699,
+        "relative_error_reset": 0.9564665025338,
+        "delta_retention": -1.791702003006712e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 1.0855447489302605,
+        "mean_update_norm": 0.006129554248223224,
+        "mean_retention_alpha": 1.0
+      },
+      "Selective_fixed_high": {
+        "relative_error_continuous": 0.9552443950977922,
+        "relative_error_reset": 0.955272798435747,
+        "delta_retention": -2.8403337954729935e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.39128076515044086,
+        "mean_update_norm": 0.015623137126794973,
+        "mean_retention_alpha": 0.99
+      },
+      "Selective_fixed_low": {
+        "relative_error_continuous": 0.9737176066527978,
+        "relative_error_reset": 0.9737176066527978,
+        "delta_retention": 0.0,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.030301107711870435,
+        "mean_update_norm": 0.01462975921098824,
+        "mean_retention_alpha": 0.7
+      },
+      "Selective_adaptive": {
+        "relative_error_continuous": 0.9824360424886157,
+        "relative_error_reset": 0.9824359035969876,
+        "delta_retention": 1.3889162808755628e-07,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.01684174221617845,
+        "mean_update_norm": 0.016509990981497046,
+        "mean_retention_alpha": 0.3837686342885718
+      },
+      "Selective_oracle": {
+        "relative_error_continuous": 0.9547544548795268,
+        "relative_error_reset": 0.9547513992637077,
+        "delta_retention": 3.0556158191474836e-06,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.24213047727588394,
+        "mean_update_norm": 0.017561311785789863,
+        "mean_retention_alpha": 0.98828125
+      },
+      "Selective_state_adaptive_trained": {
+        "relative_error_continuous": 0.9552468257012847,
+        "relative_error_reset": 0.9552695344824856,
+        "delta_retention": -2.270878120091968e-05,
+        "gate_status": "USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.24154951367484045,
+        "mean_update_norm": 0.015742332842606288,
+        "mean_retention_alpha": 0.9670554081326362
+      },
+      "P12_Selective_state_adaptive_untrained_dim8": {
+        "relative_error_continuous": 0.9982289234037671,
+        "relative_error_reset": 0.9982289928495812,
+        "delta_retention": -6.94458140992893e-08,
+        "gate_status": "NO_USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.008524790567925374,
+        "mean_update_norm": 0.004369561837901704,
+        "mean_retention_alpha": 0.7948045731393384
+      },
+      "P12_Selective_fixed_high_dim8": {
+        "relative_error_continuous": 0.9967220881300715,
+        "relative_error_reset": 0.9967263243247297,
+        "delta_retention": -4.23619465828029e-06,
+        "gate_status": "NO_USEFUL_STATE",
+        "retention_interpretable": false,
+        "stale_a2_err_continuous": 1.0,
+        "stale_a2_err_reset": 1.0,
+        "delta_stale_retention": 0.0,
+        "mean_state_norm": 0.15951726605999283,
+        "mean_update_norm": 0.005112637905199335,
+        "mean_retention_alpha": 0.99
+      }
+    }
+  }
+]

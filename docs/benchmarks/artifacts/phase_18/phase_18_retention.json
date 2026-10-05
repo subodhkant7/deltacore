@@ -1,0 +1,32 @@
+{
+  "family_a_rotation": {
+    "continuous_acc_mean": 0.8744444444444444,
+    "continuous_acc_std": 0.005386310952684791,
+    "reset_acc_mean": 0.8744444444444444,
+    "reset_acc_std": 0.005386310952684791,
+    "state_off_acc_mean": 0.8177777777777777,
+    "delta_persistent_vs_reset": 0.0,
+    "persistence_benefit": false,
+    "persistence_penalty": false
+  },
+  "family_b_translation": {
+    "continuous_acc_mean": 0.93,
+    "continuous_acc_std": 0.011573703697777599,
+    "reset_acc_mean": 0.93,
+    "reset_acc_std": 0.011573703697777599,
+    "state_off_acc_mean": 0.8327777777777777,
+    "delta_persistent_vs_reset": 0.0,
+    "persistence_benefit": false,
+    "persistence_penalty": false
+  },
+  "shift_strong_mismatch": {
+    "continuous_acc_mean": 0.60125,
+    "continuous_acc_std": 0.039409706926086085,
+    "reset_acc_mean": 0.61875,
+    "reset_acc_std": 0.03686970300938158,
+    "state_off_acc_mean": 0.45499999999999996,
+    "delta_persistent_vs_reset": -0.01749999999999998,
+    "persistence_benefit": false,
+    "persistence_penalty": true
+  }
+}

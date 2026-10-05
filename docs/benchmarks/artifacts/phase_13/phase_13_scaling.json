@@ -1,0 +1,66 @@
+{
+  "small_D64": {
+    "D": 64,
+    "height": 8,
+    "width": 8,
+    "models": {
+      "Persistence": {
+        "rel_error": 0.2901587225895212,
+        "runtime_us": 1.0659999094036579,
+        "state_memory_bytes": 256
+      },
+      "OnlineRidge": {
+        "rel_error": 0.3002583849556182,
+        "runtime_us": 1.7617484840195414,
+        "state_memory_bytes": 32768
+      },
+      "FixedDelta": {
+        "rel_error": 0.26918707104596634,
+        "runtime_us": 1.704622790035821,
+        "state_memory_bytes": 16384
+      },
+      "SafeAdaptiveDelta": {
+        "rel_error": 0.2581615110592818,
+        "runtime_us": 1.9051638320556976,
+        "state_memory_bytes": 16384
+      },
+      "SpatialConv": {
+        "rel_error": 0.3350562166717358,
+        "runtime_us": 21.960170161266046,
+        "state_memory_bytes": 0
+      }
+    }
+  },
+  "medium_D256": {
+    "D": 256,
+    "height": 16,
+    "width": 16,
+    "models": {
+      "Persistence": {
+        "rel_error": 0.2936768959298836,
+        "runtime_us": 1.318924368429437,
+        "state_memory_bytes": 1024
+      },
+      "OnlineRidge": {
+        "rel_error": 0.300258766478243,
+        "runtime_us": 4.706195641291451,
+        "state_memory_bytes": 524288
+      },
+      "FixedDelta": {
+        "rel_error": 285842958818222.9,
+        "runtime_us": 4.394936306495805,
+        "state_memory_bytes": 262144
+      },
+      "SafeAdaptiveDelta": {
+        "rel_error": 0.6427573004258349,
+        "runtime_us": 4.634213265552883,
+        "state_memory_bytes": 262144
+      },
+      "SpatialConv": {
+        "rel_error": 0.3834801723030145,
+        "runtime_us": 31.553194276057184,
+        "state_memory_bytes": 0
+      }
+    }
+  }
+}

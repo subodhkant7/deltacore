@@ -1,0 +1,260 @@
+{
+  "domain_a": {
+    "dataset_name": "NOAA_OISST_v2_1_Pacific",
+    "version": "2.1.2015_2016",
+    "download_source": "https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html",
+    "license": "Public Domain / US Government Open Data (NOAA NCEI / PSL)",
+    "resolution": "small",
+    "height": 8,
+    "width": 8,
+    "channels": 1,
+    "total_timesteps": 360,
+    "train_split": 150,
+    "val_split": 200,
+    "test_split": 360,
+    "shift_start": 240,
+    "shift_peak": 275,
+    "shift_end": 310,
+    "stride": 1,
+    "horizon": 1,
+    "seed": 42,
+    "missing_rate": 0.05,
+    "apply_land_mask": 1
+  },
+  "domain_b": {
+    "dataset_name": "ERA5_NorthAtlantic_European_T2m",
+    "version": "ERA5.2020_2021.synoptic",
+    "download_source": "https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels",
+    "license": "Copernicus C3S Open Licence / CC-BY 4.0 International",
+    "resolution": "small",
+    "height": 8,
+    "width": 8,
+    "channels": 1,
+    "total_timesteps": 360,
+    "train_split": 150,
+    "val_split": 200,
+    "test_split": 360,
+    "shift_start": 245,
+    "shift_peak": 275,
+    "shift_end": 315,
+    "stride": 1,
+    "horizon": 1,
+    "seed": 42,
+    "missing_rate": 0.03,
+    "apply_missing_mask": 1
+  },
+  "primary_frozen_config": {
+    "model": "SafeAdaptiveDelta",
+    "eta_max": 0.015,
+    "rho": 1.5,
+    "alpha_min": 0.95,
+    "gamma": 0.05
+  },
+  "severity_scales": {
+    "mean": {
+      "mild": {
+        "shift_type": "mean",
+        "severity": "mild",
+        "mean_delta": 0.5,
+        "var_scale": 1.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.0
+      },
+      "moderate": {
+        "shift_type": "mean",
+        "severity": "moderate",
+        "mean_delta": 1.0,
+        "var_scale": 1.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.0
+      },
+      "severe": {
+        "shift_type": "mean",
+        "severity": "severe",
+        "mean_delta": 2.0,
+        "var_scale": 1.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.0
+      }
+    },
+    "variance": {
+      "mild": {
+        "shift_type": "variance",
+        "severity": "mild",
+        "mean_delta": 0.0,
+        "var_scale": 1.5,
+        "temporal_stride": 1,
+        "noise_sigma": 0.0
+      },
+      "moderate": {
+        "shift_type": "variance",
+        "severity": "moderate",
+        "mean_delta": 0.0,
+        "var_scale": 2.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.0
+      },
+      "severe": {
+        "shift_type": "variance",
+        "severity": "severe",
+        "mean_delta": 0.0,
+        "var_scale": 3.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.0
+      }
+    },
+    "temporal_speed": {
+      "mild": {
+        "shift_type": "temporal_speed",
+        "severity": "mild",
+        "mean_delta": 0.0,
+        "var_scale": 1.0,
+        "temporal_stride": 2,
+        "noise_sigma": 0.0
+      },
+      "moderate": {
+        "shift_type": "temporal_speed",
+        "severity": "moderate",
+        "mean_delta": 0.0,
+        "var_scale": 1.0,
+        "temporal_stride": 3,
+        "noise_sigma": 0.0
+      },
+      "severe": {
+        "shift_type": "temporal_speed",
+        "severity": "severe",
+        "mean_delta": 0.0,
+        "var_scale": 1.0,
+        "temporal_stride": 4,
+        "noise_sigma": 0.0
+      }
+    },
+    "noise": {
+      "mild": {
+        "shift_type": "noise",
+        "severity": "mild",
+        "mean_delta": 0.0,
+        "var_scale": 1.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.1
+      },
+      "moderate": {
+        "shift_type": "noise",
+        "severity": "moderate",
+        "mean_delta": 0.0,
+        "var_scale": 1.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.25
+      },
+      "severe": {
+        "shift_type": "noise",
+        "severity": "severe",
+        "mean_delta": 0.0,
+        "var_scale": 1.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.5
+      }
+    },
+    "combined": {
+      "mild": {
+        "shift_type": "combined",
+        "severity": "mild",
+        "mean_delta": 0.5,
+        "var_scale": 1.5,
+        "temporal_stride": 1,
+        "noise_sigma": 0.1
+      },
+      "moderate": {
+        "shift_type": "combined",
+        "severity": "moderate",
+        "mean_delta": 1.0,
+        "var_scale": 2.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.25
+      },
+      "severe": {
+        "shift_type": "combined",
+        "severity": "severe",
+        "mean_delta": 2.0,
+        "var_scale": 3.0,
+        "temporal_stride": 1,
+        "noise_sigma": 0.5
+      }
+    }
+  },
+  "sensitivity_grid": [
+    {
+      "config": {
+        "eta_max": 0.01,
+        "alpha_min": 0.9,
+        "rho": 1.5,
+        "gamma": 0.05
+      },
+      "val_error_domain_a": 0.2780833548905069,
+      "val_error_domain_b": 0.25751089251973514,
+      "val_error_mean": 0.267797123705121
+    },
+    {
+      "config": {
+        "eta_max": 0.01,
+        "alpha_min": 0.95,
+        "rho": 1.5,
+        "gamma": 0.05
+      },
+      "val_error_domain_a": 0.2598107106976266,
+      "val_error_domain_b": 0.234088543858644,
+      "val_error_mean": 0.2469496272781353
+    },
+    {
+      "config": {
+        "eta_max": 0.015,
+        "alpha_min": 0.9,
+        "rho": 1.5,
+        "gamma": 0.05
+      },
+      "val_error_domain_a": 0.29517908678890725,
+      "val_error_domain_b": 0.21187303444591007,
+      "val_error_mean": 0.2535260606174087
+    },
+    {
+      "config": {
+        "eta_max": 0.015,
+        "alpha_min": 0.95,
+        "rho": 1.5,
+        "gamma": 0.05
+      },
+      "val_error_domain_a": 0.2862672418649243,
+      "val_error_domain_b": 0.2014414670791509,
+      "val_error_mean": 0.2438543544720376
+    },
+    {
+      "config": {
+        "eta_max": 0.02,
+        "alpha_min": 0.9,
+        "rho": 1.5,
+        "gamma": 0.05
+      },
+      "val_error_domain_a": 0.3796100949919359,
+      "val_error_domain_b": 0.19529077984780485,
+      "val_error_mean": 0.28745043741987036
+    },
+    {
+      "config": {
+        "eta_max": 0.02,
+        "alpha_min": 0.95,
+        "rho": 1.5,
+        "gamma": 0.05
+      },
+      "val_error_domain_a": 0.3665026680762232,
+      "val_error_domain_b": 0.1901912451169745,
+      "val_error_mean": 0.27834695659659886
+    }
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}

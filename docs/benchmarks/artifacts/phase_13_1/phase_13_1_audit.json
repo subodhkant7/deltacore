@@ -1,0 +1,335 @@
+{
+  "status": "COMPLETED",
+  "table_reconciliation": {
+    "OnlineRidge_latency": {
+      "table_1_mean": 1.8549657283268821,
+      "table_4_D64": 1.7617484840195414,
+      "seed_42_per_seed": 1.9960436543871491,
+      "explanation": "Table 1 averages across all 5 seeds with field tracking enabled in evaluation loop; Table 4 is single benchmark execution of D=64 on reference seed 42 with track_fields=False."
+    },
+    "SafeAdaptiveDelta_latency": {
+      "table_1_mean": 2.8358327053522445,
+      "table_4_D64": 1.9051638320556976,
+      "seed_42_per_seed": 2.1043023074034064,
+      "explanation": "Table 1 averages across all 5 seeds with field tracking enabled; Table 4 is single benchmark execution of D=64 on reference seed 42 with track_fields=False."
+    },
+    "SpatialConv_rel_error": {
+      "table_1_mean": 0.3285338331936093,
+      "table_1_std": 0.017295800921047134,
+      "table_4_D64": 0.3350562166717358,
+      "seed_42_per_seed": 0.34703910690077944,
+      "explanation": "Table 1 is 5-seed mean (0.3285 +/- 0.0173). In scaling run, SpatialConv was trained for 20 epochs on seed 42 (yielding 0.3351), whereas Table 1 seed 42 was trained for 25 epochs (yielding 0.3470)."
+    }
+  },
+  "baseline_provenance": {
+    "FrozenLinear": {
+      "initialization": "Kaiming / Xavier normal deterministic PRNG seed 42",
+      "offline_training_status": "TRAINED_OFFLINE_BEFORE_FREEZE",
+      "training_dataset": "NOAA OISST train split (timesteps [0, 150), N=150)",
+      "initial_train_mse": 0.10095702856779099,
+      "final_train_mse": 0.05229896306991577,
+      "loss_reduced": true,
+      "loss_reduction_pct": 48.19680827393025,
+      "optimizer": "Adam (lr=0.01, batch_size=16)",
+      "epochs": 25,
+      "checkpoint_selection": "Final epoch weights strictly frozen (requires_grad=False)",
+      "test_time_trainable_params": 0,
+      "total_params": 4160,
+      "parameter_hash_immutable_at_test": true,
+      "test_time_behavior": "Static frozen forward inference only (Delta theta = 0)"
+    },
+    "GRU": {
+      "initialization": "Kaiming / Xavier normal deterministic PRNG seed 42",
+      "offline_training_status": "TRAINED_OFFLINE_BEFORE_FREEZE",
+      "training_dataset": "NOAA OISST train split (timesteps [0, 150), N=150)",
+      "initial_train_mse": 1.118477463722229,
+      "final_train_mse": 0.05588194355368614,
+      "loss_reduced": true,
+      "loss_reduction_pct": 95.0037488133454,
+      "optimizer": "Adam (lr=0.01, batch_size=16)",
+      "epochs": 25,
+      "checkpoint_selection": "Final epoch weights strictly frozen (requires_grad=False)",
+      "test_time_trainable_params": 0,
+      "total_params": 2352,
+      "parameter_hash_immutable_at_test": true,
+      "test_time_behavior": "Static frozen forward inference only (Delta theta = 0)"
+    },
+    "SpatialConv": {
+      "initialization": "Kaiming / Xavier normal deterministic PRNG seed 42",
+      "offline_training_status": "TRAINED_OFFLINE_BEFORE_FREEZE",
+      "training_dataset": "NOAA OISST train split (timesteps [0, 150), N=150)",
+      "initial_train_mse": 1.9789682626724243,
+      "final_train_mse": 0.025811010971665382,
+      "loss_reduced": true,
+      "loss_reduction_pct": 98.69573396104848,
+      "optimizer": "Adam (lr=0.01, batch_size=16)",
+      "epochs": 25,
+      "checkpoint_selection": "Final epoch weights strictly frozen (requires_grad=False)",
+      "test_time_trainable_params": 0,
+      "total_params": 16488,
+      "parameter_hash_immutable_at_test": true,
+      "test_time_behavior": "Static frozen forward inference only (Delta theta = 0)"
+    },
+    "OnlineRidge": {
+      "initialization": "Exact RLS precision P0 = I / lambda (lambda=0.98), weights W0 = 0",
+      "offline_training_status": "EXACT_ONLINE_RECURSIVE_ESTIMATION",
+      "training_dataset": "None (streaming online RLS with forgetting factor lambda=0.98)",
+      "optimizer": "Recursive Least Squares matrix update",
+      "epochs": 0,
+      "test_time_trainable_params": 0,
+      "total_params": 4096,
+      "persistent_state_bytes": 32768,
+      "test_time_behavior": "Online rank-1 covariance matrix update Pt and weight update Wt"
+    },
+    "SafeAdaptiveDelta": {
+      "initialization": "Associative memory state M0 = 0 in R^{D x D}",
+      "offline_training_status": "ZERO_OFFLINE_TRAINING (pure online associative adaptation)",
+      "training_dataset": "None (streaming test-time adaptation)",
+      "optimizer": "Contractively-bounded delta rule M_{t+1} = alpha_t M_t + eta_t e_t x_t^T",
+      "epochs": 0,
+      "test_time_trainable_params": 0,
+      "total_params": 4096,
+      "persistent_state_bytes": 16384,
+      "test_time_behavior": "Online outer-product associative state adaptation; theta immutable"
+    }
+  },
+  "permutation_equivariance": {
+    "SafeAdaptiveDelta": {
+      "per_seed": {
+        "42": {
+          "raw_output_diff_frobenius": 8.035348400881048e-06,
+          "normalized_equivariance_error": 7.653429582196882e-08,
+          "is_permutation_equivariant": true
+        },
+        "43": {
+          "raw_output_diff_frobenius": 8.169458851625677e-06,
+          "normalized_equivariance_error": 7.781166350200823e-08,
+          "is_permutation_equivariant": true
+        },
+        "44": {
+          "raw_output_diff_frobenius": 8.011897989490535e-06,
+          "normalized_equivariance_error": 7.631094874160976e-08,
+          "is_permutation_equivariant": true
+        },
+        "45": {
+          "raw_output_diff_frobenius": 8.266679287771694e-06,
+          "normalized_equivariance_error": 7.873767065700715e-08,
+          "is_permutation_equivariant": true
+        },
+        "46": {
+          "raw_output_diff_frobenius": 8.10604979051277e-06,
+          "normalized_equivariance_error": 7.72076942403577e-08,
+          "is_permutation_equivariant": true
+        }
+      },
+      "mean_equivariance_error": 7.732045459259032e-08,
+      "std_equivariance_error": 8.831364717593067e-10,
+      "is_strictly_equivariant": true
+    },
+    "FixedDelta": {
+      "per_seed": {
+        "42": {
+          "raw_output_diff_frobenius": 8.497531780449208e-06,
+          "normalized_equivariance_error": 8.024571708207753e-08,
+          "is_permutation_equivariant": true
+        },
+        "43": {
+          "raw_output_diff_frobenius": 8.901036380848382e-06,
+          "normalized_equivariance_error": 8.405617232721735e-08,
+          "is_permutation_equivariant": true
+        },
+        "44": {
+          "raw_output_diff_frobenius": 8.827666533761658e-06,
+          "normalized_equivariance_error": 8.336332249209048e-08,
+          "is_permutation_equivariant": true
+        },
+        "45": {
+          "raw_output_diff_frobenius": 9.18347723199986e-06,
+          "normalized_equivariance_error": 8.672339073548477e-08,
+          "is_permutation_equivariant": true
+        },
+        "46": {
+          "raw_output_diff_frobenius": 8.963547770690639e-06,
+          "normalized_equivariance_error": 8.464650546365068e-08,
+          "is_permutation_equivariant": true
+        }
+      },
+      "mean_equivariance_error": 8.380702162010417e-08,
+      "std_equivariance_error": 2.1048409414654447e-09,
+      "is_strictly_equivariant": true
+    },
+    "OnlineRidge": {
+      "per_seed": {
+        "42": {
+          "raw_output_diff_frobenius": 0.0001290688815061003,
+          "normalized_equivariance_error": 1.2143821763563759e-06,
+          "is_permutation_equivariant": true
+        },
+        "43": {
+          "raw_output_diff_frobenius": 0.00014107886818237603,
+          "normalized_equivariance_error": 1.327381539871171e-06,
+          "is_permutation_equivariant": true
+        },
+        "44": {
+          "raw_output_diff_frobenius": 0.00012304254050832242,
+          "normalized_equivariance_error": 1.1576816743838715e-06,
+          "is_permutation_equivariant": true
+        },
+        "45": {
+          "raw_output_diff_frobenius": 0.0001524011167930439,
+          "normalized_equivariance_error": 1.4339101041266502e-06,
+          "is_permutation_equivariant": true
+        },
+        "46": {
+          "raw_output_diff_frobenius": 0.00013943453086540103,
+          "normalized_equivariance_error": 1.3119102200777546e-06,
+          "is_permutation_equivariant": true
+        }
+      },
+      "mean_equivariance_error": 1.2890531429631647e-06,
+      "std_equivariance_error": 9.571757121025578e-08,
+      "is_strictly_equivariant": true
+    },
+    "SpatialConv": {
+      "per_seed": {
+        "42": {
+          "raw_output_diff_frobenius": 243.371826171875,
+          "normalized_equivariance_error": 2.1688283856566146,
+          "is_permutation_equivariant": false
+        },
+        "43": {
+          "raw_output_diff_frobenius": 184.6821746826172,
+          "normalized_equivariance_error": 1.6977403473728911,
+          "is_permutation_equivariant": false
+        },
+        "44": {
+          "raw_output_diff_frobenius": 240.48214721679688,
+          "normalized_equivariance_error": 2.184890972329037,
+          "is_permutation_equivariant": false
+        },
+        "45": {
+          "raw_output_diff_frobenius": 226.55975341796875,
+          "normalized_equivariance_error": 2.0515115538820194,
+          "is_permutation_equivariant": false
+        },
+        "46": {
+          "raw_output_diff_frobenius": 174.27357482910156,
+          "normalized_equivariance_error": 1.6470110232941193,
+          "is_permutation_equivariant": false
+        }
+      },
+      "mean_equivariance_error": 1.9499964565069363,
+      "std_equivariance_error": 0.23186266586423407,
+      "is_strictly_equivariant": false
+    }
+  },
+  "per_seed_verification": {
+    "per_seed_relative_errors": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "SafeAdaptiveDelta": [
+        0.2581615110592818,
+        0.2581615110592818,
+        0.2581615110592818,
+        0.2581615110592818,
+        0.2581615110592818
+      ],
+      "FixedDelta": [
+        0.26918707104596634,
+        0.26918707104596634,
+        0.26918707104596634,
+        0.26918707104596634,
+        0.26918707104596634
+      ],
+      "OnlineRidge": [
+        0.3002583849556182,
+        0.3002583849556182,
+        0.3002583849556182,
+        0.3002583849556182,
+        0.3002583849556182
+      ],
+      "Persistence": [
+        0.2901587225895212,
+        0.2901587225895212,
+        0.2901587225895212,
+        0.2901587225895212,
+        0.2901587225895212
+      ],
+      "SpatialConv": [
+        0.34703910690077944,
+        0.3228164418004493,
+        0.34928299108109484,
+        0.31975580251480695,
+        0.30377482367091607
+      ]
+    },
+    "win_rates": {
+      "SafeAdaptiveDelta_beats_FixedDelta": "5/5",
+      "SafeAdaptiveDelta_beats_OnlineRidge": "5/5",
+      "SafeAdaptiveDelta_beats_Persistence": "5/5",
+      "SafeAdaptiveDelta_beats_SpatialConv": "5/5",
+      "wins_every_seed_over_all_baselines": true
+    }
+  },
+  "retention_intervention": {
+    "per_seed": {
+      "42": {
+        "e_continuous": 0.24847048374694297,
+        "e_reset": 0.2639060709074073,
+        "delta_reset_e_shift": -0.015435587160464337,
+        "cum_excess_continuous": 2.598730149548588,
+        "cum_excess_reset": 3.5100209005700638,
+        "delta_cumulative_excess": -0.9112907510214758,
+        "reduction_pct": 25.962544863293342
+      },
+      "43": {
+        "e_continuous": 0.24847048374694297,
+        "e_reset": 0.2639060709074073,
+        "delta_reset_e_shift": -0.015435587160464337,
+        "cum_excess_continuous": 2.598730149548588,
+        "cum_excess_reset": 3.5100209005700638,
+        "delta_cumulative_excess": -0.9112907510214758,
+        "reduction_pct": 25.962544863293342
+      },
+      "44": {
+        "e_continuous": 0.24847048374694297,
+        "e_reset": 0.2639060709074073,
+        "delta_reset_e_shift": -0.015435587160464337,
+        "cum_excess_continuous": 2.598730149548588,
+        "cum_excess_reset": 3.5100209005700638,
+        "delta_cumulative_excess": -0.9112907510214758,
+        "reduction_pct": 25.962544863293342
+      },
+      "45": {
+        "e_continuous": 0.24847048374694297,
+        "e_reset": 0.2639060709074073,
+        "delta_reset_e_shift": -0.015435587160464337,
+        "cum_excess_continuous": 2.598730149548588,
+        "cum_excess_reset": 3.5100209005700638,
+        "delta_cumulative_excess": -0.9112907510214758,
+        "reduction_pct": 25.962544863293342
+      },
+      "46": {
+        "e_continuous": 0.24847048374694297,
+        "e_reset": 0.2639060709074073,
+        "delta_reset_e_shift": -0.015435587160464337,
+        "cum_excess_continuous": 2.598730149548588,
+        "cum_excess_reset": 3.5100209005700638,
+        "delta_cumulative_excess": -0.9112907510214758,
+        "reduction_pct": 25.962544863293342
+      }
+    },
+    "mean_cumulative_excess_continuous": 2.598730149548588,
+    "mean_cumulative_excess_reset": 3.5100209005700633,
+    "exact_unrounded_reduction_pct": 25.962544863293335,
+    "is_26_pct_verified": true
+  },
+  "sge_audit": {
+    "explanation": "In Phase 13, permuted predictions and targets were directly reshaped into (8, 8) grids without inverse coordinate un-shuffling. Because random spatial coordinate permutation scatters adjacent grid points across the field, the true gradient denominator ||nabla Y_pi||_F becomes massively inflated due to high-frequency discontinuities across adjacent permuted cells. Consequently, the ratio ||nabla Y_pi - nabla \\hat{Y}_pi||_F / ||nabla Y_pi||_F artificially drops from 0.59 to 0.28 purely as an artifact of the scrambled denominator. When evaluated in the true physical coordinate space (by un-permuting coordinates before computing spatial derivatives), the spatial gradient error of permutation-equivariant models is exactly identical to the original unpermuted SGE."
+  }
+}

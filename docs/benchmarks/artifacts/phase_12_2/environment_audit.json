@@ -1,0 +1,88 @@
+{
+  "audit_metadata": {
+    "phase": "12.2",
+    "timestamp": "2026-10-05T08:13:00Z",
+    "platform": "Darwin (macOS)",
+    "terminal_shell": "zsh"
+  },
+  "package_configuration_files": {
+    "pyproject_toml": {
+      "exists": true,
+      "build_system": "setuptools>=61.0",
+      "declared_dependencies": [
+        "torch>=2.2.0",
+        "numpy>=1.24.0",
+        "matplotlib>=3.8.0"
+      ],
+      "declared_dev_dependencies": [
+        "pytest>=8.0.0",
+        "ruff>=0.4.0"
+      ],
+      "torch_declared_as_runtime_dependency": true
+    },
+    "setup_py": false,
+    "setup_cfg": false,
+    "requirements_txt": false,
+    "Pipfile": false,
+    "poetry_lock": false,
+    "uv_lock": false,
+    "dot_python_version": false,
+    "dot_env": false
+  },
+  "interpreters_inventory": [
+    {
+      "path": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "version": "3.13.0",
+      "torch_installed": true,
+      "torch_version": "2.6.0",
+      "torch_path": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/__init__.py",
+      "deltacore_installed": true,
+      "status": "CANONICAL_PROJECT_INTERPRETER"
+    },
+    {
+      "path": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+      "version": "3.11.x",
+      "torch_installed": false,
+      "status": "NO_TORCH_INSTALLED"
+    },
+    {
+      "path": "/opt/homebrew/bin/python3",
+      "version": "3.13.x (Homebrew)",
+      "torch_installed": false,
+      "status": "NO_TORCH_INSTALLED"
+    },
+    {
+      "path": "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+      "version": "3.10.x",
+      "torch_installed": false,
+      "status": "NO_TORCH_INSTALLED"
+    },
+    {
+      "path": "/usr/local/bin/python3",
+      "version": "Intel/Rosetta",
+      "torch_installed": false,
+      "status": "NO_TORCH_INSTALLED"
+    },
+    {
+      "path": "/usr/bin/python3",
+      "version": "Apple Command Line Tools",
+      "torch_installed": false,
+      "status": "NO_TORCH_INSTALLED"
+    }
+  ],
+  "canonical_environment": {
+    "interpreter": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+    "local_venv": ".venv/bin/python",
+    "site_packages": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages",
+    "torch_version": "2.6.0",
+    "pip_version": "26.1.2"
+  },
+  "ide_analysis_environment": {
+    "language_server": "Pyright / Pylance Language Server",
+    "default_resolution_behavior": "Without pyrightconfig.json or workspace .venv, defaults to which python (not found) or /usr/bin/python3 (where torch is missing).",
+    "terminal_vs_ide_match_initial": "MISMATCH",
+    "terminal_vs_ide_match_resolved": "MATCH (via .venv and canonical pyright configuration)",
+    "resolution_strategy": "Establish project-standard .venv linked to canonical Python 3.13 environment and add standard [tool.pyright] configuration in pyproject.toml."
+  },
+  "dependency_correctness_verdict": "DEPENDENCIES_COMPLETE"
+}

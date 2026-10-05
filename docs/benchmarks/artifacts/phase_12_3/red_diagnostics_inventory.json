@@ -1,0 +1,497 @@
+[
+  {
+    "file": "tests/test_adaptive_autograd.py",
+    "line": 36,
+    "diagnostic": "Operator \"**\" not supported for types \"AssociativeMemory | Tensor\" and \"Literal[2]\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Update step result (DeltaStepResult / AdaptiveDeltaStepResult) annotated with union AssociativeMemory | torch.Tensor without Generic parameterization; left operand inferred as union type which lacks __pow__ protocol.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and declare @overload on rule.step and rule.update so Tensor inputs return Tensor memory state."
+  },
+  {
+    "file": "tests/test_adaptive_autograd.py",
+    "line": 60,
+    "diagnostic": "Operator \"**\" not supported for types \"AssociativeMemory | Tensor\" and \"Literal[2]\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Update step result (DeltaStepResult / AdaptiveDeltaStepResult) annotated with union AssociativeMemory | torch.Tensor without Generic parameterization; left operand inferred as union type which lacks __pow__ protocol.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and declare @overload on rule.step and rule.update so Tensor inputs return Tensor memory state."
+  },
+  {
+    "file": "tests/test_adaptive_autograd.py",
+    "line": 80,
+    "diagnostic": "Operator \"**\" not supported for types \"AssociativeMemory | Tensor\" and \"Literal[2]\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Update step result (DeltaStepResult / AdaptiveDeltaStepResult) annotated with union AssociativeMemory | torch.Tensor without Generic parameterization; left operand inferred as union type which lacks __pow__ protocol.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and declare @overload on rule.step and rule.update so Tensor inputs return Tensor memory state."
+  },
+  {
+    "file": "tests/test_adaptive_autograd.py",
+    "line": 100,
+    "diagnostic": "Argument of type \"(m: Unknown, k: Unknown, v: Unknown) -> (AssociativeMemory | Tensor)\" cannot be assigned to parameter \"func\" of type \"(...) -> _TensorOrTensors\" in function \"gradcheck\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Lambda called rule.step(m, k, v).new_memory whose return type was union AssociativeMemory | Tensor rather than Tensor.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and add @overload."
+  },
+  {
+    "file": "tests/test_adaptive_autograd.py",
+    "line": 116,
+    "diagnostic": "Argument of type \"(m: Unknown, k: Unknown, v: Unknown) -> (AssociativeMemory | Tensor)\" cannot be assigned to parameter \"func\" of type \"(...) -> _TensorOrTensors\" in function \"gradcheck\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Lambda called rule.step(m, k, v).new_memory whose return type was union AssociativeMemory | Tensor rather than Tensor.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and add @overload."
+  },
+  {
+    "file": "tests/test_adaptive_autograd.py",
+    "line": 133,
+    "diagnostic": "Operator \"-\" not supported for types \"Tensor\" and \"Tensor | AssociativeMemory\"",
+    "category": "WRONG_TEST_OPERAND",
+    "runtime_reproduced": false,
+    "root_cause": "Test unpacked scan tuple (preds, final_mem = ...) whose __iter__ yielded union Tensor | AssociativeMemory rather than directly accessing canonical .predictions attribute.",
+    "resolution": "Access canonical scan_res.predictions directly."
+  },
+  {
+    "file": "tests/test_adaptive_dynamics.py",
+    "line": 56,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_adaptive_dynamics.py",
+    "line": 56,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"other\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_adaptive_dynamics.py",
+    "line": 132,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_adaptive_dynamics.py",
+    "line": 146,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"equal\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_adaptive_dynamics.py",
+    "line": 192,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"isfinite\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_adaptive_dynamics.py",
+    "line": 205,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"isfinite\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_adaptive_dynamics.py",
+    "line": 206,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"isnan\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_adaptive_dynamics.py",
+    "line": 220,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"isfinite\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_adaptive_dynamics.py",
+    "line": 223,
+    "diagnostic": "Argument of type \"Tensor | AssociativeMemory\" cannot be assigned to parameter \"memory\" of type \"Tensor\" in function \"read\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "rule.update returned union AssociativeMemory | Tensor, while read() accepts Tensor.",
+    "resolution": "Add @overload to rule.update so Tensor inputs return Tensor."
+  },
+  {
+    "file": "tests/test_autograd.py",
+    "line": 62,
+    "diagnostic": "Cannot access attribute \"sum\" for class \"AssociativeMemory\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Update step result annotated with union AssociativeMemory | torch.Tensor without Generic parameterization; left operand inferred as union type which lacks .sum().",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and declare @overload on rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_autograd.py",
+    "line": 77,
+    "diagnostic": "Operator \"**\" not supported for types \"AssociativeMemory | Tensor\" and \"Literal[2]\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Update step result (DeltaStepResult / AdaptiveDeltaStepResult) annotated with union AssociativeMemory | torch.Tensor without Generic parameterization; left operand inferred as union type which lacks __pow__ protocol.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and declare @overload on rule.step and rule.update so Tensor inputs return Tensor memory state."
+  },
+  {
+    "file": "tests/test_autograd.py",
+    "line": 95,
+    "diagnostic": "Argument of type \"(m: Unknown, k: Unknown, v: Unknown) -> (AssociativeMemory | Tensor)\" cannot be assigned to parameter \"func\" of type \"(...) -> _TensorOrTensors\" in function \"gradcheck\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Lambda called rule.step(m, k, v).new_memory whose return type was union AssociativeMemory | Tensor rather than Tensor.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and add @overload."
+  },
+  {
+    "file": "tests/test_autograd.py",
+    "line": 109,
+    "diagnostic": "Operator \"-\" not supported for types \"Tensor\" and \"Tensor | AssociativeMemory\"",
+    "category": "WRONG_TEST_OPERAND",
+    "runtime_reproduced": false,
+    "root_cause": "Test unpacked scan tuple (preds, final_mem = ...) whose __iter__ yielded union Tensor | AssociativeMemory rather than directly accessing canonical .predictions attribute.",
+    "resolution": "Access canonical scan_res.predictions directly."
+  },
+  {
+    "file": "tests/test_chunked_equivalence.py",
+    "line": 162,
+    "diagnostic": "Argument of type \"Tensor\" cannot be assigned to parameter \"step_size\" of type \"float | None\" in function \"step\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "step_size parameter was statically annotated as float | None, but runtime implementation supports torch.Tensor as well.",
+    "resolution": "Expand parameter annotation to float | torch.Tensor | None = None."
+  },
+  {
+    "file": "tests/test_chunked_equivalence.py",
+    "line": 172,
+    "diagnostic": "Argument of type \"Tensor | AssociativeMemory\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_delta_learning_behavior.py",
+    "line": 49,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"memory\" of type \"Tensor\" in function \"read\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "rule.update returned union AssociativeMemory | Tensor, while read() accepts Tensor.",
+    "resolution": "Add @overload to rule.update so Tensor inputs return Tensor."
+  },
+  {
+    "file": "tests/test_delta_learning_behavior.py",
+    "line": 84,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"memory\" of type \"Tensor\" in function \"read\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "rule.update returned union AssociativeMemory | Tensor, while read() accepts Tensor.",
+    "resolution": "Add @overload to rule.update so Tensor inputs return Tensor."
+  },
+  {
+    "file": "tests/test_delta_learning_behavior.py",
+    "line": 118,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"memory\" of type \"Tensor\" in function \"read\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "rule.update returned union AssociativeMemory | Tensor, while read() accepts Tensor.",
+    "resolution": "Add @overload to rule.update so Tensor inputs return Tensor."
+  },
+  {
+    "file": "tests/test_delta_learning_behavior.py",
+    "line": 145,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"memory\" of type \"Tensor\" in function \"read\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "rule.update returned union AssociativeMemory | Tensor, while read() accepts Tensor.",
+    "resolution": "Add @overload to rule.update so Tensor inputs return Tensor."
+  },
+  {
+    "file": "tests/test_phase_10_streaming.py",
+    "line": 406,
+    "diagnostic": "Argument of type \"object\" cannot be assigned to parameter \"indices\" of type \"SupportsIndex | bool | int | slice[Any, Any, Any] | ellipsis | Tensor | _NestedSequence[bool | int | slice[Any, Any, Any] | ellipsis | Tensor | None] | tuple[SupportsIndex | bool | int | slice[Any, Any, Any] | ellipsis | Tensor | _NestedSequence[bool | int | slice[Any, Any, Any] | ellipsis | Tensor | None] | None, ...] | None\" in function \"__getitem__\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "StreamData.metadata was annotated with dict[str, object], which statically prohibits using metadata integer values as tensor indices.",
+    "resolution": "Update StreamData.metadata type to dict[str, Any]."
+  },
+  {
+    "file": "tests/test_phase_11_nonlinear.py",
+    "line": 90,
+    "diagnostic": "Argument of type \"object\" cannot be assigned to parameter \"indices\" of type \"SupportsIndex | bool | int | slice[Any, Any, Any] | ellipsis | Tensor | _NestedSequence[bool | int | slice[Any, Any, Any] | ellipsis | Tensor | None] | tuple[SupportsIndex | bool | int | slice[Any, Any, Any] | ellipsis | Tensor | _NestedSequence[bool | int | slice[Any, Any, Any] | ellipsis | Tensor | None] | None, ...] | None\" in function \"__getitem__\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "StreamData.metadata was annotated with dict[str, object], which statically prohibits using metadata integer values as tensor indices.",
+    "resolution": "Update StreamData.metadata type to dict[str, Any]."
+  },
+  {
+    "file": "tests/test_phase_11_nonlinear.py",
+    "line": 216,
+    "diagnostic": "Argument of type \"dict[str, list[float]]\" cannot be assigned to parameter \"trajectories\" of type \"dict[str, Sequence[float]]\" in function \"plot_nonlinear_error_over_time_an\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Plotting function parameter typed as invariant dict[str, Sequence[float]], rejecting covariant dict[str, list[float]].",
+    "resolution": "Update parameter type to Mapping[str, Sequence[float]]."
+  },
+  {
+    "file": "tests/test_phase_12_spatiotemporal.py",
+    "line": 476,
+    "diagnostic": "Argument of type \"dict[str, list[float]]\" cannot be assigned to parameter \"trajectories\" of type \"dict[str, Sequence[float]]\" in function \"plot_spatiotemporal_error_over_time_ax\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Plotting function parameter typed as invariant dict[str, Sequence[float]], rejecting covariant dict[str, list[float]].",
+    "resolution": "Update parameter type to Mapping[str, Sequence[float]]."
+  },
+  {
+    "file": "tests/test_phase_12_spatiotemporal.py",
+    "line": 503,
+    "diagnostic": "Argument of type \"dict[str, list[float]]\" cannot be assigned to parameter \"error_trajectories\" of type \"dict[str, Sequence[float]]\" in function \"plot_error_vs_state_adaptive_bc\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Plotting function parameter typed as invariant dict[str, Sequence[float]], rejecting covariant dict[str, list[float]].",
+    "resolution": "Update parameter type to Mapping[str, Sequence[float]]."
+  },
+  {
+    "file": "tests/test_scan_autograd.py",
+    "line": 87,
+    "diagnostic": "Operator \"**\" not supported for types \"Tensor | AssociativeMemory\" and \"Literal[2]\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Update step result (DeltaStepResult / AdaptiveDeltaStepResult) annotated with union AssociativeMemory | torch.Tensor without Generic parameterization; left operand inferred as union type which lacks __pow__ protocol.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and declare @overload on rule.step and rule.update so Tensor inputs return Tensor memory state."
+  },
+  {
+    "file": "tests/test_scan_autograd.py",
+    "line": 99,
+    "diagnostic": "Argument of type \"Tensor | None\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"allclose\"",
+    "category": "FRAMEWORK_TYPING_LIMITATION",
+    "runtime_reproduced": false,
+    "root_cause": "PyTorch stubs type tensor.grad as Tensor | None, whereas torch.allclose requires Tensor.",
+    "resolution": "Add explicit assert grad is not None verification before passing to torch.allclose."
+  },
+  {
+    "file": "tests/test_scan_autograd.py",
+    "line": 99,
+    "diagnostic": "Argument of type \"Tensor | None\" cannot be assigned to parameter \"other\" of type \"Tensor\" in function \"allclose\"",
+    "category": "FRAMEWORK_TYPING_LIMITATION",
+    "runtime_reproduced": false,
+    "root_cause": "PyTorch stubs type tensor.grad as Tensor | None, whereas torch.allclose requires Tensor.",
+    "resolution": "Add explicit assert grad is not None verification before passing to torch.allclose."
+  },
+  {
+    "file": "tests/test_scan_autograd.py",
+    "line": 100,
+    "diagnostic": "Argument of type \"Tensor | None\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"allclose\"",
+    "category": "FRAMEWORK_TYPING_LIMITATION",
+    "runtime_reproduced": false,
+    "root_cause": "PyTorch stubs type tensor.grad as Tensor | None, whereas torch.allclose requires Tensor.",
+    "resolution": "Add explicit assert grad is not None verification before passing to torch.allclose."
+  },
+  {
+    "file": "tests/test_scan_autograd.py",
+    "line": 100,
+    "diagnostic": "Argument of type \"Tensor | None\" cannot be assigned to parameter \"other\" of type \"Tensor\" in function \"allclose\"",
+    "category": "FRAMEWORK_TYPING_LIMITATION",
+    "runtime_reproduced": false,
+    "root_cause": "PyTorch stubs type tensor.grad as Tensor | None, whereas torch.allclose requires Tensor.",
+    "resolution": "Add explicit assert grad is not None verification before passing to torch.allclose."
+  },
+  {
+    "file": "tests/test_scan_autograd.py",
+    "line": 101,
+    "diagnostic": "Argument of type \"Tensor | None\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"allclose\"",
+    "category": "FRAMEWORK_TYPING_LIMITATION",
+    "runtime_reproduced": false,
+    "root_cause": "PyTorch stubs type tensor.grad as Tensor | None, whereas torch.allclose requires Tensor.",
+    "resolution": "Add explicit assert grad is not None verification before passing to torch.allclose."
+  },
+  {
+    "file": "tests/test_scan_autograd.py",
+    "line": 101,
+    "diagnostic": "Argument of type \"Tensor | None\" cannot be assigned to parameter \"other\" of type \"Tensor\" in function \"allclose\"",
+    "category": "FRAMEWORK_TYPING_LIMITATION",
+    "runtime_reproduced": false,
+    "root_cause": "PyTorch stubs type tensor.grad as Tensor | None, whereas torch.allclose requires Tensor.",
+    "resolution": "Add explicit assert grad is not None verification before passing to torch.allclose."
+  },
+  {
+    "file": "tests/test_self_referential_dynamics.py",
+    "line": 96,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"other\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_sequential_scan.py",
+    "line": 38,
+    "diagnostic": "Argument of type \"Tensor | AssociativeMemory\" cannot be assigned to parameter \"other\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_sequential_scan.py",
+    "line": 57,
+    "diagnostic": "Argument of type \"Tensor | AssociativeMemory\" cannot be assigned to parameter \"other\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_sequential_scan.py",
+    "line": 69,
+    "diagnostic": "\"__getitem__\" method not defined on type \"AssociativeMemory\"",
+    "category": "WRONG_TEST_OPERAND",
+    "runtime_reproduced": false,
+    "root_cause": "Test unpacked scan tuple (preds, final_mem = ...) yielding union Tensor | AssociativeMemory, which lacks __getitem__ on AssociativeMemory.",
+    "resolution": "Access canonical scan_res.predictions[0] directly."
+  },
+  {
+    "file": "tests/test_stability_autograd.py",
+    "line": 133,
+    "diagnostic": "Argument of type \"Tensor\" cannot be assigned to parameter \"step_size\" of type \"float | None\" in function \"step\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "step_size parameter was statically annotated as float | None, but runtime implementation supports torch.Tensor as well.",
+    "resolution": "Expand parameter annotation to float | torch.Tensor | None = None."
+  },
+  {
+    "file": "tests/test_stability_autograd.py",
+    "line": 135,
+    "diagnostic": "Cannot access attribute \"sum\" for class \"AssociativeMemory\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Update step result annotated with union AssociativeMemory | torch.Tensor without Generic parameterization; left operand inferred as union type which lacks .sum().",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and declare @overload on rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_stability_bounds.py",
+    "line": 96,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"memory\" of type \"Tensor\" in function \"read\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "rule.update returned union AssociativeMemory | Tensor, while read() accepts Tensor.",
+    "resolution": "Add @overload to rule.update so Tensor inputs return Tensor."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 33,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"equal\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 51,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 107,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"equal\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 127,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 157,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 198,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"equal\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 211,
+    "diagnostic": "\"__getitem__\" method not defined on type \"AssociativeMemory\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Step result new_memory typed as union AssociativeMemory | Tensor, causing indexing on Tensor to be flagged against AssociativeMemory.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and add @overload on DeltaRule.step."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 221,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"isfinite\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 222,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"input\" of type \"Tensor\" in function \"isnan\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 242,
+    "diagnostic": "\"__getitem__\" method not defined on type \"AssociativeMemory\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Step result new_memory typed as union AssociativeMemory | Tensor, causing indexing on Tensor to be flagged against AssociativeMemory.",
+    "resolution": "Parameterize StepResult with Generic[MemoryT] and add @overload on DeltaRule.step."
+  },
+  {
+    "file": "tests/test_update_rules.py",
+    "line": 242,
+    "diagnostic": "Argument of type \"AssociativeMemory | Tensor\" cannot be assigned to parameter \"other\" of type \"Tensor\" in function \"allclose\"",
+    "category": "WRONG_ANNOTATION",
+    "runtime_reproduced": false,
+    "root_cause": "Function argument inferred as union AssociativeMemory | Tensor due to lack of overloads on rule.step/rule.update.",
+    "resolution": "Add @overload signatures to rule.step and rule.update."
+  }
+]

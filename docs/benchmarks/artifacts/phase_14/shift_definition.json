@@ -1,0 +1,11 @@
+{
+  "shift_name": "Jan_Feb_2021_European_Polar_Vortex_Outbreak",
+  "shift_start_absolute": 245,
+  "shift_end_absolute": 315,
+  "shift_peak_absolute": 275,
+  "shift_start_relative_test": 45,
+  "shift_end_relative_test": 115,
+  "shift_peak_relative_test": 75,
+  "physical_justification": "January 2021 Sudden Stratospheric Warming (SSW) caused polar vortex breakdown, pushing an intense tongue of Arctic air southward across the North Atlantic and Europe (Storm Filomena), creating a severe -7.5 deg C cold anomaly and breaking prevailing zonal wave advection.",
+  "independent_selection": true
+}

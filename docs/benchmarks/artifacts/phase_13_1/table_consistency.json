@@ -1,0 +1,21 @@
+{
+  "OnlineRidge_latency": {
+    "table_1_mean": 1.8549657283268821,
+    "table_4_D64": 1.7617484840195414,
+    "seed_42_per_seed": 1.9960436543871491,
+    "explanation": "Table 1 averages across all 5 seeds with field tracking enabled in evaluation loop; Table 4 is single benchmark execution of D=64 on reference seed 42 with track_fields=False."
+  },
+  "SafeAdaptiveDelta_latency": {
+    "table_1_mean": 2.8358327053522445,
+    "table_4_D64": 1.9051638320556976,
+    "seed_42_per_seed": 2.1043023074034064,
+    "explanation": "Table 1 averages across all 5 seeds with field tracking enabled; Table 4 is single benchmark execution of D=64 on reference seed 42 with track_fields=False."
+  },
+  "SpatialConv_rel_error": {
+    "table_1_mean": 0.3285338331936093,
+    "table_1_std": 0.017295800921047134,
+    "table_4_D64": 0.3350562166717358,
+    "seed_42_per_seed": 0.34703910690077944,
+    "explanation": "Table 1 is 5-seed mean (0.3285 +/- 0.0173). In scaling run, SpatialConv was trained for 20 epochs on seed 42 (yielding 0.3351), whereas Table 1 seed 42 was trained for 25 epochs (yielding 0.3470)."
+  }
+}

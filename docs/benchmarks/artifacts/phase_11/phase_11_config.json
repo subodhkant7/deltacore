@@ -1,0 +1,44 @@
+{
+  "phase": "11",
+  "title": "Nonlinear Adaptive State & Selective Retention Benchmark",
+  "date": "October 2026",
+  "dimension": 8,
+  "sequence_length": 512,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "delays": [
+    16,
+    64,
+    256
+  ],
+  "scaling_dims": [
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "models": [
+    "Naive",
+    "FrozenLinear",
+    "FrozenMLP",
+    "GRU",
+    "LSTM",
+    "OnlineRidge",
+    "NonlinearOnlineRidge",
+    "FixedDelta",
+    "AdaptiveDelta",
+    "SafeAdaptiveDelta",
+    "SelfReferential",
+    "SafeSelfReferential",
+    "Selective_fixed_high",
+    "Selective_fixed_low",
+    "Selective_adaptive",
+    "Selective_oracle"
+  ]
+}

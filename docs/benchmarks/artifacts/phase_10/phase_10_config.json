@@ -1,0 +1,35 @@
+{
+  "phase": "10",
+  "title": "Streaming Adaptive-State Benchmark",
+  "date": "October 2026",
+  "dimension": 8,
+  "sequence_lengths": [
+    128,
+    512,
+    1024
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "delays": [
+    16,
+    64,
+    256
+  ],
+  "models": [
+    "FrozenLinear",
+    "FrozenMLP",
+    "GRU",
+    "LSTM",
+    "OnlineRidge",
+    "FixedDelta",
+    "AdaptiveDelta",
+    "SafeAdaptiveDelta",
+    "SelfReferential",
+    "SafeSelfReferential"
+  ]
+}

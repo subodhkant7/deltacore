@@ -1,0 +1,134 @@
+{
+  "64": {
+    "FrozenLinear": {
+      "error_mean": 0.9834962345477095,
+      "error_std": 0.0014268259998773648,
+      "runtime_us_token": 27.02221678987371,
+      "state_memory_bytes": 0
+    },
+    "SpatialConvControl": {
+      "error_mean": 1.0179230680172198,
+      "error_std": 0.0119083976883336,
+      "runtime_us_token": 44.48719101901588,
+      "state_memory_bytes": 0
+    },
+    "OnlineRidge": {
+      "error_mean": 0.9853433288563881,
+      "error_std": 0.0006523344735783515,
+      "runtime_us_token": 44.37708319642297,
+      "state_memory_bytes": 32768
+    },
+    "NonlinearOnlineRidge": {
+      "error_mean": 0.999253772353323,
+      "error_std": 0.0007087561484763428,
+      "runtime_us_token": 55.0033046806675,
+      "state_memory_bytes": 12288
+    },
+    "SafeAdaptiveDelta": {
+      "error_mean": 0.9875095473817005,
+      "error_std": 0.000567048371099671,
+      "runtime_us_token": 37.53134727162433,
+      "state_memory_bytes": 16384
+    },
+    "Selective_adaptive": {
+      "error_mean": 0.9995540882675517,
+      "error_std": 0.00013542506139181627,
+      "runtime_us_token": 47.69723358322153,
+      "state_memory_bytes": 2048
+    },
+    "Selective_state_adaptive": {
+      "error_mean": 0.9991602093007813,
+      "error_std": 0.00031967452736834636,
+      "runtime_us_token": 51.55332030426507,
+      "state_memory_bytes": 2064
+    }
+  },
+  "128": {
+    "FrozenLinear": {
+      "error_mean": 0.9887711222721076,
+      "error_std": 0.000852206055076487,
+      "runtime_us_token": 37.545507814229495,
+      "state_memory_bytes": 0
+    },
+    "SpatialConvControl": {
+      "error_mean": 1.0153501998773338,
+      "error_std": 0.005580362525180194,
+      "runtime_us_token": 48.871093360958184,
+      "state_memory_bytes": 0
+    },
+    "OnlineRidge": {
+      "error_mean": 0.9907891442595265,
+      "error_std": 0.000650339415454106,
+      "runtime_us_token": 72.72745781392587,
+      "state_memory_bytes": 131072
+    },
+    "NonlinearOnlineRidge": {
+      "error_mean": 1.0009403143508968,
+      "error_std": 0.0007556987822476568,
+      "runtime_us_token": 75.54363594408642,
+      "state_memory_bytes": 49152
+    },
+    "SafeAdaptiveDelta": {
+      "error_mean": 0.9918926523241638,
+      "error_std": 0.000624767595045131,
+      "runtime_us_token": 63.786669932142104,
+      "state_memory_bytes": 65536
+    },
+    "Selective_adaptive": {
+      "error_mean": 0.9998353158654396,
+      "error_std": 6.110151370403754e-05,
+      "runtime_us_token": 51.665608594930745,
+      "state_memory_bytes": 4096
+    },
+    "Selective_state_adaptive": {
+      "error_mean": 0.9997113833799476,
+      "error_std": 0.00011526748151961881,
+      "runtime_us_token": 56.26697617344689,
+      "state_memory_bytes": 4112
+    }
+  },
+  "256": {
+    "FrozenLinear": {
+      "error_mean": 0.9916704414298181,
+      "error_std": 0.00032436885033446594,
+      "runtime_us_token": 56.76026952983193,
+      "state_memory_bytes": 0
+    },
+    "SpatialConvControl": {
+      "error_mean": 1.0094056707880505,
+      "error_std": 0.008123444115075916,
+      "runtime_us_token": 64.09101562212527,
+      "state_memory_bytes": 0
+    },
+    "OnlineRidge": {
+      "error_mean": 0.9942447190848871,
+      "error_std": 0.0003064594907696599,
+      "runtime_us_token": 122.15323866939798,
+      "state_memory_bytes": 524288
+    },
+    "NonlinearOnlineRidge": {
+      "error_mean": 1.003256943664025,
+      "error_std": 0.00040868935734647224,
+      "runtime_us_token": 110.32553711061155,
+      "state_memory_bytes": 196608
+    },
+    "SafeAdaptiveDelta": {
+      "error_mean": 0.9945884429644842,
+      "error_std": 0.00026730277321107527,
+      "runtime_us_token": 103.7647300847766,
+      "state_memory_bytes": 262144
+    },
+    "Selective_adaptive": {
+      "error_mean": 0.9998815077590445,
+      "error_std": 2.6212423927249135e-05,
+      "runtime_us_token": 53.549007037645424,
+      "state_memory_bytes": 8192
+    },
+    "Selective_state_adaptive": {
+      "error_mean": 0.9998041601826039,
+      "error_std": 4.4461338357035403e-05,
+      "runtime_us_token": 58.58276328467582,
+      "state_memory_bytes": 8208
+    }
+  }
+}

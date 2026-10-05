@@ -1,0 +1,138 @@
+{
+  "family_a_rotation": {
+    "family_name": "Family A \u2014 Boundary Rotation",
+    "shift_type": "rotation",
+    "sequence_length": 360,
+    "regime_bounds": [
+      120,
+      240
+    ],
+    "regime_names": [
+      "Regime A (Base)",
+      "Regime C (Rotated)",
+      "Regime A (Return)"
+    ],
+    "dim": 32,
+    "num_classes": 6,
+    "custom_metadata": {
+      "angle": 1.2566370614359172,
+      "noise_scale": 0.35
+    }
+  },
+  "family_b_translation": {
+    "family_name": "Family B \u2014 Boundary Translation",
+    "shift_type": "translation",
+    "sequence_length": 360,
+    "regime_bounds": [
+      120,
+      240
+    ],
+    "regime_names": [
+      "Regime A (Base)",
+      "Regime B (Translated)",
+      "Regime A (Return)"
+    ],
+    "dim": 32,
+    "num_classes": 6,
+    "custom_metadata": {
+      "translation_scale": 0.5,
+      "noise_scale": 0.35
+    }
+  },
+  "family_c_nonlinear": {
+    "family_name": "Family C \u2014 Nonlinear Deformation",
+    "shift_type": "nonlinear",
+    "sequence_length": 360,
+    "regime_bounds": [
+      120,
+      240
+    ],
+    "regime_names": [
+      "Regime A (Base)",
+      "Regime C (Nonlinear Warp)",
+      "Regime A (Return)"
+    ],
+    "dim": 32,
+    "num_classes": 6,
+    "custom_metadata": {
+      "angle_0": 1.2566370614359172,
+      "noise_scale": 0.35
+    }
+  },
+  "shift_covariate": {
+    "family_name": "Covariate Anisotropic Shift",
+    "shift_type": "covariate",
+    "sequence_length": 360,
+    "regime_bounds": [
+      120,
+      240
+    ],
+    "regime_names": [
+      "Regime A (Base)",
+      "Regime B (Covariance)",
+      "Regime A (Return)"
+    ],
+    "dim": 32,
+    "num_classes": 6,
+    "custom_metadata": {
+      "condition_number": 6.0,
+      "noise_scale": 0.35
+    }
+  },
+  "shift_gradual": {
+    "family_name": "Continuous Drift",
+    "shift_type": "gradual",
+    "sequence_length": 360,
+    "regime_bounds": [
+      120,
+      240
+    ],
+    "regime_names": [
+      "Early Drift",
+      "Mid Drift",
+      "Late Drift"
+    ],
+    "dim": 32,
+    "num_classes": 6,
+    "custom_metadata": {
+      "max_angle": 1.5707963267948966
+    }
+  },
+  "shift_prior": {
+    "family_name": "Class Prior Imbalance",
+    "shift_type": "prior",
+    "sequence_length": 360,
+    "regime_bounds": [
+      120,
+      240
+    ],
+    "regime_names": [
+      "Regime A (Balanced)",
+      "Regime B (Imbalanced)",
+      "Regime A (Return)"
+    ],
+    "dim": 32,
+    "num_classes": 6,
+    "custom_metadata": {
+      "imbalance_ratio": 0.8
+    }
+  },
+  "shift_strong_mismatch": {
+    "family_name": "Adversarial Strong Mismatch",
+    "shift_type": "mismatch",
+    "sequence_length": 160,
+    "regime_bounds": [
+      120
+    ],
+    "regime_names": [
+      "Regime A (Rotated)",
+      "Regime B (Incompatible Mismatch)"
+    ],
+    "dim": 32,
+    "num_classes": 6,
+    "custom_metadata": {
+      "steps_a": 120,
+      "steps_mismatch": 40
+    }
+  }
+}

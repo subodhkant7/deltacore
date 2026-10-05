@@ -1,0 +1,37 @@
+{
+  "Selective_fixed_high": {
+    "post_shift_error": 1.000011173696387,
+    "negative_transfer": 3.127624689236441e-07,
+    "forgetting": -3.912217156898379e-08,
+    "adaptation_energy": 0.088402205392555,
+    "mean_retention": 0.99
+  },
+  "Selective_fixed_low": {
+    "post_shift_error": 1.0000000141800456,
+    "negative_transfer": 2.2965522816775773e-10,
+    "forgetting": 0.0,
+    "adaptation_energy": 0.0787518971382272,
+    "mean_retention": 0.6999999999999998
+  },
+  "Selective_adaptive": {
+    "post_shift_error": 0.9999999823447687,
+    "negative_transfer": -1.3793148845309132e-10,
+    "forgetting": 0.0,
+    "adaptation_energy": 0.08469286527936104,
+    "mean_retention": 0.38989841464790514
+  },
+  "Selective_state_adaptive": {
+    "post_shift_error": 0.9999999992929635,
+    "negative_transfer": -2.2915023212277675e-10,
+    "forgetting": 0.0,
+    "adaptation_energy": 0.07641275352533244,
+    "mean_retention": 0.7990665660992027
+  },
+  "Selective_oracle": {
+    "post_shift_error": 1.0000376271683753,
+    "negative_transfer": 2.939622529840591e-07,
+    "forgetting": -9.74598430847351e-08,
+    "adaptation_energy": 0.6553564978239863,
+    "mean_retention": 0.994140625
+  }
+}

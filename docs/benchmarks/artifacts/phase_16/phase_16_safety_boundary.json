@@ -1,0 +1,258 @@
+{
+  "domain_a_oisst_256": {
+    "step_sizes": [
+      0.002,
+      0.005,
+      0.008,
+      0.012,
+      0.016,
+      0.02,
+      0.025
+    ],
+    "dimension": 256,
+    "FixedDelta": [
+      {
+        "step_size": 0.002,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.067189931869507,
+        "rel_error": 0.27123523966415164,
+        "min_safety_margin": 1.0371829833984374
+      },
+      {
+        "step_size": 0.005,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 60.53034973144531,
+        "rel_error": 14.234042352243526,
+        "min_safety_margin": -0.4070425415039063
+      },
+      {
+        "step_size": 0.008,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 1663172800937984.0,
+        "rel_error": 285842958818222.9,
+        "min_safety_margin": -1.85126806640625
+      },
+      {
+        "step_size": 0.012,
+        "diverged": 1,
+        "time_to_nonfinite": 32,
+        "max_state_norm": 1.8296988390983205e+19,
+        "rel_error": null,
+        "min_safety_margin": -3.7769020996093747
+      },
+      {
+        "step_size": 0.016,
+        "diverged": 1,
+        "time_to_nonfinite": 25,
+        "max_state_norm": 1.690341457738177e+19,
+        "rel_error": null,
+        "min_safety_margin": -5.7025361328125
+      },
+      {
+        "step_size": 0.02,
+        "diverged": 1,
+        "time_to_nonfinite": 21,
+        "max_state_norm": 4.4968139913596764e+18,
+        "rel_error": null,
+        "min_safety_margin": -7.628170166015625
+      },
+      {
+        "step_size": 0.025,
+        "diverged": 1,
+        "time_to_nonfinite": 19,
+        "max_state_norm": 9.948402098838176e+18,
+        "rel_error": null,
+        "min_safety_margin": -10.035212707519532
+      }
+    ],
+    "SafeAdaptiveDelta": [
+      {
+        "step_size": 0.002,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 1.757827639579773,
+        "rel_error": 0.2771306091708912,
+        "min_safety_margin": 1.0994376988398682
+      },
+      {
+        "step_size": 0.005,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.0763938426971436,
+        "rel_error": 0.344786513004722,
+        "min_safety_margin": 0.5
+      },
+      {
+        "step_size": 0.008,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.0763938426971436,
+        "rel_error": 0.4071458284977692,
+        "min_safety_margin": 0.4999999999999998
+      },
+      {
+        "step_size": 0.012,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.0763938426971436,
+        "rel_error": 0.41017763775669513,
+        "min_safety_margin": 0.4999999999999998
+      },
+      {
+        "step_size": 0.016,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.0763938426971436,
+        "rel_error": 0.41017763775669513,
+        "min_safety_margin": 0.4999999999999998
+      },
+      {
+        "step_size": 0.02,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.0763938426971436,
+        "rel_error": 0.41017763775669513,
+        "min_safety_margin": 0.4999999999999998
+      },
+      {
+        "step_size": 0.025,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.0763938426971436,
+        "rel_error": 0.41017763775669513,
+        "min_safety_margin": 0.4999999999999998
+      }
+    ]
+  },
+  "domain_b_era5_256": {
+    "step_sizes": [
+      0.002,
+      0.005,
+      0.008,
+      0.012,
+      0.016,
+      0.02,
+      0.025
+    ],
+    "dimension": 256,
+    "FixedDelta": [
+      {
+        "step_size": 0.002,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.831406593322754,
+        "rel_error": 0.14672735131474246,
+        "min_safety_margin": 0.4600364990234376
+      },
+      {
+        "step_size": 0.005,
+        "diverged": 1,
+        "time_to_nonfinite": 79,
+        "max_state_norm": 1.8246510911663636e+19,
+        "rel_error": null,
+        "min_safety_margin": -1.8499087524414062
+      },
+      {
+        "step_size": 0.008,
+        "diverged": 1,
+        "time_to_nonfinite": 41,
+        "max_state_norm": 7.267437608064516e+18,
+        "rel_error": null,
+        "min_safety_margin": -2.19666796875
+      },
+      {
+        "step_size": 0.012,
+        "diverged": 1,
+        "time_to_nonfinite": 28,
+        "max_state_norm": 6.023616728410358e+18,
+        "rel_error": null,
+        "min_safety_margin": -4.047906982421875
+      },
+      {
+        "step_size": 0.016,
+        "diverged": 1,
+        "time_to_nonfinite": 23,
+        "max_state_norm": 4.905423298566816e+18,
+        "rel_error": null,
+        "min_safety_margin": -5.9179775390625
+      },
+      {
+        "step_size": 0.02,
+        "diverged": 1,
+        "time_to_nonfinite": 20,
+        "max_state_norm": 2.498218236533801e+18,
+        "rel_error": null,
+        "min_safety_margin": -7.840551147460937
+      },
+      {
+        "step_size": 0.025,
+        "diverged": 1,
+        "time_to_nonfinite": 18,
+        "max_state_norm": 2.8179526444782715e+18,
+        "rel_error": null,
+        "min_safety_margin": -10.300688934326173
+      }
+    ],
+    "SafeAdaptiveDelta": [
+      {
+        "step_size": 0.002,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 1.742374300956726,
+        "rel_error": 0.18664171256269727,
+        "min_safety_margin": 0.8603825565890182
+      },
+      {
+        "step_size": 0.005,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.092280626296997,
+        "rel_error": 0.1528030199737141,
+        "min_safety_margin": 0.4999999999999998
+      },
+      {
+        "step_size": 0.008,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.092280626296997,
+        "rel_error": 0.15097232435827515,
+        "min_safety_margin": 0.4999999999999998
+      },
+      {
+        "step_size": 0.012,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.092280626296997,
+        "rel_error": 0.15099329329351704,
+        "min_safety_margin": 0.4999999999999998
+      },
+      {
+        "step_size": 0.016,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.092280626296997,
+        "rel_error": 0.15099329329351704,
+        "min_safety_margin": 0.4999999999999998
+      },
+      {
+        "step_size": 0.02,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.092280626296997,
+        "rel_error": 0.15099329329351704,
+        "min_safety_margin": 0.4999999999999998
+      },
+      {
+        "step_size": 0.025,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 2.092280626296997,
+        "rel_error": 0.15099329329351704,
+        "min_safety_margin": 0.4999999999999998
+      }
+    ]
+  }
+}

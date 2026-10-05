@@ -1,0 +1,216 @@
+{
+  "domain_a": {
+    "dataset_name": "NOAA_OISST_v2_1_Pacific",
+    "version": "2.1.2015_2016",
+    "download_source": "https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html",
+    "license": "Public Domain / US Government Open Data (NOAA NCEI / PSL)",
+    "resolution": "small",
+    "height": 8,
+    "width": 8,
+    "channels": 1,
+    "total_timesteps": 360,
+    "train_split": 150,
+    "val_split": 200,
+    "test_split": 360,
+    "shift_start": 240,
+    "shift_peak": 275,
+    "shift_end": 310,
+    "stride": 1,
+    "horizon": 1,
+    "seed": 42,
+    "missing_rate": 0.05,
+    "apply_land_mask": 1
+  },
+  "domain_b": {
+    "dataset_name": "ERA5_NorthAtlantic_European_T2m",
+    "version": "ERA5.2020_2021.synoptic",
+    "download_source": "https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels",
+    "license": "Copernicus C3S Open Licence / CC-BY 4.0 International",
+    "resolution": "small",
+    "height": 8,
+    "width": 8,
+    "channels": 1,
+    "total_timesteps": 360,
+    "train_split": 150,
+    "val_split": 200,
+    "test_split": 360,
+    "shift_start": 245,
+    "shift_peak": 275,
+    "shift_end": 315,
+    "stride": 1,
+    "horizon": 1,
+    "seed": 42,
+    "missing_rate": 0.03,
+    "apply_missing_mask": 1
+  },
+  "calibration_sweep": {
+    "sweep_results": [
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.5,
+          "alpha_min": 0.7,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.31370136578594904,
+        "val_error_domain_b": 0.3106931438830869,
+        "val_error_pooled": 0.312197254834518
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.5,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.3084821963268764,
+        "val_error_domain_b": 0.3085563842016919,
+        "val_error_pooled": 0.30851929026428415
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.5,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.260286928258638,
+        "val_error_domain_b": 0.25666678132576826,
+        "val_error_pooled": 0.2584768547922031
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.9,
+          "alpha_min": 0.7,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.31370136578594904,
+        "val_error_domain_b": 0.3106931438830869,
+        "val_error_pooled": 0.312197254834518
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.9,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.3084821963268764,
+        "val_error_domain_b": 0.3085563842016919,
+        "val_error_pooled": 0.30851929026428415
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.9,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.260286928258638,
+        "val_error_domain_b": 0.25666678132576826,
+        "val_error_pooled": 0.2584768547922031
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.5,
+          "alpha_min": 0.7,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.30622372463112624,
+        "val_error_domain_b": 0.21237753923875544,
+        "val_error_pooled": 0.25930063193494085
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.5,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.3039710501287688,
+        "val_error_domain_b": 0.2120390006479758,
+        "val_error_pooled": 0.2580050253883723
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.5,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.2862672418649243,
+        "val_error_domain_b": 0.2014414670791509,
+        "val_error_pooled": 0.2438543544720376
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.9,
+          "alpha_min": 0.7,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.30622372463112624,
+        "val_error_domain_b": 0.21237753923875544,
+        "val_error_pooled": 0.25930063193494085
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.9,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.3039710501287688,
+        "val_error_domain_b": 0.2120390006479758,
+        "val_error_pooled": 0.2580050253883723
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.9,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "val_error_domain_a": 0.2862672418649243,
+        "val_error_domain_b": 0.2014414670791509,
+        "val_error_pooled": 0.2438543544720376
+      }
+    ],
+    "best_domain_a": {
+      "config": {
+        "eta_max": 0.008,
+        "rho": 1.5,
+        "alpha_min": 0.95,
+        "gamma": 0.05
+      },
+      "val_error": 0.260286928258638
+    },
+    "best_domain_b": {
+      "config": {
+        "eta_max": 0.015,
+        "rho": 1.5,
+        "alpha_min": 0.95,
+        "gamma": 0.05
+      },
+      "val_error": 0.2014414670791509
+    },
+    "best_pooled": {
+      "config": {
+        "eta_max": 0.015,
+        "rho": 1.5,
+        "alpha_min": 0.95,
+        "gamma": 0.05
+      },
+      "val_error": 0.2438543544720376
+    }
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "FrozenLinear": {
+    "stat_acc_mean": 1.0,
+    "stat_acc_std": 0.0,
+    "cov_acc_mean": 1.0,
+    "cov_acc_std": 0.0,
+    "bound_acc_mean": 0.8149999976158142,
+    "bound_acc_std": 0.023080629383702318,
+    "latency_us_mean": 6.424660969059914,
+    "latency_us_std": 2.0399612412912034,
+    "state_bytes": 0,
+    "params": 198
+  },
+  "SmallMLP": {
+    "stat_acc_mean": 1.0,
+    "stat_acc_std": 0.0,
+    "cov_acc_mean": 1.0,
+    "cov_acc_std": 0.0,
+    "bound_acc_mean": 0.8049999952316285,
+    "bound_acc_std": 0.03274480139262023,
+    "latency_us_mean": 15.49622168871186,
+    "latency_us_std": 0.3013665382827084,
+    "state_bytes": 0,
+    "params": 630
+  },
+  "OnlineLogisticRegression": {
+    "stat_acc_mean": 0.9741666913032532,
+    "stat_acc_std": 0.0016666650772094727,
+    "cov_acc_mean": 0.9827777862548828,
+    "cov_acc_std": 0.001111125946044922,
+    "bound_acc_mean": 0.9594444274902344,
+    "bound_acc_std": 0.003767953407162818,
+    "latency_us_mean": 4.510025501076597,
+    "latency_us_std": 0.04714011130077547,
+    "state_bytes": 792,
+    "params": 198
+  },
+  "OnlineRidge": {
+    "stat_acc_mean": 0.9750000238418579,
+    "stat_acc_std": 0.0,
+    "cov_acc_mean": 0.9833333492279053,
+    "cov_acc_std": 0.0,
+    "bound_acc_mean": 0.8866666674613952,
+    "bound_acc_std": 0.013425607316981957,
+    "latency_us_mean": 4.037466399798481,
+    "latency_us_std": 0.1246850865564677,
+    "state_bytes": 4864,
+    "params": 192
+  },
+  "OnlineMulticlassLinear": {
+    "stat_acc_mean": 0.9691666722297668,
+    "stat_acc_std": 0.007728035037714685,
+    "cov_acc_mean": 0.9805555582046509,
+    "cov_acc_std": 0.0030429001953746603,
+    "bound_acc_mean": 0.9561111092567444,
+    "bound_acc_std": 0.005386304176504088,
+    "latency_us_mean": 3.2664783672468425,
+    "latency_us_std": 0.019289852371886202,
+    "state_bytes": 768,
+    "params": 192
+  },
+  "GRU": {
+    "stat_acc_mean": 1.0,
+    "stat_acc_std": 0.0,
+    "cov_acc_mean": 1.0,
+    "cov_acc_std": 0.0,
+    "bound_acc_mean": 0.7305555582046509,
+    "bound_acc_std": 0.013263714419174732,
+    "latency_us_mean": 23.554744220746215,
+    "latency_us_std": 0.6451601337844832,
+    "state_bytes": 64,
+    "params": 2502
+  },
+  "LSTM": {
+    "stat_acc_mean": 1.0,
+    "stat_acc_std": 0.0,
+    "cov_acc_mean": 1.0,
+    "cov_acc_std": 0.0,
+    "bound_acc_mean": 0.747777795791626,
+    "bound_acc_std": 0.028512506524459844,
+    "latency_us_mean": 23.760206919784345,
+    "latency_us_std": 0.806413591574788,
+    "state_bytes": 128,
+    "params": 3302
+  },
+  "FixedDelta": {
+    "stat_acc_mean": 1.0,
+    "stat_acc_std": 0.0,
+    "cov_acc_mean": 1.0,
+    "cov_acc_std": 0.0,
+    "bound_acc_mean": 0.9866666674613953,
+    "bound_acc_std": 0.002721655107552108,
+    "latency_us_mean": 7.062261308116528,
+    "latency_us_std": 1.6860823883187546,
+    "state_bytes": 4096,
+    "params": 198
+  },
+  "SafeAdaptiveDelta": {
+    "stat_acc_mean": 1.0,
+    "stat_acc_std": 0.0,
+    "cov_acc_mean": 1.0,
+    "cov_acc_std": 0.0,
+    "bound_acc_mean": 0.9577777862548829,
+    "bound_acc_std": 0.005386294340110182,
+    "latency_us_mean": 6.425640519106916,
+    "latency_us_std": 0.14916497394772377,
+    "state_bytes": 4096,
+    "params": 198
+  },
+  "AdaptiveStateOFF": {
+    "stat_acc_mean": 1.0,
+    "stat_acc_std": 0.0,
+    "cov_acc_mean": 1.0,
+    "cov_acc_std": 0.0,
+    "bound_acc_mean": 0.8149999976158142,
+    "bound_acc_std": 0.023080629383702318,
+    "latency_us_mean": 4.451117565622553,
+    "latency_us_std": 0.41033648545948426,
+    "state_bytes": 0,
+    "params": 198
+  }
+}

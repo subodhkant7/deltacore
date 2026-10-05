@@ -1,0 +1,54 @@
+[
+  {
+    "dim": 32,
+    "parameter_count": 198,
+    "persistent_state_bytes": 4096,
+    "bytes_formula": "4 * D^2",
+    "accuracy_mean": 0.8761111111111111,
+    "accuracy_std": 0.0073702773119008625,
+    "latency_us_mean": 35.48037999999999,
+    "latency_us_std": 0.7166203732645172,
+    "max_state_norm_mean": 0.7984387993812561,
+    "min_safety_margin_min": 0.6799999237264951,
+    "diverged_count": 0
+  },
+  {
+    "dim": 64,
+    "parameter_count": 390,
+    "persistent_state_bytes": 16384,
+    "bytes_formula": "4 * D^2",
+    "accuracy_mean": 0.9027777777777779,
+    "accuracy_std": 0.0035136418446315197,
+    "latency_us_mean": 40.01190555555556,
+    "latency_us_std": 1.521940904083208,
+    "max_state_norm_mean": 0.9140533328056335,
+    "min_safety_margin_min": 0.35999984741210944,
+    "diverged_count": 0
+  },
+  {
+    "dim": 128,
+    "parameter_count": 774,
+    "persistent_state_bytes": 65536,
+    "bytes_formula": "4 * D^2",
+    "accuracy_mean": 0.9172222222222223,
+    "accuracy_std": 0.005665577237325347,
+    "latency_us_mean": 60.33747111111111,
+    "latency_us_std": 1.934017844321266,
+    "max_state_norm_mean": 0.9548951148986816,
+    "min_safety_margin_min": 7.812498092896192e-09,
+    "diverged_count": 0
+  },
+  {
+    "dim": 256,
+    "parameter_count": 1542,
+    "persistent_state_bytes": 262144,
+    "bytes_formula": "4 * D^2",
+    "accuracy_mean": 0.9261111111111111,
+    "accuracy_std": 0.008351831321318278,
+    "latency_us_mean": 138.0911311111111,
+    "latency_us_std": 74.3678964754887,
+    "max_state_norm_mean": 1.016702163219452,
+    "min_safety_margin_min": 3.906248990936945e-09,
+    "diverged_count": 0
+  }
+]

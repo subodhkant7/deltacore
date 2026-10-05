@@ -1,0 +1,22 @@
+[
+  {
+    "task": "shift_strong_mismatch",
+    "failure_mode": "Stale State Penalty under Incompatible Regime Transition",
+    "severity": "Moderate",
+    "continuous_accuracy": 0.60125,
+    "reset_accuracy": 0.61875,
+    "delta": -0.01749999999999998,
+    "reproducible": true,
+    "scientific_interpretation": "Persistent associative state M_t formed during Regime A acts as an adversarial prior when abruptly shifted to an orthogonal cyclic coordinate permutation. An oracle reset eliminates this negative transfer immediately."
+  },
+  {
+    "task": "family_c_nonlinear",
+    "failure_mode": "Representation Ceiling on Non-Planar Boundary Deformation",
+    "severity": "Architectural Limit",
+    "safe_adaptive_accuracy": 0.8722222222222221,
+    "frozen_linear_accuracy": 0.7733333333333333,
+    "delta": 0.0988888888888888,
+    "reproducible": true,
+    "scientific_interpretation": "Nonlinear coordinate warp phi(x) bends decision boundaries nonlinearly. The tested linear-associative formulation showed an empirical performance limitation on the nonlinear deformation benchmark. The experiment does not establish a formal representational ceiling."
+  }
+]

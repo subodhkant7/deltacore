@@ -57,8 +57,9 @@ coverage.xml
 .DS_Store
 
 # DeltaCore benchmark & diagnostic artifacts (scratch/raw outputs)
-artifacts/
-runs/
-results/
-checkpoints/
+/artifacts/
+/runs/
+/results/
+/checkpoints/
 .matplotlib_cache/
+!docs/benchmarks/artifacts/

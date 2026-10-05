@@ -1,0 +1,72 @@
+{
+  "FrozenLinear": {
+    "initialization": "Kaiming / Xavier normal deterministic PRNG seed 42",
+    "offline_training_status": "TRAINED_OFFLINE_BEFORE_FREEZE",
+    "training_dataset": "NOAA OISST train split (timesteps [0, 150), N=150)",
+    "initial_train_mse": 0.10095702856779099,
+    "final_train_mse": 0.05229896306991577,
+    "loss_reduced": true,
+    "loss_reduction_pct": 48.19680827393025,
+    "optimizer": "Adam (lr=0.01, batch_size=16)",
+    "epochs": 25,
+    "checkpoint_selection": "Final epoch weights strictly frozen (requires_grad=False)",
+    "test_time_trainable_params": 0,
+    "total_params": 4160,
+    "parameter_hash_immutable_at_test": true,
+    "test_time_behavior": "Static frozen forward inference only (Delta theta = 0)"
+  },
+  "GRU": {
+    "initialization": "Kaiming / Xavier normal deterministic PRNG seed 42",
+    "offline_training_status": "TRAINED_OFFLINE_BEFORE_FREEZE",
+    "training_dataset": "NOAA OISST train split (timesteps [0, 150), N=150)",
+    "initial_train_mse": 1.118477463722229,
+    "final_train_mse": 0.05588194355368614,
+    "loss_reduced": true,
+    "loss_reduction_pct": 95.0037488133454,
+    "optimizer": "Adam (lr=0.01, batch_size=16)",
+    "epochs": 25,
+    "checkpoint_selection": "Final epoch weights strictly frozen (requires_grad=False)",
+    "test_time_trainable_params": 0,
+    "total_params": 2352,
+    "parameter_hash_immutable_at_test": true,
+    "test_time_behavior": "Static frozen forward inference only (Delta theta = 0)"
+  },
+  "SpatialConv": {
+    "initialization": "Kaiming / Xavier normal deterministic PRNG seed 42",
+    "offline_training_status": "TRAINED_OFFLINE_BEFORE_FREEZE",
+    "training_dataset": "NOAA OISST train split (timesteps [0, 150), N=150)",
+    "initial_train_mse": 1.9789682626724243,
+    "final_train_mse": 0.025811010971665382,
+    "loss_reduced": true,
+    "loss_reduction_pct": 98.69573396104848,
+    "optimizer": "Adam (lr=0.01, batch_size=16)",
+    "epochs": 25,
+    "checkpoint_selection": "Final epoch weights strictly frozen (requires_grad=False)",
+    "test_time_trainable_params": 0,
+    "total_params": 16488,
+    "parameter_hash_immutable_at_test": true,
+    "test_time_behavior": "Static frozen forward inference only (Delta theta = 0)"
+  },
+  "OnlineRidge": {
+    "initialization": "Exact RLS precision P0 = I / lambda (lambda=0.98), weights W0 = 0",
+    "offline_training_status": "EXACT_ONLINE_RECURSIVE_ESTIMATION",
+    "training_dataset": "None (streaming online RLS with forgetting factor lambda=0.98)",
+    "optimizer": "Recursive Least Squares matrix update",
+    "epochs": 0,
+    "test_time_trainable_params": 0,
+    "total_params": 4096,
+    "persistent_state_bytes": 32768,
+    "test_time_behavior": "Online rank-1 covariance matrix update Pt and weight update Wt"
+  },
+  "SafeAdaptiveDelta": {
+    "initialization": "Associative memory state M0 = 0 in R^{D x D}",
+    "offline_training_status": "ZERO_OFFLINE_TRAINING (pure online associative adaptation)",
+    "training_dataset": "None (streaming test-time adaptation)",
+    "optimizer": "Contractively-bounded delta rule M_{t+1} = alpha_t M_t + eta_t e_t x_t^T",
+    "epochs": 0,
+    "test_time_trainable_params": 0,
+    "total_params": 4096,
+    "persistent_state_bytes": 16384,
+    "test_time_behavior": "Online outer-product associative state adaptation; theta immutable"
+  }
+}

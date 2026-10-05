@@ -1,0 +1,362 @@
+{
+  "benchmark_metadata": {
+    "phase": "12.1",
+    "title": "Forensic Scientific & Code Integrity Correction",
+    "task": "Spatio-Temporal Regime Switch D=64 (8x8x1)",
+    "useful_prediction_threshold": 0.985,
+    "retention_noise_floor": 0.001,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "summary": {
+    "UsefulBaseline_SafeAdaptiveDelta": {
+      "mean_relative_error_continuous": 0.9520658585664311,
+      "std_relative_error_continuous": 0.002600298916819497,
+      "mean_relative_error_reset": 0.9520906922085951,
+      "std_relative_error_reset": 0.002605765084610799,
+      "mean_delta_retention": -2.4833642164057147e-05,
+      "std_delta_retention": 3.985496430861802e-05,
+      "mean_delta_stale_retention": 0.0,
+      "std_delta_stale_retention": 0.0,
+      "gate_status": "USEFUL_STATE",
+      "interpretable_seeds": 0,
+      "per_seed_errors_continuous": [
+        0.9513993183521348,
+        0.9523547341725649,
+        0.9483238605754152,
+        0.9518027942182704,
+        0.9564485855137699
+      ],
+      "per_seed_errors_reset": [
+        0.9513657583802952,
+        0.952444462246009,
+        0.9483372174414916,
+        0.9518395204413796,
+        0.9564665025338
+      ],
+      "per_seed_deltas_retention": [
+        3.355997183951409e-05,
+        -8.972807344409528e-05,
+        -1.3356866076397189e-05,
+        -3.672622310924023e-05,
+        -1.791702003006712e-05
+      ],
+      "per_seed_deltas_stale": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Selective_fixed_high": {
+      "mean_relative_error_continuous": 0.9507035482563951,
+      "std_relative_error_continuous": 0.0029432629992217044,
+      "mean_relative_error_reset": 0.9507312250050342,
+      "std_relative_error_reset": 0.0029525703142673013,
+      "mean_delta_retention": -2.767674863912717e-05,
+      "std_delta_retention": 3.261262719322826e-05,
+      "mean_delta_stale_retention": 0.0,
+      "std_delta_stale_retention": 0.0,
+      "gate_status": "USEFUL_STATE",
+      "interpretable_seeds": 0,
+      "per_seed_errors_continuous": [
+        0.9497029772654288,
+        0.9514085976962334,
+        0.9461125800238958,
+        0.9510491911986254,
+        0.9552443950977922
+      ],
+      "per_seed_errors_reset": [
+        0.949679267892611,
+        0.9514863165370341,
+        0.9461312796364029,
+        0.9510864625233764,
+        0.955272798435747
+      ],
+      "per_seed_deltas_retention": [
+        2.3709372817815044e-05,
+        -7.771884080065572e-05,
+        -1.8699612507111496e-05,
+        -3.727132475095374e-05,
+        -2.8403337954729935e-05
+      ],
+      "per_seed_deltas_stale": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Selective_fixed_low": {
+      "mean_relative_error_continuous": 0.9717989944864556,
+      "std_relative_error_continuous": 0.0013400786334515742,
+      "mean_relative_error_reset": 0.9717988715585676,
+      "std_relative_error_reset": 0.0013403916717188036,
+      "mean_delta_retention": 1.2292788795775777e-07,
+      "std_delta_retention": 4.2842664250664924e-07,
+      "mean_delta_stale_retention": 0.0,
+      "std_delta_stale_retention": 0.0,
+      "gate_status": "USEFUL_STATE",
+      "interpretable_seeds": 0,
+      "per_seed_errors_continuous": [
+        0.9713517406382115,
+        0.972632664662444,
+        0.9697120389817739,
+        0.9715809214970508,
+        0.9737176066527978
+      ],
+      "per_seed_errors_reset": [
+        0.9713512650920518,
+        0.9726332105366551,
+        0.9697113540142828,
+        0.9715809214970508,
+        0.9737176066527978
+      ],
+      "per_seed_deltas_retention": [
+        4.755461596728239e-07,
+        -5.458742110553416e-07,
+        6.849674911713066e-07,
+        0.0,
+        0.0
+      ],
+      "per_seed_deltas_stale": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Selective_adaptive": {
+      "mean_relative_error_continuous": 0.9817802795382145,
+      "std_relative_error_continuous": 0.0007709851932390645,
+      "mean_relative_error_reset": 0.9817801289343213,
+      "std_relative_error_reset": 0.0007711058939644988,
+      "mean_delta_retention": 1.506038930454423e-07,
+      "std_delta_retention": 1.4582180117723708e-07,
+      "mean_delta_stale_retention": 0.0,
+      "std_delta_stale_retention": 0.0,
+      "gate_status": "USEFUL_STATE",
+      "interpretable_seeds": 0,
+      "per_seed_errors_continuous": [
+        0.9812051929368896,
+        0.9829323557454045,
+        0.9809146822987208,
+        0.9814131242214416,
+        0.9824360424886157
+      ],
+      "per_seed_errors_reset": [
+        0.9812049211962268,
+        0.982932423979681,
+        0.9809143398149752,
+        0.9814130560837363,
+        0.9824359035969876
+      ],
+      "per_seed_deltas_retention": [
+        2.717406627494867e-07,
+        -6.823427645130664e-08,
+        3.424837455856533e-07,
+        6.813770525582186e-08,
+        1.3889162808755628e-07
+      ],
+      "per_seed_deltas_stale": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Selective_oracle": {
+      "mean_relative_error_continuous": 0.9500531141189473,
+      "std_relative_error_continuous": 0.003003078206585139,
+      "mean_relative_error_reset": 0.9500557415736793,
+      "std_relative_error_reset": 0.003014147722276444,
+      "mean_delta_retention": -2.6274547321625265e-06,
+      "std_delta_retention": 2.3204190960419017e-05,
+      "mean_delta_stale_retention": 0.0,
+      "std_delta_stale_retention": 0.0,
+      "gate_status": "USEFUL_STATE",
+      "interpretable_seeds": 0,
+      "per_seed_errors_continuous": [
+        0.9490842237765336,
+        0.9506533124909462,
+        0.9454063785405713,
+        0.9503672009071582,
+        0.9547544548795268
+      ],
+      "per_seed_errors_reset": [
+        0.9490738296961865,
+        0.9506808109043287,
+        0.9453754865067227,
+        0.9503971814974514,
+        0.9547513992637077
+      ],
+      "per_seed_deltas_retention": [
+        1.0394080347086998e-05,
+        -2.7498413382454068e-05,
+        3.089203384865069e-05,
+        -2.9980590293243736e-05,
+        3.0556158191474836e-06
+      ],
+      "per_seed_deltas_stale": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Selective_state_adaptive_trained": {
+      "mean_relative_error_continuous": 0.9506800083422199,
+      "std_relative_error_continuous": 0.0029742125188083946,
+      "mean_relative_error_reset": 0.9507012212675889,
+      "std_relative_error_reset": 0.0029817691813196234,
+      "mean_delta_retention": -2.1212925368874202e-05,
+      "std_delta_retention": 2.5671965584463974e-05,
+      "mean_delta_stale_retention": 0.0,
+      "std_delta_stale_retention": 0.0,
+      "gate_status": "USEFUL_STATE",
+      "interpretable_seeds": 0,
+      "per_seed_errors_continuous": [
+        0.9495412236359757,
+        0.9514409407432391,
+        0.9460631938677875,
+        0.9511078577628129,
+        0.9552468257012847
+      ],
+      "per_seed_errors_reset": [
+        0.9495213186324353,
+        0.9515013963121147,
+        0.9460790166168318,
+        0.9511348402940769,
+        0.9552695344824856
+      ],
+      "per_seed_deltas_retention": [
+        1.9905003540432453e-05,
+        -6.0455568875572574e-05,
+        -1.5822749044325235e-05,
+        -2.6982531263985976e-05,
+        -2.270878120091968e-05
+      ],
+      "per_seed_deltas_stale": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "P12_Selective_state_adaptive_untrained_dim8": {
+      "mean_relative_error_continuous": 0.9954926722450841,
+      "std_relative_error_continuous": 0.0016467722283340259,
+      "mean_relative_error_reset": 0.9954927134086432,
+      "std_relative_error_reset": 0.0016467830740214135,
+      "mean_delta_retention": -4.116355911687464e-08,
+      "std_delta_retention": 3.361306719165275e-08,
+      "mean_delta_stale_retention": 0.0,
+      "std_delta_stale_retention": 0.0,
+      "gate_status": "NO_USEFUL_STATE",
+      "interpretable_seeds": 0,
+      "per_seed_errors_continuous": [
+        0.9936324369220288,
+        0.9939923131358284,
+        0.9960927399405161,
+        0.9955169478232797,
+        0.9982289234037671
+      ],
+      "per_seed_errors_reset": [
+        0.9936324369220288,
+        0.9939923813701047,
+        0.9960927399405161,
+        0.9955170159609849,
+        0.9982289928495812
+      ],
+      "per_seed_deltas_retention": [
+        0.0,
+        -6.823427634028434e-08,
+        0.0,
+        -6.813770514479955e-08,
+        -6.94458140992893e-08
+      ],
+      "per_seed_deltas_stale": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "P12_Selective_fixed_high_dim8": {
+      "mean_relative_error_continuous": 0.9871052582591752,
+      "std_relative_error_continuous": 0.005320855758631327,
+      "mean_relative_error_reset": 0.9871146261592735,
+      "std_relative_error_reset": 0.005319002040000405,
+      "mean_delta_retention": -9.367900098355974e-06,
+      "std_delta_retention": 9.596851772834981e-06,
+      "mean_delta_stale_retention": 0.0,
+      "std_delta_stale_retention": 0.0,
+      "gate_status": "NO_USEFUL_STATE",
+      "interpretable_seeds": 0,
+      "per_seed_errors_continuous": [
+        0.9818294491742039,
+        0.9825925490490155,
+        0.9878471012826495,
+        0.986535103659935,
+        0.9967220881300715
+      ],
+      "per_seed_errors_reset": [
+        0.9818253730642639,
+        0.9826166357485788,
+        0.9878545674283026,
+        0.9865502302304922,
+        0.9967263243247297
+      ],
+      "per_seed_deltas_retention": [
+        4.076109940021055e-06,
+        -2.4086699563330427e-05,
+        -7.466145653056699e-06,
+        -1.5126570557133512e-05,
+        -4.23619465828029e-06
+      ],
+      "per_seed_deltas_stale": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "controller_training_sample_seed0": {
+    "w_init": [
+      -0.5,
+      0.0,
+      -0.5,
+      -0.5
+    ],
+    "b_init": [
+      1.0
+    ],
+    "w_trained": [
+      0.8132809400558472,
+      1.4418452978134155,
+      0.7922928929328918,
+      0.8198958039283752
+    ],
+    "b_trained": [
+      2.3431692123413086
+    ],
+    "param_delta": 4.029387712478638,
+    "mean_grad_norm": 9.195586077718569e-05,
+    "loss_before": 0.0030689958948642015,
+    "loss_after": 0.002801063936203718
+  }
+}

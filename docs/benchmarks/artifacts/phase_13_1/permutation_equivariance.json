@@ -1,0 +1,130 @@
+{
+  "SafeAdaptiveDelta": {
+    "per_seed": {
+      "42": {
+        "raw_output_diff_frobenius": 8.035348400881048e-06,
+        "normalized_equivariance_error": 7.653429582196882e-08,
+        "is_permutation_equivariant": true
+      },
+      "43": {
+        "raw_output_diff_frobenius": 8.169458851625677e-06,
+        "normalized_equivariance_error": 7.781166350200823e-08,
+        "is_permutation_equivariant": true
+      },
+      "44": {
+        "raw_output_diff_frobenius": 8.011897989490535e-06,
+        "normalized_equivariance_error": 7.631094874160976e-08,
+        "is_permutation_equivariant": true
+      },
+      "45": {
+        "raw_output_diff_frobenius": 8.266679287771694e-06,
+        "normalized_equivariance_error": 7.873767065700715e-08,
+        "is_permutation_equivariant": true
+      },
+      "46": {
+        "raw_output_diff_frobenius": 8.10604979051277e-06,
+        "normalized_equivariance_error": 7.72076942403577e-08,
+        "is_permutation_equivariant": true
+      }
+    },
+    "mean_equivariance_error": 7.732045459259032e-08,
+    "std_equivariance_error": 8.831364717593067e-10,
+    "is_strictly_equivariant": true
+  },
+  "FixedDelta": {
+    "per_seed": {
+      "42": {
+        "raw_output_diff_frobenius": 8.497531780449208e-06,
+        "normalized_equivariance_error": 8.024571708207753e-08,
+        "is_permutation_equivariant": true
+      },
+      "43": {
+        "raw_output_diff_frobenius": 8.901036380848382e-06,
+        "normalized_equivariance_error": 8.405617232721735e-08,
+        "is_permutation_equivariant": true
+      },
+      "44": {
+        "raw_output_diff_frobenius": 8.827666533761658e-06,
+        "normalized_equivariance_error": 8.336332249209048e-08,
+        "is_permutation_equivariant": true
+      },
+      "45": {
+        "raw_output_diff_frobenius": 9.18347723199986e-06,
+        "normalized_equivariance_error": 8.672339073548477e-08,
+        "is_permutation_equivariant": true
+      },
+      "46": {
+        "raw_output_diff_frobenius": 8.963547770690639e-06,
+        "normalized_equivariance_error": 8.464650546365068e-08,
+        "is_permutation_equivariant": true
+      }
+    },
+    "mean_equivariance_error": 8.380702162010417e-08,
+    "std_equivariance_error": 2.1048409414654447e-09,
+    "is_strictly_equivariant": true
+  },
+  "OnlineRidge": {
+    "per_seed": {
+      "42": {
+        "raw_output_diff_frobenius": 0.0001290688815061003,
+        "normalized_equivariance_error": 1.2143821763563759e-06,
+        "is_permutation_equivariant": true
+      },
+      "43": {
+        "raw_output_diff_frobenius": 0.00014107886818237603,
+        "normalized_equivariance_error": 1.327381539871171e-06,
+        "is_permutation_equivariant": true
+      },
+      "44": {
+        "raw_output_diff_frobenius": 0.00012304254050832242,
+        "normalized_equivariance_error": 1.1576816743838715e-06,
+        "is_permutation_equivariant": true
+      },
+      "45": {
+        "raw_output_diff_frobenius": 0.0001524011167930439,
+        "normalized_equivariance_error": 1.4339101041266502e-06,
+        "is_permutation_equivariant": true
+      },
+      "46": {
+        "raw_output_diff_frobenius": 0.00013943453086540103,
+        "normalized_equivariance_error": 1.3119102200777546e-06,
+        "is_permutation_equivariant": true
+      }
+    },
+    "mean_equivariance_error": 1.2890531429631647e-06,
+    "std_equivariance_error": 9.571757121025578e-08,
+    "is_strictly_equivariant": true
+  },
+  "SpatialConv": {
+    "per_seed": {
+      "42": {
+        "raw_output_diff_frobenius": 243.371826171875,
+        "normalized_equivariance_error": 2.1688283856566146,
+        "is_permutation_equivariant": false
+      },
+      "43": {
+        "raw_output_diff_frobenius": 184.6821746826172,
+        "normalized_equivariance_error": 1.6977403473728911,
+        "is_permutation_equivariant": false
+      },
+      "44": {
+        "raw_output_diff_frobenius": 240.48214721679688,
+        "normalized_equivariance_error": 2.184890972329037,
+        "is_permutation_equivariant": false
+      },
+      "45": {
+        "raw_output_diff_frobenius": 226.55975341796875,
+        "normalized_equivariance_error": 2.0515115538820194,
+        "is_permutation_equivariant": false
+      },
+      "46": {
+        "raw_output_diff_frobenius": 174.27357482910156,
+        "normalized_equivariance_error": 1.6470110232941193,
+        "is_permutation_equivariant": false
+      }
+    },
+    "mean_equivariance_error": 1.9499964565069363,
+    "std_equivariance_error": 0.23186266586423407,
+    "is_strictly_equivariant": false
+  }
+}

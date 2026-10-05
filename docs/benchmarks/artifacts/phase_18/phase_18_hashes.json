@@ -1,0 +1,1962 @@
+[
+  {
+    "seed": 42,
+    "task": "family_a_rotation",
+    "model": "FrozenLinear",
+    "hash_before": "e0fdc770d1bdf3794f3e62d2fc8a5a9012617674e0112f0ce6436c4690c5ca7c",
+    "hash_after": "e0fdc770d1bdf3794f3e62d2fc8a5a9012617674e0112f0ce6436c4690c5ca7c",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_a_rotation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "e0fdc770d1bdf3794f3e62d2fc8a5a9012617674e0112f0ce6436c4690c5ca7c",
+    "hash_after": "e0fdc770d1bdf3794f3e62d2fc8a5a9012617674e0112f0ce6436c4690c5ca7c",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_a_rotation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_a_rotation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_a_rotation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_a_rotation",
+    "model": "FixedDelta",
+    "hash_before": "e0fdc770d1bdf3794f3e62d2fc8a5a9012617674e0112f0ce6436c4690c5ca7c",
+    "hash_after": "e0fdc770d1bdf3794f3e62d2fc8a5a9012617674e0112f0ce6436c4690c5ca7c",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_a_rotation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "e0fdc770d1bdf3794f3e62d2fc8a5a9012617674e0112f0ce6436c4690c5ca7c",
+    "hash_after": "e0fdc770d1bdf3794f3e62d2fc8a5a9012617674e0112f0ce6436c4690c5ca7c",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_b_translation",
+    "model": "FrozenLinear",
+    "hash_before": "92c9e5cd17a9405a68678f1665a7b26e58161a4e463cdffd5d8238be5d31cb09",
+    "hash_after": "92c9e5cd17a9405a68678f1665a7b26e58161a4e463cdffd5d8238be5d31cb09",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_b_translation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "92c9e5cd17a9405a68678f1665a7b26e58161a4e463cdffd5d8238be5d31cb09",
+    "hash_after": "92c9e5cd17a9405a68678f1665a7b26e58161a4e463cdffd5d8238be5d31cb09",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_b_translation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_b_translation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_b_translation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_b_translation",
+    "model": "FixedDelta",
+    "hash_before": "92c9e5cd17a9405a68678f1665a7b26e58161a4e463cdffd5d8238be5d31cb09",
+    "hash_after": "92c9e5cd17a9405a68678f1665a7b26e58161a4e463cdffd5d8238be5d31cb09",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_b_translation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "92c9e5cd17a9405a68678f1665a7b26e58161a4e463cdffd5d8238be5d31cb09",
+    "hash_after": "92c9e5cd17a9405a68678f1665a7b26e58161a4e463cdffd5d8238be5d31cb09",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_c_nonlinear",
+    "model": "FrozenLinear",
+    "hash_before": "cbf6803290acd71108c2c737bf022ac769a5abf63d0a1547ccc3d18b7ec18d03",
+    "hash_after": "cbf6803290acd71108c2c737bf022ac769a5abf63d0a1547ccc3d18b7ec18d03",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_c_nonlinear",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "cbf6803290acd71108c2c737bf022ac769a5abf63d0a1547ccc3d18b7ec18d03",
+    "hash_after": "cbf6803290acd71108c2c737bf022ac769a5abf63d0a1547ccc3d18b7ec18d03",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_c_nonlinear",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_c_nonlinear",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_c_nonlinear",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_c_nonlinear",
+    "model": "FixedDelta",
+    "hash_before": "cbf6803290acd71108c2c737bf022ac769a5abf63d0a1547ccc3d18b7ec18d03",
+    "hash_after": "cbf6803290acd71108c2c737bf022ac769a5abf63d0a1547ccc3d18b7ec18d03",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "family_c_nonlinear",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "cbf6803290acd71108c2c737bf022ac769a5abf63d0a1547ccc3d18b7ec18d03",
+    "hash_after": "cbf6803290acd71108c2c737bf022ac769a5abf63d0a1547ccc3d18b7ec18d03",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_covariate",
+    "model": "FrozenLinear",
+    "hash_before": "a985634358ca2baed33f05ea51c3a0bae911fcdd5c4cb5c328b809a7cae54355",
+    "hash_after": "a985634358ca2baed33f05ea51c3a0bae911fcdd5c4cb5c328b809a7cae54355",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_covariate",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "a985634358ca2baed33f05ea51c3a0bae911fcdd5c4cb5c328b809a7cae54355",
+    "hash_after": "a985634358ca2baed33f05ea51c3a0bae911fcdd5c4cb5c328b809a7cae54355",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_covariate",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_covariate",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_covariate",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_covariate",
+    "model": "FixedDelta",
+    "hash_before": "a985634358ca2baed33f05ea51c3a0bae911fcdd5c4cb5c328b809a7cae54355",
+    "hash_after": "a985634358ca2baed33f05ea51c3a0bae911fcdd5c4cb5c328b809a7cae54355",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_covariate",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "a985634358ca2baed33f05ea51c3a0bae911fcdd5c4cb5c328b809a7cae54355",
+    "hash_after": "a985634358ca2baed33f05ea51c3a0bae911fcdd5c4cb5c328b809a7cae54355",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_gradual",
+    "model": "FrozenLinear",
+    "hash_before": "7344889b92f52ee2447b89dcadccdbd7869559dd72b2bcb6834fffd139f73f5f",
+    "hash_after": "7344889b92f52ee2447b89dcadccdbd7869559dd72b2bcb6834fffd139f73f5f",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_gradual",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "7344889b92f52ee2447b89dcadccdbd7869559dd72b2bcb6834fffd139f73f5f",
+    "hash_after": "7344889b92f52ee2447b89dcadccdbd7869559dd72b2bcb6834fffd139f73f5f",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_gradual",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_gradual",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_gradual",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_gradual",
+    "model": "FixedDelta",
+    "hash_before": "7344889b92f52ee2447b89dcadccdbd7869559dd72b2bcb6834fffd139f73f5f",
+    "hash_after": "7344889b92f52ee2447b89dcadccdbd7869559dd72b2bcb6834fffd139f73f5f",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_gradual",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "7344889b92f52ee2447b89dcadccdbd7869559dd72b2bcb6834fffd139f73f5f",
+    "hash_after": "7344889b92f52ee2447b89dcadccdbd7869559dd72b2bcb6834fffd139f73f5f",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_prior",
+    "model": "FrozenLinear",
+    "hash_before": "85d0000086e205e1c6180812775cfbbeadeff343e7e82ccce8c0ef127877aaf7",
+    "hash_after": "85d0000086e205e1c6180812775cfbbeadeff343e7e82ccce8c0ef127877aaf7",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_prior",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "85d0000086e205e1c6180812775cfbbeadeff343e7e82ccce8c0ef127877aaf7",
+    "hash_after": "85d0000086e205e1c6180812775cfbbeadeff343e7e82ccce8c0ef127877aaf7",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_prior",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_prior",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_prior",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_prior",
+    "model": "FixedDelta",
+    "hash_before": "85d0000086e205e1c6180812775cfbbeadeff343e7e82ccce8c0ef127877aaf7",
+    "hash_after": "85d0000086e205e1c6180812775cfbbeadeff343e7e82ccce8c0ef127877aaf7",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_prior",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "85d0000086e205e1c6180812775cfbbeadeff343e7e82ccce8c0ef127877aaf7",
+    "hash_after": "85d0000086e205e1c6180812775cfbbeadeff343e7e82ccce8c0ef127877aaf7",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_strong_mismatch",
+    "model": "FrozenLinear",
+    "hash_before": "505a130455335886c77111aefe287c421fc4e70b88e834fc666c800a9c40b3af",
+    "hash_after": "505a130455335886c77111aefe287c421fc4e70b88e834fc666c800a9c40b3af",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_strong_mismatch",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "505a130455335886c77111aefe287c421fc4e70b88e834fc666c800a9c40b3af",
+    "hash_after": "505a130455335886c77111aefe287c421fc4e70b88e834fc666c800a9c40b3af",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_strong_mismatch",
+    "model": "FixedDelta",
+    "hash_before": "505a130455335886c77111aefe287c421fc4e70b88e834fc666c800a9c40b3af",
+    "hash_after": "505a130455335886c77111aefe287c421fc4e70b88e834fc666c800a9c40b3af",
+    "immutable": true
+  },
+  {
+    "seed": 42,
+    "task": "shift_strong_mismatch",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "505a130455335886c77111aefe287c421fc4e70b88e834fc666c800a9c40b3af",
+    "hash_after": "505a130455335886c77111aefe287c421fc4e70b88e834fc666c800a9c40b3af",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_a_rotation",
+    "model": "FrozenLinear",
+    "hash_before": "648f9c9e7d8305a9b8aa0c8b9c98830faa002039edf519675f43107ed39eb45d",
+    "hash_after": "648f9c9e7d8305a9b8aa0c8b9c98830faa002039edf519675f43107ed39eb45d",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_a_rotation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "648f9c9e7d8305a9b8aa0c8b9c98830faa002039edf519675f43107ed39eb45d",
+    "hash_after": "648f9c9e7d8305a9b8aa0c8b9c98830faa002039edf519675f43107ed39eb45d",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_a_rotation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_a_rotation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_a_rotation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_a_rotation",
+    "model": "FixedDelta",
+    "hash_before": "648f9c9e7d8305a9b8aa0c8b9c98830faa002039edf519675f43107ed39eb45d",
+    "hash_after": "648f9c9e7d8305a9b8aa0c8b9c98830faa002039edf519675f43107ed39eb45d",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_a_rotation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "648f9c9e7d8305a9b8aa0c8b9c98830faa002039edf519675f43107ed39eb45d",
+    "hash_after": "648f9c9e7d8305a9b8aa0c8b9c98830faa002039edf519675f43107ed39eb45d",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_b_translation",
+    "model": "FrozenLinear",
+    "hash_before": "5255ba3815e9e31ac01e227b396ab57f851d793aa6ced6889ac2c5f6c06b42c2",
+    "hash_after": "5255ba3815e9e31ac01e227b396ab57f851d793aa6ced6889ac2c5f6c06b42c2",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_b_translation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "5255ba3815e9e31ac01e227b396ab57f851d793aa6ced6889ac2c5f6c06b42c2",
+    "hash_after": "5255ba3815e9e31ac01e227b396ab57f851d793aa6ced6889ac2c5f6c06b42c2",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_b_translation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_b_translation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_b_translation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_b_translation",
+    "model": "FixedDelta",
+    "hash_before": "5255ba3815e9e31ac01e227b396ab57f851d793aa6ced6889ac2c5f6c06b42c2",
+    "hash_after": "5255ba3815e9e31ac01e227b396ab57f851d793aa6ced6889ac2c5f6c06b42c2",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_b_translation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "5255ba3815e9e31ac01e227b396ab57f851d793aa6ced6889ac2c5f6c06b42c2",
+    "hash_after": "5255ba3815e9e31ac01e227b396ab57f851d793aa6ced6889ac2c5f6c06b42c2",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_c_nonlinear",
+    "model": "FrozenLinear",
+    "hash_before": "a553875aa5b72d8da90be6ae6cc1507dab00245e9ea846da21f4fdbbb9fa77b1",
+    "hash_after": "a553875aa5b72d8da90be6ae6cc1507dab00245e9ea846da21f4fdbbb9fa77b1",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_c_nonlinear",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "a553875aa5b72d8da90be6ae6cc1507dab00245e9ea846da21f4fdbbb9fa77b1",
+    "hash_after": "a553875aa5b72d8da90be6ae6cc1507dab00245e9ea846da21f4fdbbb9fa77b1",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_c_nonlinear",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_c_nonlinear",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_c_nonlinear",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_c_nonlinear",
+    "model": "FixedDelta",
+    "hash_before": "a553875aa5b72d8da90be6ae6cc1507dab00245e9ea846da21f4fdbbb9fa77b1",
+    "hash_after": "a553875aa5b72d8da90be6ae6cc1507dab00245e9ea846da21f4fdbbb9fa77b1",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "family_c_nonlinear",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "a553875aa5b72d8da90be6ae6cc1507dab00245e9ea846da21f4fdbbb9fa77b1",
+    "hash_after": "a553875aa5b72d8da90be6ae6cc1507dab00245e9ea846da21f4fdbbb9fa77b1",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_covariate",
+    "model": "FrozenLinear",
+    "hash_before": "d49b4964b976d516150e87787d4873b898ac0bdb1d13628bca013a0c664458b3",
+    "hash_after": "d49b4964b976d516150e87787d4873b898ac0bdb1d13628bca013a0c664458b3",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_covariate",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "d49b4964b976d516150e87787d4873b898ac0bdb1d13628bca013a0c664458b3",
+    "hash_after": "d49b4964b976d516150e87787d4873b898ac0bdb1d13628bca013a0c664458b3",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_covariate",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_covariate",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_covariate",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_covariate",
+    "model": "FixedDelta",
+    "hash_before": "d49b4964b976d516150e87787d4873b898ac0bdb1d13628bca013a0c664458b3",
+    "hash_after": "d49b4964b976d516150e87787d4873b898ac0bdb1d13628bca013a0c664458b3",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_covariate",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "d49b4964b976d516150e87787d4873b898ac0bdb1d13628bca013a0c664458b3",
+    "hash_after": "d49b4964b976d516150e87787d4873b898ac0bdb1d13628bca013a0c664458b3",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_gradual",
+    "model": "FrozenLinear",
+    "hash_before": "de60cb40442e53c9a72a7d33d57595e6276e14de9a5582ddcf34c6075444026f",
+    "hash_after": "de60cb40442e53c9a72a7d33d57595e6276e14de9a5582ddcf34c6075444026f",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_gradual",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "de60cb40442e53c9a72a7d33d57595e6276e14de9a5582ddcf34c6075444026f",
+    "hash_after": "de60cb40442e53c9a72a7d33d57595e6276e14de9a5582ddcf34c6075444026f",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_gradual",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_gradual",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_gradual",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_gradual",
+    "model": "FixedDelta",
+    "hash_before": "de60cb40442e53c9a72a7d33d57595e6276e14de9a5582ddcf34c6075444026f",
+    "hash_after": "de60cb40442e53c9a72a7d33d57595e6276e14de9a5582ddcf34c6075444026f",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_gradual",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "de60cb40442e53c9a72a7d33d57595e6276e14de9a5582ddcf34c6075444026f",
+    "hash_after": "de60cb40442e53c9a72a7d33d57595e6276e14de9a5582ddcf34c6075444026f",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_prior",
+    "model": "FrozenLinear",
+    "hash_before": "66849a0d03328b5ea20ad58d26b3e59393d67a2deda0844aab3151070c81f86d",
+    "hash_after": "66849a0d03328b5ea20ad58d26b3e59393d67a2deda0844aab3151070c81f86d",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_prior",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "66849a0d03328b5ea20ad58d26b3e59393d67a2deda0844aab3151070c81f86d",
+    "hash_after": "66849a0d03328b5ea20ad58d26b3e59393d67a2deda0844aab3151070c81f86d",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_prior",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_prior",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_prior",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_prior",
+    "model": "FixedDelta",
+    "hash_before": "66849a0d03328b5ea20ad58d26b3e59393d67a2deda0844aab3151070c81f86d",
+    "hash_after": "66849a0d03328b5ea20ad58d26b3e59393d67a2deda0844aab3151070c81f86d",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_prior",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "66849a0d03328b5ea20ad58d26b3e59393d67a2deda0844aab3151070c81f86d",
+    "hash_after": "66849a0d03328b5ea20ad58d26b3e59393d67a2deda0844aab3151070c81f86d",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_strong_mismatch",
+    "model": "FrozenLinear",
+    "hash_before": "c6cbd7bce371de2c90db3616cc32d9c86073c9dfaad8a57b57338fc7b73c508f",
+    "hash_after": "c6cbd7bce371de2c90db3616cc32d9c86073c9dfaad8a57b57338fc7b73c508f",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_strong_mismatch",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "c6cbd7bce371de2c90db3616cc32d9c86073c9dfaad8a57b57338fc7b73c508f",
+    "hash_after": "c6cbd7bce371de2c90db3616cc32d9c86073c9dfaad8a57b57338fc7b73c508f",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_strong_mismatch",
+    "model": "FixedDelta",
+    "hash_before": "c6cbd7bce371de2c90db3616cc32d9c86073c9dfaad8a57b57338fc7b73c508f",
+    "hash_after": "c6cbd7bce371de2c90db3616cc32d9c86073c9dfaad8a57b57338fc7b73c508f",
+    "immutable": true
+  },
+  {
+    "seed": 43,
+    "task": "shift_strong_mismatch",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "c6cbd7bce371de2c90db3616cc32d9c86073c9dfaad8a57b57338fc7b73c508f",
+    "hash_after": "c6cbd7bce371de2c90db3616cc32d9c86073c9dfaad8a57b57338fc7b73c508f",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_a_rotation",
+    "model": "FrozenLinear",
+    "hash_before": "b5eacc39227a9650ae87c0057b303cece347b45365b27bccfa605c6ac3557eaf",
+    "hash_after": "b5eacc39227a9650ae87c0057b303cece347b45365b27bccfa605c6ac3557eaf",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_a_rotation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "b5eacc39227a9650ae87c0057b303cece347b45365b27bccfa605c6ac3557eaf",
+    "hash_after": "b5eacc39227a9650ae87c0057b303cece347b45365b27bccfa605c6ac3557eaf",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_a_rotation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_a_rotation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_a_rotation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_a_rotation",
+    "model": "FixedDelta",
+    "hash_before": "b5eacc39227a9650ae87c0057b303cece347b45365b27bccfa605c6ac3557eaf",
+    "hash_after": "b5eacc39227a9650ae87c0057b303cece347b45365b27bccfa605c6ac3557eaf",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_a_rotation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "b5eacc39227a9650ae87c0057b303cece347b45365b27bccfa605c6ac3557eaf",
+    "hash_after": "b5eacc39227a9650ae87c0057b303cece347b45365b27bccfa605c6ac3557eaf",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_b_translation",
+    "model": "FrozenLinear",
+    "hash_before": "23ef8251a9ee43bc3b316c06e01a0736de2faa144eef60b724754c793f7e4b0a",
+    "hash_after": "23ef8251a9ee43bc3b316c06e01a0736de2faa144eef60b724754c793f7e4b0a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_b_translation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "23ef8251a9ee43bc3b316c06e01a0736de2faa144eef60b724754c793f7e4b0a",
+    "hash_after": "23ef8251a9ee43bc3b316c06e01a0736de2faa144eef60b724754c793f7e4b0a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_b_translation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_b_translation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_b_translation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_b_translation",
+    "model": "FixedDelta",
+    "hash_before": "23ef8251a9ee43bc3b316c06e01a0736de2faa144eef60b724754c793f7e4b0a",
+    "hash_after": "23ef8251a9ee43bc3b316c06e01a0736de2faa144eef60b724754c793f7e4b0a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_b_translation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "23ef8251a9ee43bc3b316c06e01a0736de2faa144eef60b724754c793f7e4b0a",
+    "hash_after": "23ef8251a9ee43bc3b316c06e01a0736de2faa144eef60b724754c793f7e4b0a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_c_nonlinear",
+    "model": "FrozenLinear",
+    "hash_before": "f6eb8ab8f482a064b32a604467b39c9baebc6033ae06fad8b3e1e408c5a657a5",
+    "hash_after": "f6eb8ab8f482a064b32a604467b39c9baebc6033ae06fad8b3e1e408c5a657a5",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_c_nonlinear",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "f6eb8ab8f482a064b32a604467b39c9baebc6033ae06fad8b3e1e408c5a657a5",
+    "hash_after": "f6eb8ab8f482a064b32a604467b39c9baebc6033ae06fad8b3e1e408c5a657a5",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_c_nonlinear",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_c_nonlinear",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_c_nonlinear",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_c_nonlinear",
+    "model": "FixedDelta",
+    "hash_before": "f6eb8ab8f482a064b32a604467b39c9baebc6033ae06fad8b3e1e408c5a657a5",
+    "hash_after": "f6eb8ab8f482a064b32a604467b39c9baebc6033ae06fad8b3e1e408c5a657a5",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "family_c_nonlinear",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "f6eb8ab8f482a064b32a604467b39c9baebc6033ae06fad8b3e1e408c5a657a5",
+    "hash_after": "f6eb8ab8f482a064b32a604467b39c9baebc6033ae06fad8b3e1e408c5a657a5",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_covariate",
+    "model": "FrozenLinear",
+    "hash_before": "b30ea03d3e32a04fc46a1f41c84ed295e6e3f81f59cec2d4c8bfad1c6b00aa0e",
+    "hash_after": "b30ea03d3e32a04fc46a1f41c84ed295e6e3f81f59cec2d4c8bfad1c6b00aa0e",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_covariate",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "b30ea03d3e32a04fc46a1f41c84ed295e6e3f81f59cec2d4c8bfad1c6b00aa0e",
+    "hash_after": "b30ea03d3e32a04fc46a1f41c84ed295e6e3f81f59cec2d4c8bfad1c6b00aa0e",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_covariate",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_covariate",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_covariate",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_covariate",
+    "model": "FixedDelta",
+    "hash_before": "b30ea03d3e32a04fc46a1f41c84ed295e6e3f81f59cec2d4c8bfad1c6b00aa0e",
+    "hash_after": "b30ea03d3e32a04fc46a1f41c84ed295e6e3f81f59cec2d4c8bfad1c6b00aa0e",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_covariate",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "b30ea03d3e32a04fc46a1f41c84ed295e6e3f81f59cec2d4c8bfad1c6b00aa0e",
+    "hash_after": "b30ea03d3e32a04fc46a1f41c84ed295e6e3f81f59cec2d4c8bfad1c6b00aa0e",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_gradual",
+    "model": "FrozenLinear",
+    "hash_before": "d500735aff529e6f4aa6d42c502b965ac067ec52841c8ac7e0d53d943162932a",
+    "hash_after": "d500735aff529e6f4aa6d42c502b965ac067ec52841c8ac7e0d53d943162932a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_gradual",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "d500735aff529e6f4aa6d42c502b965ac067ec52841c8ac7e0d53d943162932a",
+    "hash_after": "d500735aff529e6f4aa6d42c502b965ac067ec52841c8ac7e0d53d943162932a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_gradual",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_gradual",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_gradual",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_gradual",
+    "model": "FixedDelta",
+    "hash_before": "d500735aff529e6f4aa6d42c502b965ac067ec52841c8ac7e0d53d943162932a",
+    "hash_after": "d500735aff529e6f4aa6d42c502b965ac067ec52841c8ac7e0d53d943162932a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_gradual",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "d500735aff529e6f4aa6d42c502b965ac067ec52841c8ac7e0d53d943162932a",
+    "hash_after": "d500735aff529e6f4aa6d42c502b965ac067ec52841c8ac7e0d53d943162932a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_prior",
+    "model": "FrozenLinear",
+    "hash_before": "2b7dad86ba3fc0d8dfaa8aebb00b10ce330530adf5013f2656516fea02fd8ba3",
+    "hash_after": "2b7dad86ba3fc0d8dfaa8aebb00b10ce330530adf5013f2656516fea02fd8ba3",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_prior",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "2b7dad86ba3fc0d8dfaa8aebb00b10ce330530adf5013f2656516fea02fd8ba3",
+    "hash_after": "2b7dad86ba3fc0d8dfaa8aebb00b10ce330530adf5013f2656516fea02fd8ba3",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_prior",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_prior",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_prior",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_prior",
+    "model": "FixedDelta",
+    "hash_before": "2b7dad86ba3fc0d8dfaa8aebb00b10ce330530adf5013f2656516fea02fd8ba3",
+    "hash_after": "2b7dad86ba3fc0d8dfaa8aebb00b10ce330530adf5013f2656516fea02fd8ba3",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_prior",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "2b7dad86ba3fc0d8dfaa8aebb00b10ce330530adf5013f2656516fea02fd8ba3",
+    "hash_after": "2b7dad86ba3fc0d8dfaa8aebb00b10ce330530adf5013f2656516fea02fd8ba3",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_strong_mismatch",
+    "model": "FrozenLinear",
+    "hash_before": "12fe8e05ca3fffda90e49ffb492e3ec1a50eceac2e36eaf8a1331a9f71c81435",
+    "hash_after": "12fe8e05ca3fffda90e49ffb492e3ec1a50eceac2e36eaf8a1331a9f71c81435",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_strong_mismatch",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "12fe8e05ca3fffda90e49ffb492e3ec1a50eceac2e36eaf8a1331a9f71c81435",
+    "hash_after": "12fe8e05ca3fffda90e49ffb492e3ec1a50eceac2e36eaf8a1331a9f71c81435",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_strong_mismatch",
+    "model": "FixedDelta",
+    "hash_before": "12fe8e05ca3fffda90e49ffb492e3ec1a50eceac2e36eaf8a1331a9f71c81435",
+    "hash_after": "12fe8e05ca3fffda90e49ffb492e3ec1a50eceac2e36eaf8a1331a9f71c81435",
+    "immutable": true
+  },
+  {
+    "seed": 44,
+    "task": "shift_strong_mismatch",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "12fe8e05ca3fffda90e49ffb492e3ec1a50eceac2e36eaf8a1331a9f71c81435",
+    "hash_after": "12fe8e05ca3fffda90e49ffb492e3ec1a50eceac2e36eaf8a1331a9f71c81435",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_a_rotation",
+    "model": "FrozenLinear",
+    "hash_before": "56fd3dad9ebfae36a5469eab867ed5f9c8e53fea0b0eba8e23c4933f412e0ca8",
+    "hash_after": "56fd3dad9ebfae36a5469eab867ed5f9c8e53fea0b0eba8e23c4933f412e0ca8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_a_rotation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "56fd3dad9ebfae36a5469eab867ed5f9c8e53fea0b0eba8e23c4933f412e0ca8",
+    "hash_after": "56fd3dad9ebfae36a5469eab867ed5f9c8e53fea0b0eba8e23c4933f412e0ca8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_a_rotation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_a_rotation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_a_rotation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_a_rotation",
+    "model": "FixedDelta",
+    "hash_before": "56fd3dad9ebfae36a5469eab867ed5f9c8e53fea0b0eba8e23c4933f412e0ca8",
+    "hash_after": "56fd3dad9ebfae36a5469eab867ed5f9c8e53fea0b0eba8e23c4933f412e0ca8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_a_rotation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "56fd3dad9ebfae36a5469eab867ed5f9c8e53fea0b0eba8e23c4933f412e0ca8",
+    "hash_after": "56fd3dad9ebfae36a5469eab867ed5f9c8e53fea0b0eba8e23c4933f412e0ca8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_b_translation",
+    "model": "FrozenLinear",
+    "hash_before": "c7afee9b2315cd55a864a20774bdcbd6744a301e440de0b5fafb528c0c3e9f6e",
+    "hash_after": "c7afee9b2315cd55a864a20774bdcbd6744a301e440de0b5fafb528c0c3e9f6e",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_b_translation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "c7afee9b2315cd55a864a20774bdcbd6744a301e440de0b5fafb528c0c3e9f6e",
+    "hash_after": "c7afee9b2315cd55a864a20774bdcbd6744a301e440de0b5fafb528c0c3e9f6e",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_b_translation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_b_translation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_b_translation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_b_translation",
+    "model": "FixedDelta",
+    "hash_before": "c7afee9b2315cd55a864a20774bdcbd6744a301e440de0b5fafb528c0c3e9f6e",
+    "hash_after": "c7afee9b2315cd55a864a20774bdcbd6744a301e440de0b5fafb528c0c3e9f6e",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_b_translation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "c7afee9b2315cd55a864a20774bdcbd6744a301e440de0b5fafb528c0c3e9f6e",
+    "hash_after": "c7afee9b2315cd55a864a20774bdcbd6744a301e440de0b5fafb528c0c3e9f6e",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_c_nonlinear",
+    "model": "FrozenLinear",
+    "hash_before": "8f81c0f8c10608f7b2cbeec8bba49ffbe336ec8d2920a15bdccedb5c7a52b419",
+    "hash_after": "8f81c0f8c10608f7b2cbeec8bba49ffbe336ec8d2920a15bdccedb5c7a52b419",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_c_nonlinear",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "8f81c0f8c10608f7b2cbeec8bba49ffbe336ec8d2920a15bdccedb5c7a52b419",
+    "hash_after": "8f81c0f8c10608f7b2cbeec8bba49ffbe336ec8d2920a15bdccedb5c7a52b419",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_c_nonlinear",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_c_nonlinear",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_c_nonlinear",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_c_nonlinear",
+    "model": "FixedDelta",
+    "hash_before": "8f81c0f8c10608f7b2cbeec8bba49ffbe336ec8d2920a15bdccedb5c7a52b419",
+    "hash_after": "8f81c0f8c10608f7b2cbeec8bba49ffbe336ec8d2920a15bdccedb5c7a52b419",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "family_c_nonlinear",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "8f81c0f8c10608f7b2cbeec8bba49ffbe336ec8d2920a15bdccedb5c7a52b419",
+    "hash_after": "8f81c0f8c10608f7b2cbeec8bba49ffbe336ec8d2920a15bdccedb5c7a52b419",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_covariate",
+    "model": "FrozenLinear",
+    "hash_before": "35533ff1230a97f0801484aeb0e452955fc7b31f82f1b566ca22390836e853df",
+    "hash_after": "35533ff1230a97f0801484aeb0e452955fc7b31f82f1b566ca22390836e853df",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_covariate",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "35533ff1230a97f0801484aeb0e452955fc7b31f82f1b566ca22390836e853df",
+    "hash_after": "35533ff1230a97f0801484aeb0e452955fc7b31f82f1b566ca22390836e853df",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_covariate",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_covariate",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_covariate",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_covariate",
+    "model": "FixedDelta",
+    "hash_before": "35533ff1230a97f0801484aeb0e452955fc7b31f82f1b566ca22390836e853df",
+    "hash_after": "35533ff1230a97f0801484aeb0e452955fc7b31f82f1b566ca22390836e853df",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_covariate",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "35533ff1230a97f0801484aeb0e452955fc7b31f82f1b566ca22390836e853df",
+    "hash_after": "35533ff1230a97f0801484aeb0e452955fc7b31f82f1b566ca22390836e853df",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_gradual",
+    "model": "FrozenLinear",
+    "hash_before": "c7de8e7cc7d938c6b71fdce98592cba80e69da1777d3878fd139e3c9ee0aeb48",
+    "hash_after": "c7de8e7cc7d938c6b71fdce98592cba80e69da1777d3878fd139e3c9ee0aeb48",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_gradual",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "c7de8e7cc7d938c6b71fdce98592cba80e69da1777d3878fd139e3c9ee0aeb48",
+    "hash_after": "c7de8e7cc7d938c6b71fdce98592cba80e69da1777d3878fd139e3c9ee0aeb48",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_gradual",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_gradual",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_gradual",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_gradual",
+    "model": "FixedDelta",
+    "hash_before": "c7de8e7cc7d938c6b71fdce98592cba80e69da1777d3878fd139e3c9ee0aeb48",
+    "hash_after": "c7de8e7cc7d938c6b71fdce98592cba80e69da1777d3878fd139e3c9ee0aeb48",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_gradual",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "c7de8e7cc7d938c6b71fdce98592cba80e69da1777d3878fd139e3c9ee0aeb48",
+    "hash_after": "c7de8e7cc7d938c6b71fdce98592cba80e69da1777d3878fd139e3c9ee0aeb48",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_prior",
+    "model": "FrozenLinear",
+    "hash_before": "49cddbba11adf089b64f00fc8e7651a135b56edf0b028ab98fcb2d7d6dab1e46",
+    "hash_after": "49cddbba11adf089b64f00fc8e7651a135b56edf0b028ab98fcb2d7d6dab1e46",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_prior",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "49cddbba11adf089b64f00fc8e7651a135b56edf0b028ab98fcb2d7d6dab1e46",
+    "hash_after": "49cddbba11adf089b64f00fc8e7651a135b56edf0b028ab98fcb2d7d6dab1e46",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_prior",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_prior",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_prior",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_prior",
+    "model": "FixedDelta",
+    "hash_before": "49cddbba11adf089b64f00fc8e7651a135b56edf0b028ab98fcb2d7d6dab1e46",
+    "hash_after": "49cddbba11adf089b64f00fc8e7651a135b56edf0b028ab98fcb2d7d6dab1e46",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_prior",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "49cddbba11adf089b64f00fc8e7651a135b56edf0b028ab98fcb2d7d6dab1e46",
+    "hash_after": "49cddbba11adf089b64f00fc8e7651a135b56edf0b028ab98fcb2d7d6dab1e46",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_strong_mismatch",
+    "model": "FrozenLinear",
+    "hash_before": "fb00afca90cf11a235863dd06fb12d92e224eb53f152796bace24a2f5fec75f9",
+    "hash_after": "fb00afca90cf11a235863dd06fb12d92e224eb53f152796bace24a2f5fec75f9",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_strong_mismatch",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "fb00afca90cf11a235863dd06fb12d92e224eb53f152796bace24a2f5fec75f9",
+    "hash_after": "fb00afca90cf11a235863dd06fb12d92e224eb53f152796bace24a2f5fec75f9",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_strong_mismatch",
+    "model": "FixedDelta",
+    "hash_before": "fb00afca90cf11a235863dd06fb12d92e224eb53f152796bace24a2f5fec75f9",
+    "hash_after": "fb00afca90cf11a235863dd06fb12d92e224eb53f152796bace24a2f5fec75f9",
+    "immutable": true
+  },
+  {
+    "seed": 45,
+    "task": "shift_strong_mismatch",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "fb00afca90cf11a235863dd06fb12d92e224eb53f152796bace24a2f5fec75f9",
+    "hash_after": "fb00afca90cf11a235863dd06fb12d92e224eb53f152796bace24a2f5fec75f9",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_a_rotation",
+    "model": "FrozenLinear",
+    "hash_before": "e561732b7880500d7131aa5cc94c9f71b93b677929c008e6182935d415a58696",
+    "hash_after": "e561732b7880500d7131aa5cc94c9f71b93b677929c008e6182935d415a58696",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_a_rotation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "e561732b7880500d7131aa5cc94c9f71b93b677929c008e6182935d415a58696",
+    "hash_after": "e561732b7880500d7131aa5cc94c9f71b93b677929c008e6182935d415a58696",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_a_rotation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_a_rotation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_a_rotation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_a_rotation",
+    "model": "FixedDelta",
+    "hash_before": "e561732b7880500d7131aa5cc94c9f71b93b677929c008e6182935d415a58696",
+    "hash_after": "e561732b7880500d7131aa5cc94c9f71b93b677929c008e6182935d415a58696",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_a_rotation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "e561732b7880500d7131aa5cc94c9f71b93b677929c008e6182935d415a58696",
+    "hash_after": "e561732b7880500d7131aa5cc94c9f71b93b677929c008e6182935d415a58696",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_b_translation",
+    "model": "FrozenLinear",
+    "hash_before": "bd21c072b59944f1dfcfa2084dd7fe14a31501f58d615b1515d3fa14bc6201eb",
+    "hash_after": "bd21c072b59944f1dfcfa2084dd7fe14a31501f58d615b1515d3fa14bc6201eb",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_b_translation",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "bd21c072b59944f1dfcfa2084dd7fe14a31501f58d615b1515d3fa14bc6201eb",
+    "hash_after": "bd21c072b59944f1dfcfa2084dd7fe14a31501f58d615b1515d3fa14bc6201eb",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_b_translation",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_b_translation",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_b_translation",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_b_translation",
+    "model": "FixedDelta",
+    "hash_before": "bd21c072b59944f1dfcfa2084dd7fe14a31501f58d615b1515d3fa14bc6201eb",
+    "hash_after": "bd21c072b59944f1dfcfa2084dd7fe14a31501f58d615b1515d3fa14bc6201eb",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_b_translation",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "bd21c072b59944f1dfcfa2084dd7fe14a31501f58d615b1515d3fa14bc6201eb",
+    "hash_after": "bd21c072b59944f1dfcfa2084dd7fe14a31501f58d615b1515d3fa14bc6201eb",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_c_nonlinear",
+    "model": "FrozenLinear",
+    "hash_before": "a43fad9d707a28825fb04e835d21687697c30e7e3caf61064b070cc0fe6fb32a",
+    "hash_after": "a43fad9d707a28825fb04e835d21687697c30e7e3caf61064b070cc0fe6fb32a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_c_nonlinear",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "a43fad9d707a28825fb04e835d21687697c30e7e3caf61064b070cc0fe6fb32a",
+    "hash_after": "a43fad9d707a28825fb04e835d21687697c30e7e3caf61064b070cc0fe6fb32a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_c_nonlinear",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_c_nonlinear",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_c_nonlinear",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_c_nonlinear",
+    "model": "FixedDelta",
+    "hash_before": "a43fad9d707a28825fb04e835d21687697c30e7e3caf61064b070cc0fe6fb32a",
+    "hash_after": "a43fad9d707a28825fb04e835d21687697c30e7e3caf61064b070cc0fe6fb32a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "family_c_nonlinear",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "a43fad9d707a28825fb04e835d21687697c30e7e3caf61064b070cc0fe6fb32a",
+    "hash_after": "a43fad9d707a28825fb04e835d21687697c30e7e3caf61064b070cc0fe6fb32a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_covariate",
+    "model": "FrozenLinear",
+    "hash_before": "f7f738974b3a563e736094c457091df3c3f7ae7e885682b7ddb4d79326840b8c",
+    "hash_after": "f7f738974b3a563e736094c457091df3c3f7ae7e885682b7ddb4d79326840b8c",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_covariate",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "f7f738974b3a563e736094c457091df3c3f7ae7e885682b7ddb4d79326840b8c",
+    "hash_after": "f7f738974b3a563e736094c457091df3c3f7ae7e885682b7ddb4d79326840b8c",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_covariate",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_covariate",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_covariate",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_covariate",
+    "model": "FixedDelta",
+    "hash_before": "f7f738974b3a563e736094c457091df3c3f7ae7e885682b7ddb4d79326840b8c",
+    "hash_after": "f7f738974b3a563e736094c457091df3c3f7ae7e885682b7ddb4d79326840b8c",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_covariate",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "f7f738974b3a563e736094c457091df3c3f7ae7e885682b7ddb4d79326840b8c",
+    "hash_after": "f7f738974b3a563e736094c457091df3c3f7ae7e885682b7ddb4d79326840b8c",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_gradual",
+    "model": "FrozenLinear",
+    "hash_before": "16a5665e1691ed93d906d1869f3b01b466f6ec792fb6fd4ea2d19770761f0463",
+    "hash_after": "16a5665e1691ed93d906d1869f3b01b466f6ec792fb6fd4ea2d19770761f0463",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_gradual",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "16a5665e1691ed93d906d1869f3b01b466f6ec792fb6fd4ea2d19770761f0463",
+    "hash_after": "16a5665e1691ed93d906d1869f3b01b466f6ec792fb6fd4ea2d19770761f0463",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_gradual",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_gradual",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_gradual",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_gradual",
+    "model": "FixedDelta",
+    "hash_before": "16a5665e1691ed93d906d1869f3b01b466f6ec792fb6fd4ea2d19770761f0463",
+    "hash_after": "16a5665e1691ed93d906d1869f3b01b466f6ec792fb6fd4ea2d19770761f0463",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_gradual",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "16a5665e1691ed93d906d1869f3b01b466f6ec792fb6fd4ea2d19770761f0463",
+    "hash_after": "16a5665e1691ed93d906d1869f3b01b466f6ec792fb6fd4ea2d19770761f0463",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_prior",
+    "model": "FrozenLinear",
+    "hash_before": "78580623a86a779ff2e42305a70637b0e63ac031f0e432ff261d5be03e44121e",
+    "hash_after": "78580623a86a779ff2e42305a70637b0e63ac031f0e432ff261d5be03e44121e",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_prior",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "78580623a86a779ff2e42305a70637b0e63ac031f0e432ff261d5be03e44121e",
+    "hash_after": "78580623a86a779ff2e42305a70637b0e63ac031f0e432ff261d5be03e44121e",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_prior",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_prior",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_prior",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_prior",
+    "model": "FixedDelta",
+    "hash_before": "78580623a86a779ff2e42305a70637b0e63ac031f0e432ff261d5be03e44121e",
+    "hash_after": "78580623a86a779ff2e42305a70637b0e63ac031f0e432ff261d5be03e44121e",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_prior",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "78580623a86a779ff2e42305a70637b0e63ac031f0e432ff261d5be03e44121e",
+    "hash_after": "78580623a86a779ff2e42305a70637b0e63ac031f0e432ff261d5be03e44121e",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_strong_mismatch",
+    "model": "FrozenLinear",
+    "hash_before": "7a356e3038e701bb14cd3b001cdb96ae65c5b0435eba0a89128b796017913701",
+    "hash_after": "7a356e3038e701bb14cd3b001cdb96ae65c5b0435eba0a89128b796017913701",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_strong_mismatch",
+    "model": "AdaptiveStateOFF",
+    "hash_before": "7a356e3038e701bb14cd3b001cdb96ae65c5b0435eba0a89128b796017913701",
+    "hash_after": "7a356e3038e701bb14cd3b001cdb96ae65c5b0435eba0a89128b796017913701",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineLogisticRegression",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineRidge",
+    "hash_before": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "hash_after": "ef115a0e0c15cdc41958ca46b5b14b456115f4baec5e3ca68599d2a8f435e3b8",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_strong_mismatch",
+    "model": "OnlineMulticlassLinear",
+    "hash_before": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "hash_after": "52f033ec34066343ced3a1bed745100fe4efe6577154125a6d9483c6b482219a",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_strong_mismatch",
+    "model": "FixedDelta",
+    "hash_before": "7a356e3038e701bb14cd3b001cdb96ae65c5b0435eba0a89128b796017913701",
+    "hash_after": "7a356e3038e701bb14cd3b001cdb96ae65c5b0435eba0a89128b796017913701",
+    "immutable": true
+  },
+  {
+    "seed": 46,
+    "task": "shift_strong_mismatch",
+    "model": "SafeAdaptiveDelta",
+    "hash_before": "7a356e3038e701bb14cd3b001cdb96ae65c5b0435eba0a89128b796017913701",
+    "hash_after": "7a356e3038e701bb14cd3b001cdb96ae65c5b0435eba0a89128b796017913701",
+    "immutable": true
+  }
+]

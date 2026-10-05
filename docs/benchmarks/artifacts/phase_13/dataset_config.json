@@ -1,0 +1,22 @@
+{
+  "dataset_name": "NOAA_OISST_v2_1_Pacific",
+  "version": "2.1.2015_2016",
+  "download_source": "https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html",
+  "license": "Public Domain / US Government Open Data (NOAA NCEI / PSL)",
+  "resolution": "small",
+  "height": 8,
+  "width": 8,
+  "channels": 1,
+  "total_timesteps": 360,
+  "train_split": 150,
+  "val_split": 200,
+  "test_split": 360,
+  "shift_start": 240,
+  "shift_peak": 275,
+  "shift_end": 310,
+  "stride": 1,
+  "horizon": 1,
+  "seed": 42,
+  "missing_rate": 0.05,
+  "apply_land_mask": true
+}

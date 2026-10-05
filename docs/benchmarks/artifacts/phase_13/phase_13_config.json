@@ -1,0 +1,46 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "dataset_config": {
+    "dataset_name": "NOAA_OISST_v2_1_Pacific",
+    "version": "2.1.2015_2016",
+    "download_source": "https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html",
+    "license": "Public Domain / US Government Open Data (NOAA NCEI / PSL)",
+    "resolution": "small",
+    "height": 8,
+    "width": 8,
+    "channels": 1,
+    "total_timesteps": 360,
+    "train_split": 150,
+    "val_split": 200,
+    "test_split": 360,
+    "shift_start": 240,
+    "shift_peak": 275,
+    "shift_end": 310,
+    "stride": 1,
+    "horizon": 1,
+    "seed": 42,
+    "missing_rate": 0.05,
+    "apply_land_mask": true
+  },
+  "leakage_audit": {
+    "disjoint_train_val": true,
+    "disjoint_val_test": true,
+    "disjoint_train_test": true,
+    "train_timestamps_count": 150,
+    "val_timestamps_count": 50,
+    "test_timestamps_count": 160,
+    "mean_train": 26.829233169555664,
+    "std_train": 2.024937391281128,
+    "mean_audit_consistent": true,
+    "std_audit_consistent": true,
+    "future_target_identical_timesteps": 0,
+    "sha256_checksum": "02656c32c65c9b361e39a287964895554d8c6350051236f02e4655d7470b3d72",
+    "leakage_audit_passed": true
+  }
+}

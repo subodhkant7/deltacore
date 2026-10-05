@@ -1,0 +1,371 @@
+{
+  "experiment_c_sweep": [
+    {
+      "eta_max": 0.008,
+      "rho": 1.5,
+      "alpha_min": 0.7,
+      "gamma": 0.05
+    },
+    {
+      "eta_max": 0.008,
+      "rho": 1.5,
+      "alpha_min": 0.85,
+      "gamma": 0.05
+    },
+    {
+      "eta_max": 0.008,
+      "rho": 1.5,
+      "alpha_min": 0.95,
+      "gamma": 0.05
+    },
+    {
+      "eta_max": 0.008,
+      "rho": 1.9,
+      "alpha_min": 0.7,
+      "gamma": 0.05
+    },
+    {
+      "eta_max": 0.008,
+      "rho": 1.9,
+      "alpha_min": 0.85,
+      "gamma": 0.05
+    },
+    {
+      "eta_max": 0.008,
+      "rho": 1.9,
+      "alpha_min": 0.95,
+      "gamma": 0.05
+    },
+    {
+      "eta_max": 0.015,
+      "rho": 1.9,
+      "alpha_min": 0.85,
+      "gamma": 0.05
+    },
+    {
+      "eta_max": 0.015,
+      "rho": 1.9,
+      "alpha_min": 0.95,
+      "gamma": 0.05
+    }
+  ],
+  "experiment_d_pareto": {
+    "domain_a": [
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.5,
+          "alpha_min": 0.7,
+          "gamma": 0.05
+        },
+        "rel_error": 0.3544690390964761,
+        "e_shift": 0.37076040250817277,
+        "recovery_time": 119,
+        "adaptation_energy": 4.135775393509119,
+        "max_state_norm": 0.9687326550483704,
+        "numerical_risk": 0.0051665741602579755
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.5,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "rel_error": 0.34808330387882425,
+        "e_shift": 0.3639324489448963,
+        "recovery_time": 119,
+        "adaptation_energy": 3.9642748595733948,
+        "max_state_norm": 1.0527576208114624,
+        "numerical_risk": 0.005614707310994466
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.5,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "rel_error": 0.27706678028664294,
+        "e_shift": 0.2768670049723218,
+        "recovery_time": 119,
+        "adaptation_energy": 2.4208464529277554,
+        "max_state_norm": 1.1772470474243164,
+        "numerical_risk": 0.006278650919596354
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.9,
+          "alpha_min": 0.7,
+          "gamma": 0.05
+        },
+        "rel_error": 0.3544690390964761,
+        "e_shift": 0.37076040250817277,
+        "recovery_time": 119,
+        "adaptation_energy": 4.135775393509119,
+        "max_state_norm": 0.9687326550483704,
+        "numerical_risk": 0.0040788743370457695
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.9,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "rel_error": 0.34808330387882425,
+        "e_shift": 0.3639324489448963,
+        "recovery_time": 119,
+        "adaptation_energy": 3.9642748595733948,
+        "max_state_norm": 1.0527576208114624,
+        "numerical_risk": 0.004432663666574578
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.9,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "rel_error": 0.27706678028664294,
+        "e_shift": 0.2768670049723218,
+        "recovery_time": 119,
+        "adaptation_energy": 2.4208464529277554,
+        "max_state_norm": 1.1772470474243164,
+        "numerical_risk": 0.004956829673365542
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.9,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "rel_error": 0.3201162651297447,
+        "e_shift": 0.3024845831495734,
+        "recovery_time": 81,
+        "adaptation_energy": 12.596220139796303,
+        "max_state_norm": 1.5929170846939087,
+        "numerical_risk": 0.01257566119495191
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.9,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "rel_error": 0.2941329329774092,
+        "e_shift": 0.2709080684159706,
+        "recovery_time": 0,
+        "adaptation_energy": 10.534130571773668,
+        "max_state_norm": 1.6367357969284058,
+        "numerical_risk": 0.012921598396803204
+      }
+    ],
+    "domain_b": [
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.5,
+          "alpha_min": 0.7,
+          "gamma": 0.05
+        },
+        "rel_error": 0.23918708811508552,
+        "e_shift": 0.19044430849905053,
+        "recovery_time": 0,
+        "adaptation_energy": 3.70833162116095,
+        "max_state_norm": 0.9566958546638489,
+        "numerical_risk": 0.005102377891540527
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.5,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "rel_error": 0.23861010641473634,
+        "e_shift": 0.1904436431254323,
+        "recovery_time": 0,
+        "adaptation_energy": 3.6899337651029063,
+        "max_state_norm": 1.041683316230774,
+        "numerical_risk": 0.005555644353230794
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.5,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "rel_error": 0.19885982276286907,
+        "e_shift": 0.16024753673856046,
+        "recovery_time": 0,
+        "adaptation_energy": 2.4136812671463708,
+        "max_state_norm": 1.1497119665145874,
+        "numerical_risk": 0.006131797154744466
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.9,
+          "alpha_min": 0.7,
+          "gamma": 0.05
+        },
+        "rel_error": 0.23918708811508552,
+        "e_shift": 0.19044430849905053,
+        "recovery_time": 0,
+        "adaptation_energy": 3.70833162116095,
+        "max_state_norm": 0.9566958546638489,
+        "numerical_risk": 0.004028193072268837
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.9,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "rel_error": 0.23861010641473634,
+        "e_shift": 0.1904436431254323,
+        "recovery_time": 0,
+        "adaptation_energy": 3.6899337651029063,
+        "max_state_norm": 1.041683316230774,
+        "numerical_risk": 0.004386035015708522
+      },
+      {
+        "config": {
+          "eta_max": 0.008,
+          "rho": 1.9,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "rel_error": 0.19885982276286907,
+        "e_shift": 0.16024753673856046,
+        "recovery_time": 0,
+        "adaptation_energy": 2.4136812671463708,
+        "max_state_norm": 1.1497119665145874,
+        "numerical_risk": 0.0048408924905877365
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.9,
+          "alpha_min": 0.85,
+          "gamma": 0.05
+        },
+        "rel_error": 0.1722476316635052,
+        "e_shift": 0.13123681473413695,
+        "recovery_time": 0,
+        "adaptation_energy": 6.192629508085098,
+        "max_state_norm": 1.5671669244766235,
+        "numerical_risk": 0.012372370456394397
+      },
+      {
+        "config": {
+          "eta_max": 0.015,
+          "rho": 1.9,
+          "alpha_min": 0.95,
+          "gamma": 0.05
+        },
+        "rel_error": 0.16246130365529152,
+        "e_shift": 0.12449321291146137,
+        "recovery_time": 0,
+        "adaptation_energy": 5.4470690782744,
+        "max_state_norm": 1.6116788387298584,
+        "numerical_risk": 0.012723780305762041
+      }
+    ]
+  },
+  "experiment_h_failure_boundary": {
+    "domain_a_oisst_256": {
+      "FixedDelta": {
+        "model_type": "FixedDelta",
+        "dimension": 256,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 1663172800937984.0,
+        "min_safety_margin": -1.85126806640625,
+        "final_error_before_failure": 130082065853928.39,
+        "rel_error": 285842958818222.9
+      },
+      "SafeAdaptiveDelta": {
+        "model_type": "SafeAdaptiveDelta",
+        "dimension": 256,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 3.456103563308716,
+        "min_safety_margin": 0.09999999999999987,
+        "final_error_before_failure": 0.5631277966018879,
+        "rel_error": 0.6427573004258349
+      }
+    },
+    "domain_b_era5_256": {
+      "FixedDelta": {
+        "model_type": "FixedDelta",
+        "dimension": 256,
+        "diverged": 1,
+        "time_to_nonfinite": 41,
+        "max_state_norm": 7.267437608064516e+18,
+        "min_safety_margin": -2.19666796875,
+        "final_error_before_failure": null,
+        "rel_error": null
+      },
+      "SafeAdaptiveDelta": {
+        "model_type": "SafeAdaptiveDelta",
+        "dimension": 256,
+        "diverged": 0,
+        "time_to_nonfinite": null,
+        "max_state_norm": 3.274181842803955,
+        "min_safety_margin": 0.09999999999999987,
+        "final_error_before_failure": 0.16356418660598732,
+        "rel_error": 0.26040718570904897
+      }
+    }
+  },
+  "scaling_resources": {
+    "small_D64": {
+      "D": 64,
+      "domain_a_runtimes_us": {
+        "Persistence": 1.077822361246876,
+        "FrozenLinear": 5.6088667212100995,
+        "OnlineRidge": 1.96220887731175,
+        "NonlinearOnlineRidge": 8.082547083748915,
+        "SpatialConv": 22.050306993923236,
+        "FixedDelta": 1.97477999316095,
+        "SafeAdaptiveDelta": 1.835639064299798
+      },
+      "domain_b_runtimes_us": {
+        "Persistence": 1.1474552890871588,
+        "FrozenLinear": 5.101248985830014,
+        "OnlineRidge": 2.0576529856478363,
+        "NonlinearOnlineRidge": 7.549791399875668,
+        "SpatialConv": 19.158382604261803,
+        "FixedDelta": 1.7760794847008754,
+        "SafeAdaptiveDelta": 1.7685636675934184
+      },
+      "state_memory_bytes": {
+        "Persistence": 256,
+        "FrozenLinear": 0,
+        "OnlineRidge": 32768,
+        "NonlinearOnlineRidge": 12288,
+        "SpatialConv": 0,
+        "FixedDelta": 16384,
+        "SafeAdaptiveDelta": 16384
+      }
+    },
+    "medium_D256": {
+      "D": 256,
+      "SafeAdaptiveDelta": {
+        "domain_a_rel_error": 0.6427573004258349,
+        "domain_b_rel_error": 0.26040718570904897,
+        "persistent_state_bytes": 262144
+      },
+      "OnlineRidge": {
+        "persistent_state_bytes": 524288
+      }
+    }
+  }
+}

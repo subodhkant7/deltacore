@@ -1,0 +1,162 @@
+{
+  "dimensions": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "models": {
+    "FrozenLinear": [
+      {
+        "dim": 32,
+        "accuracy": 0.875,
+        "latency_us": 4.326995040173642,
+        "state_memory_bytes": 0,
+        "max_state_norm": 0.0,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      },
+      {
+        "dim": 64,
+        "accuracy": 0.8799999952316284,
+        "latency_us": 5.679462992702611,
+        "state_memory_bytes": 0,
+        "max_state_norm": 0.0,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      },
+      {
+        "dim": 128,
+        "accuracy": 0.8924999833106995,
+        "latency_us": 13.194872408348601,
+        "state_memory_bytes": 0,
+        "max_state_norm": 0.0,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      },
+      {
+        "dim": 256,
+        "accuracy": 0.887499988079071,
+        "latency_us": 5.211869465711061,
+        "state_memory_bytes": 0,
+        "max_state_norm": 0.0,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      }
+    ],
+    "OnlineRidge": [
+      {
+        "dim": 32,
+        "accuracy": 0.9150000214576721,
+        "latency_us": 4.047822949360125,
+        "state_memory_bytes": 4864,
+        "max_state_norm": 1.440992832183838,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      },
+      {
+        "dim": 64,
+        "accuracy": 0.887499988079071,
+        "latency_us": 3.942817165807355,
+        "state_memory_bytes": 17920,
+        "max_state_norm": 1.1352808475494385,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      },
+      {
+        "dim": 128,
+        "accuracy": 0.8924999833106995,
+        "latency_us": 7.80857491918141,
+        "state_memory_bytes": 68608,
+        "max_state_norm": 1.5640395879745483,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      },
+      {
+        "dim": 256,
+        "accuracy": 0.7549999952316284,
+        "latency_us": 5.60342195967678,
+        "state_memory_bytes": 268288,
+        "max_state_norm": 7.027736663818359,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      }
+    ],
+    "FixedDelta": [
+      {
+        "dim": 32,
+        "accuracy": 0.9900000095367432,
+        "latency_us": 6.515317436424084,
+        "state_memory_bytes": 4096,
+        "max_state_norm": 1.4053696393966675,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      },
+      {
+        "dim": 64,
+        "accuracy": 0.9925000071525574,
+        "latency_us": 6.55906002066331,
+        "state_memory_bytes": 16384,
+        "max_state_norm": 1.4064934253692627,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      },
+      {
+        "dim": 128,
+        "accuracy": 0.9900000095367432,
+        "latency_us": 25.03354291548021,
+        "state_memory_bytes": 65536,
+        "max_state_norm": 2.2098026275634766,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      },
+      {
+        "dim": 256,
+        "accuracy": 0.987500011920929,
+        "latency_us": 11.07948261051206,
+        "state_memory_bytes": 262144,
+        "max_state_norm": 3.331216812133789,
+        "min_safety_margin": 2.0,
+        "diverged": 0
+      }
+    ],
+    "SafeAdaptiveDelta": [
+      {
+        "dim": 32,
+        "accuracy": 0.9674999713897705,
+        "latency_us": 6.239055001060478,
+        "state_memory_bytes": 4096,
+        "max_state_norm": 1.4945019483566284,
+        "min_safety_margin": 0.5000000468749872,
+        "diverged": 0
+      },
+      {
+        "dim": 64,
+        "accuracy": 0.9524999856948853,
+        "latency_us": 6.43092436803272,
+        "state_memory_bytes": 16384,
+        "max_state_norm": 1.0666121244430542,
+        "min_safety_margin": 0.500000023437494,
+        "diverged": 0
+      },
+      {
+        "dim": 128,
+        "accuracy": 0.9325000047683716,
+        "latency_us": 48.15617277927231,
+        "state_memory_bytes": 65536,
+        "max_state_norm": 0.9904327392578125,
+        "min_safety_margin": 0.5000000117187471,
+        "diverged": 0
+      },
+      {
+        "dim": 256,
+        "accuracy": 0.9350000023841858,
+        "latency_us": 11.417617679398973,
+        "state_memory_bytes": 262144,
+        "max_state_norm": 0.841001570224762,
+        "min_safety_margin": 0.5000000058593728,
+        "diverged": 0
+      }
+    ]
+  }
+}

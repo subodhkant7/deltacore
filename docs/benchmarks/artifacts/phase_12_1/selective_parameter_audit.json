@@ -1,0 +1,72 @@
+{
+  "phase_12_as_run": {
+    "model_name": "SelectiveStateAdaptivePredictor",
+    "dim": 64,
+    "feat_dim": 8,
+    "total_parameters": 5,
+    "trainable_parameters": 0,
+    "optimizer_parameter_count": 0,
+    "number_of_optimization_steps": 0,
+    "gradient_norm": 0.0,
+    "parameter_delta": 0.0,
+    "training_loss_before": null,
+    "training_loss_after": null,
+    "validation_loss": 0.99549,
+    "parameters": {
+      "w_controller": {
+        "requires_grad": false,
+        "present_in_optimizer": false,
+        "gradient_after_backward": null,
+        "value_before_training": [-1.20, -0.05, -0.60, -0.60],
+        "value_after_training": [-1.20, -0.05, -0.60, -0.60],
+        "actual_use_in_forward": true,
+        "usage_details": "Evaluated in adapt_step as an affine scalar combination v_t = w @ z_t + b for sigmoid gating, but as a fixed heuristic rather than an optimized parameter."
+      },
+      "b_controller": {
+        "requires_grad": false,
+        "present_in_optimizer": false,
+        "gradient_after_backward": null,
+        "value_before_training": [2.00],
+        "value_after_training": [2.00],
+        "actual_use_in_forward": true,
+        "usage_details": "Bias scalar added in affine controller formula."
+      }
+    },
+    "forensic_question_answer": "Why does Selective_state_adaptive contain 5 total parameters but 0 trainable parameters? In deltacore/streaming/models.py lines 888-895, w_controller and b_controller were registered as nn.Parameter with requires_grad=False and initialized to hand-tuned constants. In examples/phase_12_spatiotemporal_benchmark.py, no optimizer was created and no loss.backward() was ever invoked. The benchmark solely unrolled streaming evaluation via adapt_step(), which updates the associative state buffer M.data via online delta rules. Consequently, 0 parameters were trainable and 0 gradient steps occurred. The controller was purely an unlearned, fixed heuristic."
+  },
+  "phase_12_1_corrected_and_trained": {
+    "model_name": "SelectiveStateAdaptivePredictor (Corrected & Trained)",
+    "dim": 64,
+    "feat_dim": 64,
+    "total_parameters": 5,
+    "trainable_parameters": 5,
+    "optimizer_parameter_count": 5,
+    "number_of_optimization_steps": 30,
+    "gradient_norm": 9.195586e-05,
+    "parameter_delta": 4.029388,
+    "training_loss_before": 0.003069,
+    "training_loss_after": 0.002801,
+    "validation_loss": 0.95068,
+    "parameters": {
+      "w_controller": {
+        "requires_grad": true,
+        "present_in_optimizer": true,
+        "gradient_after_backward": [1.42e-05, 4.31e-05, 1.38e-05, 1.45e-05],
+        "value_before_training": [-0.50, 0.00, -0.50, -0.50],
+        "value_after_training": [0.81328, 1.44185, 0.79229, 0.81990],
+        "parameter_delta": 3.686218,
+        "actual_use_in_forward": true
+      },
+      "b_controller": {
+        "requires_grad": true,
+        "present_in_optimizer": true,
+        "gradient_after_backward": [7.98e-05],
+        "value_before_training": [1.00],
+        "value_after_training": [2.34317],
+        "parameter_delta": 1.34317,
+        "actual_use_in_forward": true
+      }
+    },
+    "controller_learning_behavior": "When given non-zero gradients and trained via backpropagation through time on the recurrent state stream, the 5 parameters adapt with delta_theta = 4.029. All weights become positive, driving the controller gate to high retention (alpha_t approx 1.0). The resulting evaluation error (0.95068) is statistically identical to fixed high retention (0.95070), demonstrating that learned state-conditioned modulation converges to static high retention on this benchmark."
+  }
+}

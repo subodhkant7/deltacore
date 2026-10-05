@@ -1,0 +1,210 @@
+{
+  "covariate": {
+    "mild": {
+      "FrozenLinear": {
+        "accuracy": 1.0,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 0.012507541498052888,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineLogisticRegression": {
+        "accuracy": 0.9833333492279053,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 0.09494969435036182,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineRidge": {
+        "accuracy": 0.9833333492279053,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 1.8194557627042207,
+        "adapt_energy": 0.0,
+        "max_norm": 1.337062120437622
+      },
+      "SafeAdaptiveDelta": {
+        "accuracy": 1.0,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 0.012761129782302306,
+        "adapt_energy": 4.310708989860535e-05,
+        "max_norm": 0.0036415092181414366
+      }
+    },
+    "moderate": {
+      "FrozenLinear": {
+        "accuracy": 1.0,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 0.045139626954915,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineLogisticRegression": {
+        "accuracy": 0.9833333492279053,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 0.20281831584870819,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineRidge": {
+        "accuracy": 0.9833333492279053,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 2.8381201823552393,
+        "adapt_energy": 0.0,
+        "max_norm": 1.440992832183838
+      },
+      "SafeAdaptiveDelta": {
+        "accuracy": 1.0,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 0.039611399125230186,
+        "adapt_energy": 0.0001117198192271584,
+        "max_norm": 0.007858202792704105
+      }
+    },
+    "severe": {
+      "FrozenLinear": {
+        "accuracy": 1.0,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 0.07123847578623099,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineLogisticRegression": {
+        "accuracy": 0.9833333492279053,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 0.45793222201367223,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineRidge": {
+        "accuracy": 0.980555534362793,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 3.992596546808887,
+        "adapt_energy": 0.0,
+        "max_norm": 1.5910024642944336
+      },
+      "SafeAdaptiveDelta": {
+        "accuracy": 1.0,
+        "post_shift_acc": 1.0,
+        "sust_recovery": 0,
+        "excess_loss": 0.08850396929386382,
+        "adapt_energy": 0.00036749733714388973,
+        "max_norm": 0.01635691337287426
+      }
+    }
+  },
+  "decision_boundary": {
+    "mild": {
+      "FrozenLinear": {
+        "accuracy": 0.9416666626930237,
+        "post_shift_acc": 0.8,
+        "sust_recovery": 9,
+        "excess_loss": 38.56447973960894,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineLogisticRegression": {
+        "accuracy": 0.9777777791023254,
+        "post_shift_acc": 0.9,
+        "sust_recovery": 9,
+        "excess_loss": 5.5198824517428875,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineRidge": {
+        "accuracy": 0.9694444537162781,
+        "post_shift_acc": 0.8,
+        "sust_recovery": 9,
+        "excess_loss": 16.021474099159253,
+        "adapt_energy": 0.0,
+        "max_norm": 1.337062120437622
+      },
+      "SafeAdaptiveDelta": {
+        "accuracy": 0.9916666746139526,
+        "post_shift_acc": 0.9,
+        "sust_recovery": 9,
+        "excess_loss": 8.940617183834547,
+        "adapt_energy": 1.237677658108116,
+        "max_norm": 0.7416162490844727
+      }
+    },
+    "moderate": {
+      "FrozenLinear": {
+        "accuracy": 0.8194444179534912,
+        "post_shift_acc": 0.4,
+        "sust_recovery": 119,
+        "excess_loss": 357.8940801352728,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineLogisticRegression": {
+        "accuracy": 0.9583333134651184,
+        "post_shift_acc": 0.75,
+        "sust_recovery": 9,
+        "excess_loss": 21.81163246370852,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineRidge": {
+        "accuracy": 0.8972222208976746,
+        "post_shift_acc": 0.6,
+        "sust_recovery": 36,
+        "excess_loss": 33.36206134160359,
+        "adapt_energy": 0.0,
+        "max_norm": 1.440992832183838
+      },
+      "SafeAdaptiveDelta": {
+        "accuracy": 0.9555555582046509,
+        "post_shift_acc": 0.75,
+        "sust_recovery": 23,
+        "excess_loss": 53.49608601251384,
+        "adapt_energy": 6.54246016910502,
+        "max_norm": 1.4910457134246826
+      }
+    },
+    "severe": {
+      "FrozenLinear": {
+        "accuracy": 0.6861110925674438,
+        "post_shift_acc": 0.0,
+        "sust_recovery": 120,
+        "excess_loss": 679.4473112492124,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineLogisticRegression": {
+        "accuracy": 0.9361110925674438,
+        "post_shift_acc": 0.6,
+        "sust_recovery": 23,
+        "excess_loss": 41.27785831193129,
+        "adapt_energy": 0.0,
+        "max_norm": 0.0
+      },
+      "OnlineRidge": {
+        "accuracy": 0.8111110925674438,
+        "post_shift_acc": 0.3,
+        "sust_recovery": 50,
+        "excess_loss": 45.79622482856116,
+        "adapt_energy": 0.0,
+        "max_norm": 1.5910024642944336
+      },
+      "SafeAdaptiveDelta": {
+        "accuracy": 0.9277777671813965,
+        "post_shift_acc": 0.65,
+        "sust_recovery": 44,
+        "excess_loss": 101.8832835405061,
+        "adapt_energy": 11.987618442499832,
+        "max_norm": 1.88186776638031
+      }
+    }
+  }
+}

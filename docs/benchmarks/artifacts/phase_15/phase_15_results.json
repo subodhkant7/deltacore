@@ -1,0 +1,160 @@
+{
+  "domain_a": {
+    "Persistence": {
+      "rel_error_mean": 0.2934996950012267,
+      "rel_error_std": 0.010594877768053339,
+      "shift_error_mean": 0.30394691970879373,
+      "shift_error_std": 0.015626873320170293,
+      "runtime_us_mean": 1.077822361246876,
+      "adaptation_energy_mean": 0.0,
+      "max_state_norm_mean": 10.91160545349121,
+      "total_params": 0,
+      "persistent_state_bytes": 256
+    },
+    "FrozenLinear": {
+      "rel_error_mean": 0.2768176598032361,
+      "rel_error_std": 0.004001370858346276,
+      "shift_error_mean": 0.30989759899519276,
+      "shift_error_std": 0.0009196141839840017,
+      "runtime_us_mean": 5.6088667212100995,
+      "adaptation_energy_mean": 0.0,
+      "max_state_norm_mean": 5.698507785797119,
+      "total_params": 4160,
+      "persistent_state_bytes": 0
+    },
+    "OnlineRidge": {
+      "rel_error_mean": 0.3011716775045542,
+      "rel_error_std": 0.011912163059203227,
+      "shift_error_mean": 0.30775022372885497,
+      "shift_error_std": 0.01458229991726597,
+      "runtime_us_mean": 1.96220887731175,
+      "adaptation_energy_mean": 381.38176500385873,
+      "max_state_norm_mean": 10.99646816253662,
+      "total_params": 4096,
+      "persistent_state_bytes": 32768
+    },
+    "NonlinearOnlineRidge": {
+      "rel_error_mean": 0.4852291201119258,
+      "rel_error_std": 0.027735638361285588,
+      "shift_error_mean": 0.4546628547585252,
+      "shift_error_std": 0.034275873655854,
+      "runtime_us_mean": 8.082547083748915,
+      "adaptation_energy_mean": 1211.707394469334,
+      "max_state_norm_mean": 25.54007034301758,
+      "total_params": 0,
+      "persistent_state_bytes": 12288
+    },
+    "SpatialConv": {
+      "rel_error_mean": 0.3477960780781716,
+      "rel_error_std": 0.006443874388158086,
+      "shift_error_mean": 0.41861933778027227,
+      "shift_error_std": 0.008589668244062832,
+      "runtime_us_mean": 22.050306993923236,
+      "adaptation_energy_mean": 0.0,
+      "max_state_norm_mean": 0.0,
+      "total_params": 16488,
+      "persistent_state_bytes": 0
+    },
+    "FixedDelta": {
+      "rel_error_mean": 0.27209656737129134,
+      "rel_error_std": 0.008284328276412822,
+      "shift_error_mean": 0.25944014126331366,
+      "shift_error_std": 0.010984606164372118,
+      "runtime_us_mean": 1.97477999316095,
+      "adaptation_energy_mean": 4.411332012782998,
+      "max_state_norm_mean": 1.5373968839645387,
+      "total_params": 4096,
+      "persistent_state_bytes": 16384
+    },
+    "SafeAdaptiveDelta": {
+      "rel_error_mean": 0.2605618327127587,
+      "rel_error_std": 0.008194778451569261,
+      "shift_error_mean": 0.2509656722625227,
+      "shift_error_std": 0.011126916469694902,
+      "runtime_us_mean": 1.835639064299798,
+      "adaptation_energy_mean": 2.1646135901144663,
+      "max_state_norm_mean": 1.5374195337295533,
+      "total_params": 4096,
+      "persistent_state_bytes": 16384
+    }
+  },
+  "domain_b": {
+    "Persistence": {
+      "rel_error_mean": 0.1365508355620442,
+      "rel_error_std": 0.0004637295273027458,
+      "shift_error_mean": 0.12687549946507795,
+      "shift_error_std": 0.00046489947366455144,
+      "runtime_us_mean": 1.1474552890871588,
+      "adaptation_energy_mean": 0.0,
+      "max_state_norm_mean": 13.625416374206543,
+      "total_params": 0,
+      "persistent_state_bytes": 256
+    },
+    "FrozenLinear": {
+      "rel_error_mean": 0.08154613585469064,
+      "rel_error_std": 0.0025510682442879086,
+      "shift_error_mean": 0.08221792956905515,
+      "shift_error_std": 0.003541529450038126,
+      "runtime_us_mean": 5.101248985830014,
+      "adaptation_energy_mean": 0.0,
+      "max_state_norm_mean": 7.100883293151855,
+      "total_params": 4160,
+      "persistent_state_bytes": 0
+    },
+    "OnlineRidge": {
+      "rel_error_mean": 0.09208144847760007,
+      "rel_error_std": 0.0004236070717117333,
+      "shift_error_mean": 0.04979224455691081,
+      "shift_error_std": 0.00023618266954160565,
+      "runtime_us_mean": 2.0576529856478363,
+      "adaptation_energy_mean": 48.44248329390815,
+      "max_state_norm_mean": 5.550440406799316,
+      "total_params": 4096,
+      "persistent_state_bytes": 32768
+    },
+    "NonlinearOnlineRidge": {
+      "rel_error_mean": 0.38921297343988737,
+      "rel_error_std": 0.05511079664989193,
+      "shift_error_mean": 0.2756245603895968,
+      "shift_error_std": 0.026698272137589314,
+      "runtime_us_mean": 7.549791399875668,
+      "adaptation_energy_mean": 1370.558478070016,
+      "max_state_norm_mean": 46.2913101196289,
+      "total_params": 0,
+      "persistent_state_bytes": 12288
+    },
+    "SpatialConv": {
+      "rel_error_mean": 0.2588751161451549,
+      "rel_error_std": 0.00608061277462483,
+      "shift_error_mean": 0.2827657701348163,
+      "shift_error_std": 0.006455828553342309,
+      "runtime_us_mean": 19.158382604261803,
+      "adaptation_energy_mean": 0.0,
+      "max_state_norm_mean": 0.0,
+      "total_params": 16488,
+      "persistent_state_bytes": 0
+    },
+    "FixedDelta": {
+      "rel_error_mean": 0.14478140136841872,
+      "rel_error_std": 0.00040302416772957045,
+      "shift_error_mean": 0.11138350304826576,
+      "shift_error_std": 0.0004720362898760294,
+      "runtime_us_mean": 1.7760794847008754,
+      "adaptation_energy_mean": 2.7004919655839807,
+      "max_state_norm_mean": 2.369564390182495,
+      "total_params": 4096,
+      "persistent_state_bytes": 16384
+    },
+    "SafeAdaptiveDelta": {
+      "rel_error_mean": 0.161981971355726,
+      "rel_error_std": 0.0001851656673029766,
+      "shift_error_mean": 0.12824912573059094,
+      "shift_error_std": 0.000231321266634374,
+      "runtime_us_mean": 1.7685636675934184,
+      "adaptation_energy_mean": 1.5623596191343774,
+      "max_state_norm_mean": 2.110768127441406,
+      "total_params": 4096,
+      "persistent_state_bytes": 16384
+    }
+  }
+}

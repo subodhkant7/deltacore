@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "phase": "10",
+    "title": "Streaming Adaptive-State Benchmark",
+    "date": "October 2026",
+    "dimension": 8,
+    "sequence_lengths": [
+      128,
+      512,
+      1024
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "delays": [
+      16,
+      64,
+      256
+    ],
+    "models": [
+      "FrozenLinear",
+      "FrozenMLP",
+      "GRU",
+      "LSTM",
+      "OnlineRidge",
+      "FixedDelta",
+      "AdaptiveDelta",
+      "SafeAdaptiveDelta",
+      "SelfReferential",
+      "SafeSelfReferential"
+    ]
+  },
+  "param_counts": {
+    "FrozenLinear": 72,
+    "FrozenMLP": 76,
+    "GRU": 96,
+    "LSTM": 120,
+    "OnlineRidge": 64,
+    "FixedDelta": 64,
+    "AdaptiveDelta": 64,
+    "SafeAdaptiveDelta": 64,
+    "SelfReferential": 66,
+    "SafeSelfReferential": 66
+  },
+  "task_a": {
+    "FrozenLinear": {
+      "mean_error": 1.4005098841960277,
+      "std_error": 0.09015327234194938,
+      "first_passage_steps": 0.8,
+      "sustained_steps": 22.0,
+      "adaptation_energy": 0.0,
+      "us_per_token": 28.575700002875237
+    },
+    "FrozenMLP": {
+      "mean_error": 4.203850790860525,
+      "std_error": 0.6036114028235339,
+      "first_passage_steps": 0.0,
+      "sustained_steps": 27.0,
+      "adaptation_energy": 0.0,
+      "us_per_token": 40.55511054730232
+    },
+    "GRU": {
+      "mean_error": 6.166666282557026,
+      "std_error": 0.7284833479761834,
+      "first_passage_steps": 0.0,
+      "sustained_steps": 26.6,
+      "adaptation_energy": 3.782702242920358,
+      "us_per_token": 58.80112265117532
+    },
+    "LSTM": {
+      "mean_error": 5.539112145927107,
+      "std_error": 1.2137633915585202,
+      "first_passage_steps": 0.0,
+      "sustained_steps": 26.6,
+      "adaptation_energy": 6.984551673554771,
+      "us_per_token": 72.75165976352582
+    },
+    "OnlineRidge": {
+      "mean_error": 0.7651531566388403,
+      "std_error": 0.029051950921148786,
+      "first_passage_steps": 5.0,
+      "sustained_steps": 61.6,
+      "adaptation_energy": 9.71345374415852,
+      "us_per_token": 37.4511718746362
+    },
+    "FixedDelta": {
+      "mean_error": 0.9295857388660584,
+      "std_error": 0.04794863080639481,
+      "first_passage_steps": 0.6,
+      "sustained_steps": 72.6,
+      "adaptation_energy": 6.576439465272394,
+      "us_per_token": 29.649007433363295
+    },
+    "AdaptiveDelta": {
+      "mean_error": 3.7403415630425343,
+      "std_error": 5.38701326564149,
+      "first_passage_steps": 2.2,
+      "sustained_steps": 93.8,
+      "adaptation_energy": 22603.83418445236,
+      "us_per_token": 31.773633594411876
+    },
+    "SafeAdaptiveDelta": {
+      "mean_error": 0.9701911758986224,
+      "std_error": 0.03946128040025479,
+      "first_passage_steps": 5.8,
+      "sustained_steps": 101.2,
+      "adaptation_energy": 10.278303553151272,
+      "us_per_token": 32.39498671518959
+    },
+    "SelfReferential": {
+      "mean_error": 1.3835503000160074,
+      "std_error": 0.9168647261078872,
+      "first_passage_steps": 2.4,
+      "sustained_steps": 88.6,
+      "adaptation_energy": 5.822971553341341e+18,
+      "us_per_token": 58.33134765111936
+    },
+    "SafeSelfReferential": {
+      "mean_error": 0.9132814438419172,
+      "std_error": 0.037758692963100846,
+      "first_passage_steps": 6.0,
+      "sustained_steps": 73.0,
+      "adaptation_energy": 8.635687828642187,
+      "us_per_token": 61.01873398733915
+    }
+  },
+  "task_b": {
+    "FrozenLinear": {
+      "16": 5.5407850707045245,
+      "64": 5.5407850707045245,
+      "256": 5.5407850707045245
+    },
+    "FrozenMLP": {
+      "16": 2.133357842764726,
+      "64": 1.5124565906796807,
+      "256": 1.993164681980889
+    },
+    "GRU": {
+      "16": 2.0866998724162507,
+      "64": 2.064494065314178,
+      "256": 1.8158203492057532
+    },
+    "LSTM": {
+      "16": 1.7625311709959015,
+      "64": 1.5615757442459908,
+      "256": 1.7935964938161668
+    },
+    "OnlineRidge": {
+      "16": 1.0473091034477415,
+      "64": 0.9931728120549209,
+      "256": 0.9986134170659433
+    },
+    "FixedDelta": {
+      "16": 1.0489541321369489,
+      "64": 1.0363988778828905,
+      "256": 1.0056339744111285
+    },
+    "AdaptiveDelta": {
+      "16": 1.0436073567633244,
+      "64": 1.042266287938731,
+      "256": 1.0382416151906022
+    },
+    "SafeAdaptiveDelta": {
+      "16": 1.044350412151242,
+      "64": 1.0426811124492352,
+      "256": 1.0377211831641902
+    },
+    "SelfReferential": {
+      "16": 1.0533970626233258,
+      "64": 1.0351726552946958,
+      "256": 0.9979170798013854
+    },
+    "SafeSelfReferential": {
+      "16": 1.0548130544908676,
+      "64": 1.0349589726304393,
+      "256": 0.9967643139817902
+    }
+  },
+  "task_c": {
+    "FrozenLinear": {
+      "adapt_error_b": 0.1257903613023725,
+      "forgetting_a": 0.004627126143771166
+    },
+    "FrozenMLP": {
+      "adapt_error_b": 0.9555663065343183,
+      "forgetting_a": -1.9552347722352341
+    },
+    "GRU": {
+      "adapt_error_b": 1.109479724929356,
+      "forgetting_a": -4.17524213778489
+    },
+    "LSTM": {
+      "adapt_error_b": 0.9206134284260976,
+      "forgetting_a": -3.5651735559066062
+    },
+    "OnlineRidge": {
+      "adapt_error_b": 0.0837878242841087,
+      "forgetting_a": 0.2883419950684892
+    },
+    "FixedDelta": {
+      "adapt_error_b": NaN,
+      "forgetting_a": NaN
+    },
+    "AdaptiveDelta": {
+      "adapt_error_b": NaN,
+      "forgetting_a": NaN
+    },
+    "SafeAdaptiveDelta": {
+      "adapt_error_b": 0.2966430707934755,
+      "forgetting_a": 0.07892628667025929
+    },
+    "SelfReferential": {
+      "adapt_error_b": NaN,
+      "forgetting_a": NaN
+    },
+    "SafeSelfReferential": {
+      "adapt_error_b": 0.2778987196791348,
+      "forgetting_a": 0.0829243969759963
+    }
+  },
+  "on_vs_off": {
+    "FixedDelta": {
+      "on_error": 0.9295857388660584,
+      "off_error": 1.001219858177591
+    },
+    "AdaptiveDelta": {
+      "on_error": 3.7403415630425343,
+      "off_error": 1.001219858177591
+    },
+    "SafeAdaptiveDelta": {
+      "on_error": 0.9701911758986224,
+      "off_error": 1.001219858177591
+    },
+    "SelfReferential": {
+      "on_error": 1.3835503000160074,
+      "off_error": 1.001219858177591
+    },
+    "SafeSelfReferential": {
+      "on_error": 0.9132814438419172,
+      "off_error": 1.001219858177591
+    }
+  },
+  "continuous_vs_reset": {
+    "FixedDelta": {
+      "continuous_error": 0.9295857388660584,
+      "reset_error": 0.8977541081433669
+    },
+    "AdaptiveDelta": {
+      "continuous_error": 3.7403415630425343,
+      "reset_error": 1.837807624449574
+    },
+    "SafeAdaptiveDelta": {
+      "continuous_error": 0.9701911758986224,
+      "reset_error": 0.9094676229325488
+    },
+    "SelfReferential": {
+      "continuous_error": 1.3835503000160074,
+      "reset_error": 1.0476450906254933
+    },
+    "SafeSelfReferential": {
+      "continuous_error": 0.9132814438419172,
+      "reset_error": 0.8679410263571441
+    }
+  }
+}
