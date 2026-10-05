@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use DeltaCore in your research, please cite it as below."
+title: "DeltaCore: Primitives and Benchmarks for Adaptive Neural State"
+abstract: "A modular, research-oriented toolkit for systems that adapt their internal state during inference."
+authors:
+  - family-names: "Kant"
+    given-names: "Subodh"
+date-released: "2026-10-05"
+repository-code: "https://github.com/subodhkant7/deltacore"
+url: "https://github.com/subodhkant7/deltacore"
+license: "MIT"
+type: "software"
+keywords:
+  - "associative memory"
+  - "adaptive state"
+  - "delta rule"
+  - "test-time training"
+  - "neural dynamics"
+  - "stability"

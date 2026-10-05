@@ -1,0 +1,14 @@
+{
+  "include": [
+    "deltacore",
+    "examples",
+    "tests"
+  ],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.13",
+  "typeCheckingMode": "basic",
+  "extraPaths": [
+    "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages"
+  ]
+}
