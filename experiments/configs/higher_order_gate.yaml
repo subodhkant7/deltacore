@@ -1,0 +1,57 @@
+# Pre-registered Evaluation-Correction Gate Configuration
+experiment_name: higher_order_regime_shift_validation
+experiment_version: "3.0.0"
+date_registered: "2026-10-07"
+
+seed_range:
+  start: 0
+  end: 19
+  count: 20
+
+stream_lengths:
+  n_a_train: 50
+  n_a_eval: 100
+  n_b_drift: 100
+  n_c_stable: 120
+  n_c_holdout: 200
+  n_d_eval: 80
+  anomaly_rate: 0.25
+
+marginal_tolerances:
+  categorical_tvd_threshold: 0.05
+  numeric_mean_diff_threshold: 5.0
+  numeric_std_diff_threshold: 10.0
+
+calibration_procedure:
+  percentile: 95.0
+  regularization_lambda: 0.001
+
+adaptation_target_procedure:
+  holdout_median_metric: "median_holdout_residual"
+  tolerance_pct: 0.05
+  consecutive_steps_required: 5
+
+dimensions:
+  primary: 128
+  sweep: [64, 128, 256, 512]
+
+baseline_parameters:
+  online_centroid:
+    beta: 0.95
+  robust_centroid:
+    eta: 0.05
+    delta_huber: 0.30
+  pca:
+    rank: 8
+    eta: 0.02
+  online_covariance:
+    beta: 0.95
+    lambda_reg: 0.001
+  pairwise_correlation:
+    beta: 0.95
+  deltacore:
+    eta0: 0.03
+    rho: 0.95
+    alpha_min: 0.98
+    gamma: 0.10
+    selective_retention: false
