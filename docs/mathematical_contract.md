@@ -1,10 +1,26 @@
 # DeltaCore Mathematical Contract & Formal Specification
 
 **Module**: `deltacore.controller`, `deltacore.updates`, `deltacore.stability`  
-**Status**: Authoritative Runtime Mathematical Contract  
-**Version**: `0.1.0`  
+**Status**: Authoritative Runtime Mathematical Contract & Conceptual Boundary Reference  
+**Version**: `0.2.0`  
 
 This document specifies the exact mathematical equations, tensor contracts, temporal ordering, and stability bounds implemented across the executable DeltaCore codebase. Every equation below corresponds directly to runtime code in `deltacore/controller.py`, `deltacore/updates/delta.py`, `deltacore/updates/adaptive_delta.py`, and `deltacore/stability/controllers.py`.
+
+---
+
+## Conceptual Disambiguation & Primitive Distinctions
+
+To prevent conflation of theoretical and operational concepts, DeltaCore explicitly establishes the following definitions:
+
+1. **Associative Memory**: An accumulated mapping $M \in \mathbb{R}^{V \times K}$ storing associations between key vectors $k \in \mathbb{R}^K$ and target value vectors $v \in \mathbb{R}^V$ via outer products.
+2. **Auto-Association**: The special configuration where target values equal key inputs ($v_t \equiv x_t$). The matrix learns to reconstruct inputs: $\hat{x}_t = M x_t$.
+3. **Reconstruction Residual**: The instantaneous Euclidean distance $r_t = \|x_t - M_{t-1} x_t\|_2$ evaluating reconstruction discrepancy strictly prior to any state update.
+4. **Adaptive Update**: Test-time, online modification of internal matrix state $M_t = \alpha_t M_{t-1} + \eta_t (e_t x_t^T)$ without gradient backpropagation to offline weights.
+5. **Feature Hashing**: Static, stateless deterministic mapping from structured telemetry dictionaries into Euclidean space using signed SHA-256 token hashing.
+6. **Novelty Diagnostic**: A scalar score indicating whether the current observation is poorly reconstructed under the currently adapted associative memory state.
+7. **Regime Shift**: A non-stationary transition in the joint distribution generating observations over time (e.g. parameter drift $A \to B$).
+8. **Principal Component Analysis (PCA)**: A classical spectral technique that projects data onto the top-$k$ eigenvectors of the empirical covariance matrix under an explicit rank constraint ($k \ll D$). **Auto-association in a full-rank square matrix $M \in \mathbb{R}^{D \times D}$ is NOT PCA**; full-rank $M$ can trivially represent the identity matrix $I$ and does not learn principal subspaces without rank constraints.
+9. **Covariance**: A classical second-order statistic $\Sigma_t = \mathbb{E}[(x-\mu)(x-\mu)^T]$ tracking pairwise feature covariances, enabling scale-invariant Mahalanobis distance scoring $d_t = \sqrt{(x-\mu)^T(\Sigma+\lambda I)^{-1}(x-\mu)}$. DeltaCore's unnormalized outer-product update does not compute a sample covariance or inverse covariance matrix.
 
 ---
 

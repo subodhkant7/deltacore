@@ -1,86 +1,79 @@
 # DeltaCore: Scientific Boundaries, Theoretical Assumptions & Limitations
 
 **Status**: Authoritative Epistemic & Experimental Boundary Reference  
-**Scope**: DeltaCore Adaptive Associative State Core & Pre-RecoveryOS Evaluation  
-**Version**: `0.1.0`  
+**Version**: `0.2.0`  
+**Date**: 2026-10-07  
 
 ---
 
 ## 1. Executive Scientific Stance
 
-DeltaCore is an experimental framework for studying test-time adaptive associative neural memory. It provides mathematical primitives, Lyapunov contractive bounds, and reproducible streaming benchmarks.
+DeltaCore is an open-source research implementation of adaptive associative state dynamics. It provides mathematical primitives, Lyapunov contractive step bounds, and reproducible benchmarks for studying test-time adaptation under non-stationary distribution shift.
 
-The engineering and experimental evidence establishes specific, bounded capabilities. It does **not** establish universal superiority over classical algorithms, guaranteed anomaly detection, or unconstrained nonlinear representation capacity.
-
----
-
-## 2. What Has Been Demonstrated
-
-1. **Parameter Immutability ($\Delta\theta = 0$)**:
-   Across all synthetic and real-world benchmarks, offline neural/linear parameters $\theta$ remain bit-for-bit immutable during streaming evaluation, verified via cryptographic SHA-256 parameter hashes.
-2. **Local Contractive Step Stability**:
-   The Lyapunov projection $\eta_t = \min(\eta_{\text{cand}, t}, \rho / (\|x_t\|_2^2 + \epsilon))$ with $\rho < 2$ guarantees local non-expansion of residual error on the active key:
-   $$
-   |1 - \eta_t \|x_t\|_2^2| \le \max(|1 - \rho|, 1) \le 1
-   $$
-   This prevents catastrophic numerical runaway ($NaN$ / $\pm\infty$) across tested dimensions $D \in [32, 256]$.
-3. **Causal State Mechanism ($M_t \equiv 0$ Ablation)**:
-   Ablation experiments across regression and non-stationary classification confirm that $100\%$ of online adaptation gain originates from the evolving associative state $M_t$.
-4. **Reproducible Multi-Family Classification Transfer**:
-   Under a frozen configuration ($\eta_0=0.015, \rho=1.50, \alpha_{\min}=0.95$), the associative state demonstrates positive adaptation gains over frozen linear baselines under boundary rotation (+5.6 percentage points), translation (+9.8 percentage points), and nonlinear deformation (+9.9 percentage points).
-5. **Exact Memory Scaling Law**:
-   Persistent state memory scales as exactly $4 D^2$ bytes (FP32) for square associative memory $M_t \in \mathbb{R}^{D \times D}$.
+The experimental evidence establishes specific, bounded capabilities. It does **not** establish universal superiority over classical algorithms, guaranteed anomaly detection, or unconstrained nonlinear representation capacity.
 
 ---
 
-## 3. What Has Only Been Tested Synthetically
+## 2. The 10 Primary Empirical Limitations
 
-1. **Multi-Family Regime Transfer**: Evaluated on synthetic 2D/multi-dimensional geometric stream generators with controlled rotation, translation, and deformation dynamics.
-2. **Telemetry Novelty & Anomaly Detection**: Evaluated on synthetic structured microservice event streams (e.g. checkout, refund, gateway timeout distributions).
-3. **Adversarial Negative Transfer**: Evaluated on synthetic alternating regime sequences ($A \to B \to A$) and mismatched covariance injections.
-
----
-
-## 4. What Is NOT Established
-
-1. **Auto-Association $\neq$ Proven PCA / Subspace Learning**:
-   An unconstrained full-rank matrix $M_t \in \mathbb{R}^{D \times D}$ can learn an identity mapping ($M \to I$). Without an explicit low-rank bottleneck or projection constraint, auto-associative DeltaCore does **not** perform principal component analysis. Claims that $v_t = x_t$ inherently yields a principal-subspace detector are **theoretically false and rejected**.
-2. **No Guaranteed Anomaly Detection**:
-   Reconstruction residual $r_t = \|x_t - M_{t-1} x_t\|_2$ reflects reconstruction difficulty relative to past associations. In empirical benchmarks on categorical telemetry streams, simpler static baselines (static centroid distance, raw categorical Jaccard dissimilarity, and static PCA reconstruction) perform competitively or superiorly with orders of magnitude smaller memory footprints (e.g. 512 bytes vs. 64 KB–4 MB for DeltaCore).
-3. **No Proof of Global Boundedness**:
-   Local contractivity $|1 - \eta_t \|x_t\|_2^2| \le 1$ guarantees that the immediate error along direction $x_t$ does not expand. It does **not** constitute a mathematical proof that the matrix norm $\|M_t\|_F$ remains globally bounded under arbitrary non-orthogonal sequence streams.
-4. **No Universal Superiority Over Classical Online Learners**:
-   In classification benchmarks, `OnlineLogisticRegression` outperformed `SafeAdaptiveDelta` on class-prior shifts (96.6% vs 92.2%). In high-speed atmospheric advection (ECMWF ERA5), `OnlineRidge` achieved lower tracking error ($0.0923$ vs $0.1622$).
-5. **No Arbitrary Nonlinear Representational Capacity**:
-   Because $M_t$ is a linear matrix mapping $\hat{v} = M x$, it exhibits an empirical performance limitation on complex non-planar decision boundaries without nonlinear kernel lifting or multi-layer architectures.
-
----
-
-## 5. Identified Failure Modes & Operational Risks
-
-### A. Anomaly Absorption Risk (Score-Before-Update Imperative)
-If an anomalous observation $x_{\text{anom}}$ is adapted unconditionally into $M_t$, the associative memory rapidly incorporates the anomaly within 1–3 steps. Consequently, subsequent occurrences of the same anomaly exhibit contracted residuals, masking the ongoing regime shift.
-- **Remedy**: Always evaluate novelty via pre-update scoring (`score()`).
-- **Gating**: When novelty exceeds an established operating threshold, freeze state adaptation (`adapt=False`) to prevent memory contamination.
-
-### B. Stale-State Negative Transfer Penalty
-When the operating environment undergoes an abrupt, incompatible regime shift (e.g. alternating regimes $A \to B$), persistent memory from regime $A$ incurs an empirical penalty ($-1.75$ percentage points overall, $-10.0$ percentage points immediate post-shift) relative to an oracle state reset.
-
-### C. Hash Collision Noise in Categorical Telemetry
-Feature hashing via SHA-256 into dimension $D$ produces random bucket collisions across vocabulary tokens. In small dimensions ($D \le 64$), collision noise increases the variance of reconstruction residuals, necessitating calibrated smoothing windows.
-
-### D. Memory Footprint at Large Dimensions
-Because persistent memory scales quadratically ($4 D^2$ bytes), high-dimensional settings incur significant memory footprints:
-- $D = 256$: $256\text{ KB}$
+### 1. Quadratic State Memory Overhead ($O(D^2)$)
+Persistent controller state requires an unconstrained square associative matrix $M_t \in \mathbb{R}^{D \times D}$, demanding exactly $4 D^2$ bytes of memory (FP32). At scale:
+- $D = 128$: $64\text{ KB}$
 - $D = 512$: $1\text{ MB}$
 - $D = 1024$: $4\text{ MB}$
 - $D = 4096$: $64\text{ MB}$
 
-In contrast, first-order centroid or rolling-mean baselines require only $4 D$ bytes ($O(D)$).
+In contrast, first-order centroid baselines require only $4 D$ bytes ($512\text{ B}$ at $D = 128$, $128\times$ smaller).
+
+### 2. Higher Evaluation Latency Than First-Order Baselines
+Scoring and updating an associative matrix requires matrix-vector multiplications ($O(D^2)$ operations). In benchmarking:
+- Online Centroid median scoring latency: **$3.0\text{ µs}$**
+- DeltaCore Gated median scoring latency: **$25.9\text{ µs}$** ($8.6\times$ slower)
+
+While faster than covariance matrix inversion ($44.3\text{ µs}$), DeltaCore incurs substantial computational cost relative to lightweight first-order methods.
+
+### 3. No Demonstrated Superiority Over Online Covariance
+On decisive multi-seed evaluation with matched marginal distributions ($\text{TVD} \le 0.05$):
+- **Online Covariance (Mahalanobis)** achieved **$0.5976$** AUROC.
+- **DeltaCore Gated** achieved **$0.5711$** AUROC.
+- Mean paired difference was **$-0.0265$** (95% Bootstrap CI: $[-0.0478, -0.0072]$, exact sign test $p = 0.0118$, paired permutation $p = 0.0192$).
+DeltaCore fails to provide an empirical advantage over proper second-order statistical estimation on identical representations.
+
+### 4. Representation Dependence
+DeltaCore's cross-feature anomaly sensitivity depends overwhelmingly on representation engineering. Representation tier ablations revealed that gains on higher-order joint anomalies were driven by the feature hashing layer (pair and triple interaction hashing) rather than the associative matrix itself. Adding interaction tokens benefited classical covariance and centroid models equally or more.
+
+### 5. Operating Threshold Calibration Sensitivity
+Under frozen calibration thresholds ($\tau = \mu_{\text{calib}} + 3\sigma_{\text{calib}}$), DeltaCore exhibited near-zero operational recall ($0.000$) on subtle anomaly families due to residual variance under non-stationary drift. Setting reliable, fixed decision boundaries across arbitrary shifts remains an unsolved challenge.
+
+### 6. Adaptive Anomaly Absorption (Contamination Risk)
+Without score-before-update gating (`score()` followed by conditional `step(adapt=False)`), continuous adaptation rapidly assimilates persistent anomalies into the associative matrix within 5–25 steps ($r_{100}/r_1 = 0.0529$, absorbing 94.7% of the anomalous signal). Subsequent anomalies of the same type are reconstructed easily, masking the ongoing regime shift.
+
+### 7. Lack of Inherent Temporal Modeling
+From event-only feature representations $x_t$, DeltaCore cannot detect temporal sequence violations (such as inverted Markov event cycles) because the associative matrix treats observations as exchangeable vectors. Temporal detection requires explicit lag feature engineering ($x_t = \text{hash}(\text{event}_t, \text{event}_{t-1})$).
+
+### 8. No Proof of Global Matrix Boundedness
+The Lyapunov step-size controller $\eta_t = \min(\eta_0, \rho / (\|x_t\|_2^2 + \epsilon))$ ensures local non-expansion along the active vector direction ($|1 - \eta_t \|x_t\|_2^2| \le 1$). However, this is a local step property; it does **not** constitute a mathematical proof that the Frobenius norm $\|M_t\|_F$ remains globally bounded under arbitrary, adversarial, or non-orthogonal input sequences. Claims of global boundedness are scientifically rejected.
+
+### 9. Synthetic and Controlled Benchmark Limitations
+While evaluation streams incorporated non-stationary drift, Markov transitions, and matched marginals ($\text{TVD} \le 0.05$), all telemetry streams were synthetically generated under controlled schema models. Behavior on unstructured real-world distributed traces may exhibit unpredictable token distributions and drift rates.
+
+### 10. No Evidence of Production Superiority
+DeltaCore has not been evaluated in live production clusters, high-throughput message brokers, or real-time SRE control loops. It is research software, not a production-hardened telemetry monitoring system.
 
 ---
 
-## 6. Prohibited Promotional Language
+## 3. What Was Scientifically Demonstrated
+
+Despite the boundaries above, DeltaCore verified:
+- Pure-PyTorch deterministic implementation of test-time associative memory.
+- Score-before-update residual semantics preventing mutation during inspection.
+- Causal attribution: 100% of adaptation gain in non-stationary tasks stems from $M_t$.
+- Safe numerical stability: Zero $NaN$ or $\pm\infty$ blow-ups across all tested seeds and dimensions.
+- Reliable state persistence with SHA-256 integrity checks and atomic file replacement.
+
+---
+
+## 4. Prohibited Promotional Language
 
 Contributors and automated agents are strictly prohibited from using the following unproven claims in documentation, code docstrings, and research reports:
 - *"guaranteed anomaly detection"*
@@ -88,4 +81,5 @@ Contributors and automated agents are strictly prohibited from using the followi
 - *"universal distribution-shift detection"*
 - *"proven principal-subspace learning"*
 - *"globally stable neural memory"*
-- *"subquadratic associative scaling"*
+- *"production-ready telemetry controller"*
+- *"superior to covariance or PCA"*
