@@ -13,7 +13,7 @@ $$\boxed{\textbf{DELTACORE RESEARCH IS FORMALLY FROZEN.}}$$
 
 The research agenda exploring DeltaCore's adaptive associative controller as an online operational telemetry and regime-shift detector has reached its definitive conclusion.
 
-Following rigorous multi-seed evaluation with matched marginal distributions ($\text{TVD} \le 0.05$) against proper first- and second-order baselines, the central hypothesis—that DeltaCore provides a decisive advantage over classical adaptive statistical methods—has been **falsified**.
+Following rigorous multi-seed evaluation with matched marginal distributions ($\text{TVD} \le 0.05$) against proper first- and second-order baselines, the central hypothesis—that DeltaCore provides a decisive advantage over classical adaptive statistical methods—was not supported by the evidence on the decisive benchmark.
 
 The repository is now frozen and preserved as a reproducible, peer-reviewable open-source research artifact. No further algorithmic development or optimization cycles will be conducted.
 
@@ -44,8 +44,8 @@ Across 18 research development phases and 4 rigorous regime-shift benchmarks, De
 
 DeltaCore's extensive empirical evaluations established clear negative boundaries:
 
-1. **No Superiority to Second-Order Covariance**:
-   - On the decisive higher-order benchmark with matched marginals, **Online Covariance with regularized Mahalanobis distance achieved a higher mean AUROC ($0.5976$) than DeltaCore Gated ($0.5711$)**, with a mean paired difference of $-0.0265$ ($95\%$ bootstrap CI $[-0.0478, -0.0072]$, exact sign test $p = 0.0118$, exact paired permutation $p = 0.0188$ across 20 seeds).
+1. **No Performance Advantage Over Second-Order Covariance**:
+   - Under the predefined 20-seed non-stationary matched-marginal benchmark, **regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test.** DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark (Online Covariance mean AUROC $0.5976 \pm 0.0667$ vs. DeltaCore Gated $0.5711 \pm 0.0801$, mean paired difference $-0.0265$, $95\%$ bootstrap CI $[-0.0478, -0.0072]$, exact sign test $p = 0.0118$, exact paired sign-flip test $p = 0.0188$ across 20 seeds).
 2. **No Representation-Independent Advantage**:
    - Gains on complex cross-token anomalies were driven by the feature hasher (pair and triple token interactions), which benefited classical covariance and centroid methods equally or more.
 3. **No Proof of Global Boundedness**:
@@ -57,14 +57,32 @@ DeltaCore's extensive empirical evaluations established clear negative boundarie
 6. **No Resistance to Persistent Anomaly Assimilation**:
    - Continuous associative adaptation absorbs repeated anomalies within 5–25 steps ($r_{100}/r_1 = 0.0529$), erasing anomalous residuals unless external gating is applied.
 7. **No Justification for $O(D^2)$ Memory Overhead**:
-   - Requiring $64\text{ KB}$–$4\text{ MB}$ of persistent state and $26\text{ µs}$ latency does not justify replacement of $O(D)$ first-order centroids ($512\text{ B}$, $3.0\text{ µs}$) or standard regularized covariance trackers.
+   - Requiring $64\text{ KB}$–$4\text{ MB}$ of persistent state and $26\text{ µs}$ latency does not justify replacement of $O(D)$ first-order centroids ($512\text{ B}$, $3.0\text{ µs}$) or standard regularized covariance trackers. Within the evaluated design and benchmark, DeltaCore incurred substantially greater state/latency cost without demonstrating a compensating performance advantage.
 
 ---
 
-## 4. Final Scientific Conclusion
+## 4. Scope of Inference
+
+> The evidence is benchmark-specific. It establishes that, on the predefined 20-seed non-stationary matched-marginal benchmark with $D=128$ and the specified feature representation, DeltaCore Gated did not demonstrate an advantage over regularized Online Covariance, while the observed paired difference favored Online Covariance.
+>
+> The benchmark does not establish universal superiority of Online Covariance, universal inferiority of DeltaCore, or performance ordering under telemetry distributions, dimensions, drift processes, workloads, or deployment conditions not represented by the benchmark.
+>
+> The result therefore supports terminating this specific DeltaCore research direction for RecoveryOS, rather than claiming that adaptive telemetry detection as a broader problem has been solved.
+
+---
+
+## 5. Statistical Interpretation Caveats
+
+- **Mean Effect Uncertainty (Bootstrap)**: The 95% paired percentile bootstrap confidence interval $[-0.0478, -0.0072]$ is a resampling-based uncertainty estimate ($B=10{,}000$, seed 42). It is not an assumption-free or mathematically exact confidence interval.
+- **Randomization / Magnitude (Sign-Flip Test)**: The $p$-value ($p = 0.0188$) is exact with respect to exhaustive enumeration of all $2^{20} = 1{,}048{,}576$ sign assignments under the exchangeability-of-signs null. Exact enumeration removes Monte Carlo approximation error, but the inferential validity of the test remains conditional on the null and exchangeability assumptions specified by the test.
+- **Direction / Majority (Sign Test)**: The exact two-sided binomial sign test ($p = 0.0118$, 4 wins out of 20 streams) evaluates the direction of paired differences under a 50/50 null, separate from effect magnitude.
+
+---
+
+## 6. Final Scientific Conclusion
 
 The empirical findings are summarized by the following formal research statement:
 
-> **"Under non-stationary distribution drift with matched marginals ($\text{TVD} \le 0.05$), DeltaCore's auto-associative controller did not demonstrate a sufficient discriminative or operational advantage over regularized online covariance estimation to justify its additional algorithmic complexity, $O(D^2)$ state memory, and higher latency for telemetry regime detection."**
+> **"Under the predefined 20-seed non-stationary matched-marginal benchmark, regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test. DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark."**
 
 The project stands as a fully documented, reproducible study in test-time adaptive neural dynamics, with all negative findings, baselines, and artifacts preserved.

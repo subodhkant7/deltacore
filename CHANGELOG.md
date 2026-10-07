@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Research Freeze & Reproducibility Archive Release
 
-This release marks the formal completion and research freeze of the DeltaCore project. Following conclusive multi-seed evaluation on matched-marginal telemetry distribution shift, the hypothesis that DeltaCore's adaptive associative controller provides an advantage over standard second-order covariance estimation for telemetry regime detection was falsified. The codebase is frozen and preserved as a reproducible open-source research archive.
+This release marks the formal completion and research freeze of the DeltaCore project. Under the predefined 20-seed non-stationary matched-marginal benchmark, regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test, and DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark. The codebase is frozen and preserved as a reproducible open-source research archive.
 
 #### Added
 - **Canonical Controller API**: Stabilized `AdaptiveController` and `ControllerConfig` with non-mutating pre-update residual evaluation (`score()`) and explicit update gating (`step(adapt=...)`).
@@ -23,7 +23,8 @@ This release marks the formal completion and research freeze of the DeltaCore pr
 - **Comprehensive Documentation Suite**: Added `docs/research_status.md`, `docs/recoveryos_decision.md`, `docs/experiments.md`, `docs/reproducibility.md`, `docs/release_checklist.md`, and updated `docs/limitations.md`.
 
 #### Changed
-- **Statistical Reporting**: Corrected statistical inference reporting to strictly distinguish between mean paired difference uncertainty (bootstrap CI) and seed-direction frequency (sign test).
+- **Epistemic Scope & Statistical Clarification**: Tightened statistical reporting and inferential scope across all documentation (documentation/epistemic clarification only; research results unchanged, benchmark unchanged, implementation unchanged). Explicitly clarified that percentile bootstrap intervals are resampling-based and that exact enumeration in sign-flip randomization tests is exact under the stated exchangeability null without implying assumption-free inference.
+- **Statistical Reporting**: Corrected statistical inference reporting to strictly distinguish between mean paired difference uncertainty (bootstrap CI), randomization magnitude test (exact sign-flip test), and seed-direction frequency (sign test).
 - **Roadmap & RecoveryOS Status**: Formally recorded that DeltaCore is rejected for RecoveryOS telemetry regime detection and marked all roadmap items as research frozen.
 - **Repository Metadata**: Synchronized package version to `0.2.0` across `pyproject.toml` and `deltacore/__init__.py`.
 

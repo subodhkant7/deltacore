@@ -515,8 +515,8 @@ Phase 19: Autonomous Coherence Gating & Nonlinear State Transfer
 ### Final Project Status: Research Frozen
 
 - **Current Status**: **Research frozen.**
-- **Telemetry Evaluation Outcome**: Tested across 4 non-stationary benchmarks culminating in `higher_order_regime_shift` (v3.0.0). DeltaCore did not establish a sufficient advantage over regularized online covariance estimation to justify its $O(D^2)$ state memory and computational complexity.
-- **RecoveryOS Integration**: **Rejected.** No RecoveryOS integration is planned under the current evidence.
+- **Telemetry Evaluation Outcome**: Under the predefined 20-seed non-stationary matched-marginal benchmark, regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test. DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark. Within the evaluated design and benchmark, DeltaCore incurred substantially greater state/latency cost ($O(D^2)$ memory, $8.6\times$ higher latency) without demonstrating a compensating performance advantage over regularized online covariance.
+- **RecoveryOS Integration**: **PERMANENTLY REJECTED & FROZEN.** DeltaCore is removed as an active RecoveryOS research dependency. Any future work on adaptive telemetry detection must be treated as a new independent research effort with a new hypothesis, benchmark design, and preregistered evaluation.
 - **Future Work**: Potential independent academic research directions (such as low-rank tensor factorization or nonlinear associative memory) may be explored in external projects, but no further algorithmic development or production productization will take place in this repository. DeltaCore is preserved as a completed, reproducible open-source research archive.
 
 

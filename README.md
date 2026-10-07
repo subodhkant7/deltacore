@@ -47,9 +47,9 @@ This question was evaluated across 4 multi-seed non-stationary benchmarks, culmi
 
 Following rigorous multi-seed evaluation with matched marginal distributions ($\text{TVD} \le 0.05$):
 - **Core Research Status**: **RESEARCH FROZEN** (see [docs/research_status.md](docs/research_status.md)).
-- **RecoveryOS Integration**: **REJECTED** (see [docs/recoveryos_decision.md](docs/recoveryos_decision.md)).
-- **Reason**: Standard **Online Covariance with regularized Mahalanobis distance** matched or outperformed DeltaCore in discriminative accuracy while first-order centroids required $128\times$ less memory and executed $8.6\times$ faster.
-- **Future Direction**: The repository is archived for scientific reproducibility and peer review. No further algorithmic development or production productization is planned.
+- **RecoveryOS Integration**: **PERMANENTLY REJECTED & FROZEN** (see [docs/recoveryos_decision.md](docs/recoveryos_decision.md)).
+- **Reason**: The RecoveryOS integration was rejected because DeltaCore did not demonstrate a sufficient empirical advantage over a simpler regularized online covariance baseline on the decisive benchmark, while incurring greater state complexity and latency. DeltaCore is therefore removed as an active RecoveryOS research dependency.
+- **Future Direction**: The repository is archived for scientific reproducibility and peer review. Any future work on adaptive telemetry detection must be treated as a new independent research effort with a new hypothesis, benchmark design, and preregistered evaluation.
 
 ---
 
@@ -80,16 +80,29 @@ Across 20 independent paired streams evaluating 5 hard anomaly families with mat
 | **DeltaCore Gated Mean AUROC** | 0.5711 $\pm$ 0.0801 | 95% Bootstrap CI: [0.5365, 0.6071] |
 | **Online Covariance Mean AUROC** | **0.5976 $\pm$ 0.0667** | 95% Bootstrap CI: [0.5697, 0.6271] |
 | **Mean Paired Difference ($\text{DC} - \text{Cov}$)** | **-0.0265** | 95% Paired Bootstrap CI: **[-0.0478, -0.0072]** (excludes zero) |
-| **Exact Binomial Sign Test** | **$p = 0.0118$** | DeltaCore won on only 4 of 20 seeds ($p < 0.05$) |
-| **Exact Paired Permutation Test** | **$p = 0.0188$** | Evaluated all $2^{20} = 1{,}048{,}576$ sign configurations ($p < 0.05$) |
+| **Exact Binomial Sign Test** | **$p = 0.0118$** | DeltaCore won on 4 of 20 seeds, lost on 16 ($p < 0.05$) |
+| **Exact Paired Sign-Flip Randomization Test** | **$p = 0.0188$** | Exhaustive enumeration across all $2^{20} = 1{,}048{,}576$ sign configurations ($p < 0.05$) |
 | **DeltaCore vs. Online Centroid (Gated)** | +0.0382 | 95% Bootstrap CI: [+0.0205, +0.0541], Exact Sign Test $p = 0.0004$ |
 | **DeltaCore vs. Online PCA (Gated)** | +0.0070 | 95% Bootstrap CI: [-0.0074, +0.0209] (includes zero), $p = 0.8238$ |
 
 ### Scientific Conclusions
 1. **DeltaCore outperformed first-order online centroids** (+0.0382 AUROC, $p = 0.0004$), demonstrating sensitivity to linear feature correlations that centroid models cannot track.
-2. **Online Covariance statistically outperformed DeltaCore** (-0.0265 AUROC, bootstrap CI $[-0.0478, -0.0072]$, sign test $p = 0.0118$, exact permutation test $p = 0.0188$).
+2. **Under the predefined 20-seed non-stationary matched-marginal benchmark, regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test.** DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark (mean paired difference $-0.0265$, 95% paired bootstrap CI $[-0.0478, -0.0072]$, exact sign test $p = 0.0118$, exact paired sign-flip test $p = 0.0188$).
 3. **Representation engineering explained higher-order detection**: Representation tier ablations revealed that gains on multi-token anomalies were driven by the feature hashing layer (pair and triple interaction tokens), which benefited classical covariance and centroid methods equally or more.
 4. **Adaptive Anomaly Absorption**: Continuous un-gated adaptation absorbs repeated anomalies within 5–25 steps ($r_{100}/r_1 = 0.0529$, assimilating 94.7% of the anomaly), confirming that score-before-update gating is strictly necessary.
+
+### Scope of Inference
+> The evidence is benchmark-specific. It establishes that, on the predefined 20-seed non-stationary matched-marginal benchmark with $D=128$ and the specified feature representation, DeltaCore Gated did not demonstrate an advantage over regularized Online Covariance, while the observed paired difference favored Online Covariance.
+>
+> The benchmark does not establish universal superiority of Online Covariance, universal inferiority of DeltaCore, or performance ordering under telemetry distributions, dimensions, drift processes, workloads, or deployment conditions not represented by the benchmark.
+>
+> The result therefore supports terminating this specific DeltaCore research direction for RecoveryOS, rather than claiming that adaptive telemetry detection as a broader problem has been solved.
+
+### Statistical Interpretation Caveats
+- **Mean Effect Uncertainty (Bootstrap)**: The 95% percentile bootstrap interval $[-0.0478, -0.0072]$ is a resampling-based uncertainty estimate ($B=10{,}000$, seed 42). It is not an assumption-free or mathematically exact confidence interval.
+- **Randomization / Magnitude (Sign-Flip Test)**: The $p$-value ($p = 0.0188$) is exact with respect to exhaustive enumeration of all $2^{20} = 1{,}048{,}576$ sign assignments under the exchangeability-of-signs null. Exact enumeration removes Monte Carlo approximation error, but the inferential validity of the test remains conditional on the null and exchangeability assumptions specified by the test.
+- **Direction / Majority (Sign Test)**: The exact two-sided binomial sign test ($p = 0.0118$, 4 wins out of 20 streams) evaluates the direction of paired differences under a 50/50 null, separate from effect magnitude.
+- **Practical vs. Statistical Significance**: Within the evaluated design and benchmark, DeltaCore incurred substantially greater state/latency cost ($O(D^2)$ state memory, 8.6x higher latency than first-order centroids) without demonstrating a compensating performance advantage over regularized online covariance.
 
 ---
 

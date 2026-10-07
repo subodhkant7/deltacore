@@ -61,7 +61,7 @@ Execute the complete regression test suite:
 ```bash
 pytest -q
 ```
-**Expected Output**: `682 passed in ~35s` (0 failures, 0 errors).
+**Expected Output**: `689 passed in ~31s` (0 failures, 0 errors).
 
 Run static analysis and code linters:
 ```bash
@@ -100,7 +100,7 @@ python examples/basic_adaptation.py
 
 ### Primary Decisive Benchmark: Higher-Order Regime Shift (Experiment 4)
 
-Reproduce the 20-seed decisive evaluation gate comparing DeltaCore against Online Covariance and 9 other baselines:
+Reproduce the 20-seed decisive evaluation gate comparing DeltaCore against Online Covariance and other baselines:
 
 ```bash
 python experiments/higher_order_regime_shift.py
@@ -115,10 +115,26 @@ python experiments/higher_order_regime_shift.py
 - **Expected Results Summary**:
   - `Online Covariance AUROC`: $0.5976 \pm 0.0667$
   - `DeltaCore Gated AUROC`: $0.5711 \pm 0.0801$
-  - `Mean Paired Difference`: $-0.0265$ (95% Bootstrap CI: $[-0.0478, -0.0072]$)
-  - `Exact Binomial Sign Test`: $p = 0.0118$ (DeltaCore wins 4/20 seeds)
-  - `Exact Paired Permutation Test`: $p = 0.0188$ (evaluated over all $2^{20} = 1{,}048{,}576$ sign configurations)
-  - `Final Verdict`: `FAIL`
+  - `Mean Paired Difference`: $-0.0265$ (95% percentile bootstrap CI: $[-0.0478, -0.0072]$, $B=10,000$, seed 42)
+  - `Paired Cohen's d`: $-0.58$
+  - `Exact Binomial Sign Test`: $p = 0.0118$ (DeltaCore wins 4/20 seeds, 16 losses)
+  - `Exact Paired Sign-Flip Randomization Test`: $p = 0.0188$ ($19,728 / 1,048,576$ sign configurations as or more extreme than observed)
+
+**Canonical Conclusion**:
+Under the predefined 20-seed non-stationary matched-marginal benchmark, regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test. DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark.
+
+**Statistical Caveats**:
+- *Bootstrap*: The 95% percentile bootstrap interval is a resampling-based uncertainty estimate; it is not an assumption-free or mathematically exact confidence interval.
+- *Randomization Test*: Exact enumeration over all $2^{20} = 1,048,576$ sign assignments removes Monte Carlo approximation error, but the inferential validity of the test remains conditional on the null and exchangeability assumptions specified by the test.
+- *Sign Test*: Directional test evaluating consistency with a 50/50 sign null ($p = 0.0118$).
+
+### Scope of Inference
+
+The evidence is benchmark-specific. It establishes that, on the predefined 20-seed non-stationary matched-marginal benchmark with $D=128$ and the specified feature representation, DeltaCore Gated did not demonstrate an advantage over regularized Online Covariance, while the observed paired difference favored Online Covariance.
+
+The benchmark does not establish universal superiority of Online Covariance, universal inferiority of DeltaCore, or performance ordering under telemetry distributions, dimensions, drift processes, workloads, or deployment conditions not represented by the benchmark.
+
+The result therefore supports terminating this specific DeltaCore research direction for RecoveryOS, rather than claiming that adaptive telemetry detection as a broader problem has been solved.
 
 ### Pre-Registered Configuration Invariance
 

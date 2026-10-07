@@ -19,12 +19,14 @@ This evaluation served as the final falsification gate before any RecoveryOS run
 
 ## 2. Decision
 
-$$\boxed{\textbf{DeltaCore is REJECTED for RecoveryOS Telemetry Regime Detection.}}$$
+$$\boxed{\textbf{DeltaCore is PERMANENTLY REJECTED & FROZEN for RecoveryOS Telemetry Regime Detection.}}$$
 
 **DeltaCore will NOT be integrated into RecoveryOS.**  
-The telemetry integration hypothesis has been definitively tested, rejected, and frozen.
+The telemetry integration hypothesis has been tested on the decisive benchmark, rejected, and frozen.
 
-This is a specific **engineering use-case decision** based on empirical benchmark results. It does not imply that DeltaCore has no theoretical value as an experimental implementation of adaptive neural associative memory; rather, it establishes that DeltaCore is not justified as a telemetry anomaly or regime detector in RecoveryOS.
+The RecoveryOS integration was rejected because DeltaCore did not demonstrate a sufficient empirical advantage over a simpler regularized online covariance baseline on the decisive benchmark, while incurring greater state complexity and latency. DeltaCore is therefore removed as an active RecoveryOS research dependency.
+
+This is an **engineering use-case decision** based on empirical benchmark results. It does not imply that DeltaCore has no theoretical value as an experimental implementation of adaptive neural associative memory, nor that adaptive telemetry detection as a broader problem has been solved; rather, it establishes that within the evaluated design and benchmark, DeltaCore is not justified as a telemetry anomaly or regime detector in RecoveryOS.
 
 ---
 
@@ -32,12 +34,15 @@ This is a specific **engineering use-case decision** based on empirical benchmar
 
 The decision is grounded in the findings of the final multi-seed paired benchmark (`experiments/higher_order_regime_shift.py` v3.0.0, 20 independent seeds, matched categorical marginals $\text{TVD} \le 0.05$):
 
-### A. Online Covariance Matches or Exceeds DeltaCore
+### A. Performance on the Decisive Benchmark
 When compared against a proper online second-order baseline (**Online Covariance with regularized Mahalanobis distance**, $4D^2$ state):
+- **Under the predefined 20-seed non-stationary matched-marginal benchmark, regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test.**
+- **DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark.**
 - **Online Covariance** achieved higher mean discriminative accuracy (**$0.5976 \pm 0.0667$** AUROC) than **DeltaCore Gated** (**$0.5711 \pm 0.0801$** AUROC).
-- The mean paired difference ($\text{DeltaCore} - \text{Covariance}$) was **$-0.0265$**, with a **95% paired bootstrap confidence interval of $[-0.0478, -0.0072]$** strictly excluding zero.
-- The exact two-sided binomial sign test yielded **$p = 0.0118$** (DeltaCore won on only 4 of 20 evaluation seeds), and the exact paired sign-flip permutation test yielded **$p = 0.0188$** (evaluating all $2^{20} = 1{,}048{,}576$ sign assignments).
-- Online Covariance demonstrated superior or equivalent discriminative ability without requiring non-standard auto-associative controller dynamics.
+- The mean paired difference ($\text{DeltaCore} - \text{Covariance}$) was **$-0.0265$**, with a **95% paired bootstrap confidence interval of $[-0.0478, -0.0072]$** strictly excluding zero. (Note: this percentile bootstrap interval is a resampling-based uncertainty estimate; it is not an assumption-free confidence interval.)
+- The exact two-sided binomial sign test yielded **$p = 0.0118$** (DeltaCore won on 4 of 20 evaluation seeds, lost on 16).
+- The exact paired sign-flip randomization test yielded **$p = 0.0188$** (evaluating all $2^{20} = 1{,}048{,}576$ sign assignments under the exchangeability null). Exact enumeration removes Monte Carlo approximation error, but inferential validity remains conditional on the exchangeability null.
+- Online Covariance achieved higher benchmark AUROC on this evaluation without requiring non-standard auto-associative controller dynamics.
 
 ### B. Computational and Memory Overhead is Unjustified
 - DeltaCore requires $4 D^2$ bytes of persistent state memory ($64.0\text{ KB}$ at $D = 128$, $1\text{ MB}$ at $D = 512$, $4\text{ MB}$ at $D = 1024$).
@@ -59,7 +64,7 @@ Under frozen calibration operating thresholds ($\tau = \mu_{\text{calib}} + 3\si
 
 ## 4. Architectural Path for RecoveryOS
 
-RecoveryOS will address telemetry monitoring and regime tracking using classical, transparent, and operationally proven primitives:
+RecoveryOS will address telemetry monitoring and regime tracking using classical, transparent, and operationally established primitives:
 1. **First-Order Tracking**: Lightweight online exponentially weighted moving averages (EWMA) and robust Huber centroids ($O(D)$ state, sub-5 µs latency) for baseline metrics.
 2. **Second-Order Covariance Tracking**: Regularized streaming sample covariance and Mahalanobis distances ($O(D^2)$ state) where joint correlation tracking is required.
 3. **Explicit Domain Invariants**: Explicit rule tables and transactional state machines for operational contradictions rather than learned associative approximations.
@@ -69,3 +74,15 @@ RecoveryOS will address telemetry monitoring and regime tracking using classical
 ## 5. Status of the DeltaCore Codebase
 
 DeltaCore remains an independent, open-source research toolkit for exploring adaptive associative memory dynamics, streaming matrix updates, and test-time learning. Development on DeltaCore is now **frozen**, preserved as a reproducible scientific archive with full benchmark artifacts and negative findings intact.
+
+---
+
+## 6. Scope of Inference
+
+> The evidence is benchmark-specific. It establishes that, on the predefined 20-seed non-stationary matched-marginal benchmark with $D=128$ and the specified feature representation, DeltaCore Gated did not demonstrate an advantage over regularized Online Covariance, while the observed paired difference favored Online Covariance.
+>
+> The benchmark does not establish universal superiority of Online Covariance, universal inferiority of DeltaCore, or performance ordering under telemetry distributions, dimensions, drift processes, workloads, or deployment conditions not represented by the benchmark.
+>
+> The result therefore supports terminating this specific DeltaCore research direction for RecoveryOS, rather than claiming that adaptive telemetry detection as a broader problem has been solved.
+>
+> Any future work on adaptive telemetry detection must be treated as a new independent research effort with a new hypothesis, benchmark design, and preregistered evaluation.

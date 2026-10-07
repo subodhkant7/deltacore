@@ -8,10 +8,11 @@
 
 ### Core Science & Algorithm
 - [x] **Algorithm Frozen**: `AdaptiveController`, update equations, stability bounds, learning rates, and controller mathematics remain 100% frozen.
-- [x] **Statistical Test Corrected**: Replaced pseudo sign-test calculation with exact two-sided binomial sign test ($H_0: p = 0.5$) and added exact paired sign-flip permutation test evaluating all $2^{20} = 1{,}048{,}576$ sign configurations.
+- [x] **Statistical Test Corrected**: Replaced pseudo sign-test calculation with exact two-sided binomial sign test ($H_0: p = 0.5$) and added exact paired sign-flip randomization test evaluating all $2^{20} = 1{,}048{,}576$ sign configurations.
 - [x] **Bootstrap Verified**: Verified that `paired_bootstrap_ci` resamples paired seed units ($d_i$) rather than algorithms independently ($B = 10,000$, seed 42).
 - [x] **Benchmark Artifacts Regenerated**: `higher_order_regime_shift_results.json` and `higher_order_regime_shift_report.md` reflect verified statistical outputs.
-- [x] **Statistical Reporting Framework Aligned**: Conflation between mean difference (bootstrap CI) and seed-direction frequency (sign test) eliminated across all documentation.
+- [x] **Statistical Reporting Framework Aligned**: Conflation between mean difference (bootstrap CI), effect magnitude (exact randomization test), and seed-direction frequency (sign test) eliminated across all documentation.
+- [x] **Epistemic Scope & Statistical Nuance Calibrated**: All documentation explicitly distinguishes benchmark-scoped findings from universal algorithmic claims, notes that bootstrap CI is resampling-based, and clarifies that exact randomization testing is conditioned on exchangeability under the stated null.
 
 ### Documentation & Scientific Honesty
 - [x] **README Accurate**: Clean, conservative positioning as an open-source research implementation of adaptive associative state dynamics; prominent research-status notice included.
