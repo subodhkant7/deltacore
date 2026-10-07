@@ -13,6 +13,7 @@
 - [x] **Benchmark Artifacts Regenerated**: `higher_order_regime_shift_results.json` and `higher_order_regime_shift_report.md` reflect verified statistical outputs.
 - [x] **Statistical Reporting Framework Aligned**: Conflation between mean difference (bootstrap CI), effect magnitude (exact randomization test), and seed-direction frequency (sign test) eliminated across all documentation.
 - [x] **Epistemic Scope & Statistical Nuance Calibrated**: All documentation explicitly distinguishes benchmark-scoped findings from universal algorithmic claims, notes that bootstrap CI is resampling-based, and clarifies that exact randomization testing is conditioned on exchangeability under the stated null.
+- [x] **Multiplicity & Benchmark Identity Hardened**: Clarified inferential roles without omnibus pooling; added immutable benchmark identity (v3.0.0, D=128, seeds 0..19, commits `deda3ea` and `0ac487b`) and historical metric isolation (0.9859/0.9594).
 
 ### Documentation & Scientific Honesty
 - [x] **README Accurate**: Clean, conservative positioning as an open-source research implementation of adaptive associative state dynamics; prominent research-status notice included.

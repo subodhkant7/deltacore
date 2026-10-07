@@ -42,19 +42,27 @@ The following table constitutes the single authoritative numerical record for th
 
 The three inferential procedures answer fundamentally distinct questions and must never be conflated:
 
+| Procedure | Question | Null / Framework | Result |
+| :--- | :--- | :--- | :--- |
+| **Paired percentile bootstrap** | Mean-effect uncertainty | Resampling framework ($B = 10{,}000$, seed 42) | 95% CI `[-0.0478, -0.0072]` |
+| **Exact paired sign-flip test** | Paired-effect magnitude | Exchangeability-of-signs null ($2^{20} = 1{,}048{,}576$ assignments) | `p = 0.0188` ($19{,}728$ extreme) |
+| **Exact two-sided sign test** | Direction / majority | 50/50 sign null ($H_0: p = 0.5$) | `p = 0.0118` (4 wins / 16 losses) |
+
+Exhaustive enumeration removes Monte Carlo approximation error from the sign-flip calculation; it does not make the inferential procedure assumption-free. The percentile bootstrap interval is a resampling-based uncertainty estimate and is not treated as an exact confidence interval.
+
 ### Inferential Question 1 — Mean Effect Uncertainty
 - **Method**: Paired percentile bootstrap confidence interval ($B = 10{,}000$, seed 42).
 - **Question**: *What sampling uncertainty surrounds the estimated mean paired performance difference?*
 - **Canonical Result**: $95\%\text{ paired percentile bootstrap CI} = [\mathbf{-0.0478}, \mathbf{-0.0072}]$.
 - **Interpretation**: The bootstrap interval for the mean paired difference excludes zero and is entirely negative for this benchmark.
-- **Mandatory Caveat**: This percentile bootstrap interval is a resampling-based uncertainty estimate. It is not an assumption-free or mathematically exact confidence interval.
+- **Mandatory Caveat**: The percentile bootstrap interval is a resampling-based uncertainty estimate and is not treated as an exact confidence interval.
 
 ### Inferential Question 2 — Randomization / Magnitude
 - **Method**: Exact paired sign-flip permutation/randomization test.
 - **Question**: *Is the observed mean paired difference statistic ($\bar{d} = -0.0265$) inconsistent with a symmetric sign-exchangeability null?*
 - **Canonical Result**: $2^{20} = 1{,}048{,}576$ exact sign assignments; $19{,}728$ assignments satisfy $|\bar{d}_{\text{perm}}| \ge |\bar{d}_{\text{observed}}|$; $p = 19{,}728 / 1{,}048{,}576 = 0.0188140869 \dots \approx \mathbf{0.0188}$.
 - **Interpretation**: The $p$-value is exact with respect to exhaustive enumeration of the sign assignments under the specified exchangeability-of-signs null.
-- **Mandatory Caveat**: "Exact" refers to exhaustive enumeration under the stated null; it does not mean assumption-free inference. Exact enumeration removes Monte Carlo approximation error, but the inferential validity of the test remains conditional on the null and exchangeability assumptions specified by the test.
+- **Mandatory Caveat**: "Exact" refers to exhaustive enumeration under the stated null; it does not mean assumption-free inference. Exhaustive enumeration removes Monte Carlo approximation error from the sign-flip calculation; it does not make the inferential procedure assumption-free.
 
 ### Inferential Question 3 — Direction / Majority
 - **Method**: Exact two-sided binomial sign test.
@@ -62,37 +70,44 @@ The three inferential procedures answer fundamentally distinct questions and mus
 - **Canonical Result**: DeltaCore wins: $4 / 20$, DeltaCore loses: $16 / 20$, $p = \mathbf{0.0118}$.
 - **Interpretation**: Under the two-sided 50/50 sign null, the observed directional imbalance is statistically significant for this benchmark.
 
-Explicitly:
-- **Sign test**: direction / majority across streams.
-- **Sign-flip test**: magnitude / paired effect under sign exchangeability.
-- **Bootstrap**: uncertainty interval for the mean difference.
+---
+
+## 4. Multiplicity and Inferential Roles
+
+**Multiplicity and inferential roles.** The sign test and paired sign-flip test are separately defined inferential procedures addressing different questions. The exact two-sided sign test evaluates directional imbalance under a 50/50 sign null, while the exact paired sign-flip randomization test evaluates the magnitude of the paired mean difference under the stated exchangeability-of-signs null. They are not independent replications of a single hypothesis test. Their p-values are therefore reported separately for their respective null hypotheses and are not interpreted as a combined family-wise-error-controlled omnibus result.
+
+The paired percentile bootstrap serves a different purpose: it provides a resampling-based uncertainty interval for the observed mean paired difference. It is not treated as a third hypothesis test.
 
 ---
 
-## 4. Scope of Inference
+## 5. Scope of Inference
 
-> **The evidence is benchmark-specific. It establishes that, on the predefined 20-seed non-stationary matched-marginal benchmark with $D=128$ and the specified feature representation, DeltaCore Gated did not demonstrate an advantage over regularized Online Covariance, while the observed paired difference favored Online Covariance.**
->
-> **The benchmark does not establish universal superiority of Online Covariance, universal inferiority of DeltaCore, or performance ordering under telemetry distributions, dimensions, drift processes, workloads, or deployment conditions not represented by the benchmark.**
->
-> **The result therefore supports terminating this specific DeltaCore research direction for RecoveryOS, rather than claiming that adaptive telemetry detection as a broader problem has been solved.**
+> **The evidence is benchmark-specific. It establishes that, on the specified 20-seed non-stationary matched-marginal benchmark with D=128 and the stated feature representation, DeltaCore Gated did not demonstrate an advantage over regularized Online Covariance, while the observed paired difference favored Online Covariance. The benchmark does not establish universal superiority of Online Covariance, universal inferiority of DeltaCore, or performance ordering under telemetry distributions, dimensions, drift processes, workloads, or deployment conditions not represented by the benchmark. The result supports terminating this specific DeltaCore research direction for RecoveryOS; it does not establish that adaptive telemetry detection as a broader problem has been solved.**
 
 ---
 
-## 5. Practical vs. Statistical Significance
+## 6. Practical vs. Statistical Significance
 
 The statistical metrics must be interpreted alongside engineering costs rather than generalized into universal claims:
-- **Observed Benchmark Effect**: Mean paired AUROC difference was $-0.0265$ (Cohen's $d = -0.58$). These quantify the observed benchmark effect and should not be converted into a universal production-performance claim.
+- **Observed Benchmark Effect**:
+  - Mean paired AUROC difference: $\bar{d} = -0.0265$
+  - Paired Cohen's $d = -0.58$
+  - Exact two-sided sign test: $p = 0.0118$ (directional null)
+  - Exact paired sign-flip test: $p = 0.0188$ (magnitude / randomization null)
+  - 95% paired percentile bootstrap CI: $[-0.0478, -0.0072]$
+  These metrics quantify the observed benchmark effect and should not be converted into a universal production-performance claim.
 - **Engineering Complexity & Latency**:
-  - DeltaCore requires an unconstrained square associative matrix ($M_t \in \mathbb{R}^{D \times D}$) consuming $4 D^2$ bytes ($64\text{ KB}$ at $D = 128$) and median scoring latency of $25.9\text{ µs}$ ($8.6\times$ higher than first-order centroids at $3.0\text{ µs}$).
+  - DeltaCore requires an unconstrained square associative matrix ($M_t \in \mathbb{R}^{D \times D}$) consuming $4 D^2$ bytes ($64\text{ KB}$ at $D = 128$) and median scoring latency of $25.9\text{ µs}$ ($8.6\times$ higher latency relative to first-order centroids at $3.0\text{ µs}$).
   - Online Covariance also consumes $O(D^2)$ state ($64\text{ KB}$) with comparable matrix operations.
-- **Engineering Tradeoff**: Within the evaluated design and benchmark, DeltaCore incurred substantially greater state/latency cost than first-order methods without demonstrating a compensating performance advantage over regularized online covariance.
+- **Engineering Tradeoff**: Within the evaluated design and benchmark, DeltaCore incurred greater state and latency cost without demonstrating a compensating performance advantage over regularized online covariance.
 
 ---
 
-## 6. Canonical Scientific Conclusion
+## 7. Canonical Scientific Conclusion
 
-> **"Under the predefined 20-seed non-stationary matched-marginal benchmark, regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test."**
+> **"Under the 20-seed non-stationary matched-marginal benchmark, the observed paired difference favored regularized Online Covariance. The exact two-sided sign test rejected its 50/50 directional null at p = 0.0118, and the exact paired sign-flip randomization test rejected its stated exchangeability-of-signs null at p = 0.0188."**
+>
+> **"These tests address different inferential questions and are reported separately; the two p-values are not treated as independent confirmations of a single omnibus hypothesis."**
 >
 > **"DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark."**
 
@@ -100,7 +115,44 @@ DeltaCore successfully demonstrated deterministic controller semantics, local Ly
 
 ---
 
-## 7. Reproducibility
+## 8. Decisive Benchmark Identity
+
+```text
+Benchmark implementation:
+experiments/higher_order_regime_shift.py
+
+Benchmark version:
+v3.0.0
+
+Streams:
+20 independent paired streams
+
+Seeds:
+0 through 19
+
+Feature dimension:
+D = 128
+
+Feature representation:
+unary + pairs + triples + lag
+
+Marginal-invariance constraint:
+Categorical TVD <= 0.05 vs Phase C
+```
+
+**Git Provenance**:
+- Benchmark implementation introduced: commit `deda3eaaef1ebdeb3171198bce2f50070e38f1df` (*"experiments: complete higher-order baseline and evaluation-correction gate"*).
+- Exact statistical validation & research freeze: commit `0ac487bf5d85be17267bd97133a5bef55c2e4767` (*"release: close research freeze with exact statistical validation"*).
+
+---
+
+## 9. Historical Metric Isolation
+
+The values 0.9859 and 0.9594 are Phase 16/17 balanced classification accuracy metrics and are not part of the telemetry regime-detection AUROC record.
+
+---
+
+## 10. Reproducibility
 
 The complete benchmark and regression suite can be reproduced with:
 
@@ -128,7 +180,7 @@ python experiments/higher_order_regime_shift.py
 
 ---
 
-## 8. Repository Integrity
+## 11. Repository Integrity
 
 | Check | Tool / Command | Result |
 | :--- | :--- | :--- |
@@ -143,7 +195,7 @@ python experiments/higher_order_regime_shift.py
 
 ---
 
-## 9. Closure Rule & RecoveryOS Decision
+## 12. Closure Rule & RecoveryOS Decision
 
 > **The RecoveryOS integration was rejected because DeltaCore did not demonstrate a sufficient empirical advantage over a simpler regularized online covariance baseline on the decisive benchmark, while incurring greater state complexity and latency. DeltaCore is therefore removed as an active RecoveryOS research dependency.**
 >

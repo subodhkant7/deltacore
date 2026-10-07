@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Research Freeze & Reproducibility Archive Release
 
-This release marks the formal completion and research freeze of the DeltaCore project. Under the predefined 20-seed non-stationary matched-marginal benchmark, regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test, and DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark. The codebase is frozen and preserved as a reproducible open-source research archive.
+This release marks the formal completion and research freeze of the DeltaCore project. Under the 20-seed non-stationary matched-marginal benchmark, the observed paired difference favored regularized Online Covariance. The exact two-sided sign test rejected its 50/50 directional null at p = 0.0118, and the exact paired sign-flip randomization test rejected its stated exchangeability-of-signs null at p = 0.0188. These tests address different inferential questions and are reported separately; the two p-values are not treated as independent confirmations of a single omnibus hypothesis. DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark. The codebase is frozen and preserved as a reproducible open-source research archive.
 
 #### Added
 - **Canonical Controller API**: Stabilized `AdaptiveController` and `ControllerConfig` with non-mutating pre-update residual evaluation (`score()`) and explicit update gating (`step(adapt=...)`).

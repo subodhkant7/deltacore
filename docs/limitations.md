@@ -30,10 +30,10 @@ Scoring and updating an associative matrix requires matrix-vector multiplication
 - Online Centroid median scoring latency: **$3.0\text{ µs}$**
 - DeltaCore Gated median scoring latency: **$25.9\text{ µs}$** ($8.6\times$ slower)
 
-Within the evaluated design and benchmark, DeltaCore incurred substantially greater state/latency cost without demonstrating a compensating performance advantage over regularized online covariance. (This does not imply that $O(D^2)$ state memory is inherently unacceptable in every deployment, but represents an unfavorable trade-off within this benchmark context.)
+Within the evaluated design and benchmark, DeltaCore incurred greater state and latency cost without demonstrating a compensating performance advantage over regularized online covariance. (This does not imply that $O(D^2)$ state memory is inherently unacceptable in every deployment, but represents an unfavorable trade-off within this benchmark context.)
 
 ### 3. No Demonstrated Advantage Over Online Covariance on Decisive Benchmark
-Under the predefined 20-seed non-stationary matched-marginal benchmark, regularized Online Covariance significantly outperformed DeltaCore Gated under both the exact paired sign test and exact paired sign-flip randomization test. DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark.
+Under the 20-seed non-stationary matched-marginal benchmark, the observed paired difference favored regularized Online Covariance. The exact two-sided sign test rejected its 50/50 directional null at p = 0.0118, and the exact paired sign-flip randomization test rejected its stated exchangeability-of-signs null at p = 0.0188. These tests address different inferential questions and are reported separately; the two p-values are not treated as independent confirmations of a single omnibus hypothesis. DeltaCore Gated did not demonstrate a performance advantage over regularized Online Covariance on the decisive benchmark.
 - **Online Covariance (Mahalanobis)**: **$0.5976 \pm 0.0667$** AUROC.
 - **DeltaCore Gated**: **$0.5711 \pm 0.0801$** AUROC.
 - **Mean paired difference**: **$-0.0265$** (95% percentile bootstrap CI: $[-0.0478, -0.0072]$, exact sign test $p = 0.0118$, exact paired sign-flip randomization test $p = 0.0188$).
@@ -66,15 +66,17 @@ DeltaCore has not been evaluated in live production clusters, high-throughput me
 
 ## 3. Scope of Inference
 
-The evidence is benchmark-specific. It establishes that, on the predefined 20-seed non-stationary matched-marginal benchmark with $D=128$ and the specified feature representation, DeltaCore Gated did not demonstrate an advantage over regularized Online Covariance, while the observed paired difference favored Online Covariance.
-
-The benchmark does not establish universal superiority of Online Covariance, universal inferiority of DeltaCore, or performance ordering under telemetry distributions, dimensions, drift processes, workloads, or deployment conditions not represented by the benchmark.
-
-The result therefore supports terminating this specific DeltaCore research direction for RecoveryOS, rather than claiming that adaptive telemetry detection as a broader problem has been solved.
+> **The evidence is benchmark-specific. It establishes that, on the specified 20-seed non-stationary matched-marginal benchmark with D=128 and the stated feature representation, DeltaCore Gated did not demonstrate an advantage over regularized Online Covariance, while the observed paired difference favored Online Covariance. The benchmark does not establish universal superiority of Online Covariance, universal inferiority of DeltaCore, or performance ordering under telemetry distributions, dimensions, drift processes, workloads, or deployment conditions not represented by the benchmark. The result supports terminating this specific DeltaCore research direction for RecoveryOS; it does not establish that adaptive telemetry detection as a broader problem has been solved.**
 
 ---
 
-## 4. What Was Scientifically Demonstrated
+## 4. Historical Metric Isolation
+
+The values 0.9859 and 0.9594 are Phase 16/17 balanced classification accuracy metrics and are not part of the telemetry regime-detection AUROC record.
+
+---
+
+## 5. What Was Scientifically Demonstrated
 
 Despite the boundaries above, DeltaCore verified:
 - Pure-PyTorch deterministic implementation of test-time associative memory.
@@ -85,7 +87,7 @@ Despite the boundaries above, DeltaCore verified:
 
 ---
 
-## 5. Prohibited Promotional Language
+## 6. Prohibited Promotional Language
 
 Contributors and automated agents are strictly prohibited from using the following unproven claims in documentation, code docstrings, and research reports:
 - *"guaranteed anomaly detection"*
