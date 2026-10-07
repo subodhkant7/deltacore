@@ -1,0 +1,463 @@
+{
+  "abrupt_shift": {
+    "categorical_distance": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0,
+      "threshold": 0.0,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.9711,
+      "mean_nominal_score": 0.0
+    },
+    "rolling_hashed_distance": {
+      "auroc": 0.976,
+      "fpr_at_95_thresh": 0.025,
+      "threshold": 0.9553,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.0001,
+      "mean_nominal_score": 0.7779
+    },
+    "static_centroid_distance": {
+      "auroc": 0.9998,
+      "fpr_at_95_thresh": 0.025,
+      "threshold": 0.9456,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.1534,
+      "mean_nominal_score": 0.7782
+    },
+    "pca_reconstruction_error": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.025,
+      "threshold": 0.7506,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.12,
+      "mean_nominal_score": 0.3436
+    },
+    "deltacore_continuous": {
+      "auroc": 0.9768,
+      "fpr_at_95_thresh": 0.025,
+      "threshold": 0.8602,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.8872,
+      "mean_nominal_score": 0.6936
+    },
+    "deltacore_gated": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.025,
+      "threshold": 0.8649,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.9829,
+      "mean_nominal_score": 0.6949
+    },
+    "timing_us_per_step": 161.43
+  },
+  "gradual_drift": {
+    "categorical_distance": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0405,
+      "threshold": 0.0,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.9574,
+      "mean_nominal_score": 0.0135
+    },
+    "rolling_hashed_distance": {
+      "auroc": 0.9763,
+      "fpr_at_95_thresh": 0.0405,
+      "threshold": 0.8303,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.0109,
+      "mean_nominal_score": 0.7733
+    },
+    "static_centroid_distance": {
+      "auroc": 0.9998,
+      "fpr_at_95_thresh": 0.0405,
+      "threshold": 0.836,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.1475,
+      "mean_nominal_score": 0.7749
+    },
+    "pca_reconstruction_error": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0405,
+      "threshold": 0.4506,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.1208,
+      "mean_nominal_score": 0.3629
+    },
+    "deltacore_continuous": {
+      "auroc": 0.9767,
+      "fpr_at_95_thresh": 0.0405,
+      "threshold": 0.748,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.8894,
+      "mean_nominal_score": 0.6698
+    },
+    "deltacore_gated": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0405,
+      "threshold": 0.7479,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.9795,
+      "mean_nominal_score": 0.6713
+    },
+    "timing_us_per_step": 156.98
+  },
+  "repeated_anomaly": {
+    "categorical_distance": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0111,
+      "threshold": 0.0,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.963,
+      "mean_nominal_score": 0.0012
+    },
+    "rolling_hashed_distance": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0444,
+      "threshold": 0.8489,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.1383,
+      "mean_nominal_score": 0.7787
+    },
+    "static_centroid_distance": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0444,
+      "threshold": 0.8485,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.1401,
+      "mean_nominal_score": 0.7804
+    },
+    "pca_reconstruction_error": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0444,
+      "threshold": 0.5059,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.1066,
+      "mean_nominal_score": 0.3737
+    },
+    "deltacore_continuous": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0444,
+      "threshold": 0.7755,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.9789,
+      "mean_nominal_score": 0.6621
+    },
+    "deltacore_gated": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0444,
+      "threshold": 0.7755,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.9799,
+      "mean_nominal_score": 0.6624
+    },
+    "timing_us_per_step": 173.06
+  },
+  "return_to_nominal": {
+    "categorical_distance": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.0,
+      "threshold": 0.3333,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.9704,
+      "mean_nominal_score": 0.0167
+    },
+    "rolling_hashed_distance": {
+      "auroc": 0.986,
+      "fpr_at_95_thresh": 0.04,
+      "threshold": 0.955,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.0343,
+      "mean_nominal_score": 0.8045
+    },
+    "static_centroid_distance": {
+      "auroc": 0.9955,
+      "fpr_at_95_thresh": 0.04,
+      "threshold": 1.0172,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.1459,
+      "mean_nominal_score": 0.7811
+    },
+    "pca_reconstruction_error": {
+      "auroc": 0.9998,
+      "fpr_at_95_thresh": 0.04,
+      "threshold": 0.7921,
+      "detection_delay": 0,
+      "mean_anomaly_score": 1.116,
+      "mean_nominal_score": 0.3647
+    },
+    "deltacore_continuous": {
+      "auroc": 0.9898,
+      "fpr_at_95_thresh": 0.04,
+      "threshold": 0.8121,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.9129,
+      "mean_nominal_score": 0.6566
+    },
+    "deltacore_gated": {
+      "auroc": 1.0,
+      "fpr_at_95_thresh": 0.04,
+      "threshold": 0.8433,
+      "detection_delay": 0,
+      "mean_anomaly_score": 0.9801,
+      "mean_nominal_score": 0.6616
+    },
+    "timing_us_per_step": 161.03
+  },
+  "dimensional_scaling": {
+    "D_64": {
+      "categorical_distance": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.0,
+        "threshold": 0.0,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9711,
+        "mean_nominal_score": 0.0
+      },
+      "rolling_hashed_distance": {
+        "auroc": 0.975,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9376,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9908,
+        "mean_nominal_score": 0.7775
+      },
+      "static_centroid_distance": {
+        "auroc": 0.9995,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9273,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.1395,
+        "mean_nominal_score": 0.778
+      },
+      "pca_reconstruction_error": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.7365,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.0767,
+        "mean_nominal_score": 0.335
+      },
+      "deltacore_continuous": {
+        "auroc": 0.9722,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.8502,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.8655,
+        "mean_nominal_score": 0.6891
+      },
+      "deltacore_gated": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.8536,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9662,
+        "mean_nominal_score": 0.6904
+      },
+      "timing_us_per_step": 117.34
+    },
+    "D_128": {
+      "categorical_distance": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.0,
+        "threshold": 0.0,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9711,
+        "mean_nominal_score": 0.0
+      },
+      "rolling_hashed_distance": {
+        "auroc": 0.976,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9553,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.0001,
+        "mean_nominal_score": 0.7779
+      },
+      "static_centroid_distance": {
+        "auroc": 0.9998,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9456,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.1534,
+        "mean_nominal_score": 0.7782
+      },
+      "pca_reconstruction_error": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.7506,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.12,
+        "mean_nominal_score": 0.3436
+      },
+      "deltacore_continuous": {
+        "auroc": 0.9768,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.8602,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.8872,
+        "mean_nominal_score": 0.6936
+      },
+      "deltacore_gated": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.8649,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9829,
+        "mean_nominal_score": 0.6949
+      },
+      "timing_us_per_step": 147.12
+    },
+    "D_256": {
+      "categorical_distance": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.0,
+        "threshold": 0.0,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9711,
+        "mean_nominal_score": 0.0
+      },
+      "rolling_hashed_distance": {
+        "auroc": 0.974,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9736,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.0026,
+        "mean_nominal_score": 0.763
+      },
+      "static_centroid_distance": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9626,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.1567,
+        "mean_nominal_score": 0.7636
+      },
+      "pca_reconstruction_error": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.7504,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.1338,
+        "mean_nominal_score": 0.3532
+      },
+      "deltacore_continuous": {
+        "auroc": 0.9782,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.866,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.8944,
+        "mean_nominal_score": 0.69
+      },
+      "deltacore_gated": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.8706,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9856,
+        "mean_nominal_score": 0.6913
+      },
+      "timing_us_per_step": 227.34
+    },
+    "D_512": {
+      "categorical_distance": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.0,
+        "threshold": 0.0,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9711,
+        "mean_nominal_score": 0.0
+      },
+      "rolling_hashed_distance": {
+        "auroc": 0.9715,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9963,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.0142,
+        "mean_nominal_score": 0.7642
+      },
+      "static_centroid_distance": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9862,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.1706,
+        "mean_nominal_score": 0.7648
+      },
+      "pca_reconstruction_error": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.7706,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.1577,
+        "mean_nominal_score": 0.3545
+      },
+      "deltacore_continuous": {
+        "auroc": 0.98,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.8753,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9049,
+        "mean_nominal_score": 0.6906
+      },
+      "deltacore_gated": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.8802,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9916,
+        "mean_nominal_score": 0.6918
+      },
+      "timing_us_per_step": 452.96
+    },
+    "D_1024": {
+      "categorical_distance": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.0,
+        "threshold": 0.0,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9711,
+        "mean_nominal_score": 0.0
+      },
+      "rolling_hashed_distance": {
+        "auroc": 0.9732,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9963,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.0236,
+        "mean_nominal_score": 0.7642
+      },
+      "static_centroid_distance": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.9862,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.1891,
+        "mean_nominal_score": 0.7648
+      },
+      "pca_reconstruction_error": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.7706,
+        "detection_delay": 0,
+        "mean_anomaly_score": 1.1793,
+        "mean_nominal_score": 0.3545
+      },
+      "deltacore_continuous": {
+        "auroc": 0.9808,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.8753,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9101,
+        "mean_nominal_score": 0.6906
+      },
+      "deltacore_gated": {
+        "auroc": 1.0,
+        "fpr_at_95_thresh": 0.025,
+        "threshold": 0.8802,
+        "detection_delay": 0,
+        "mean_anomaly_score": 0.9975,
+        "mean_nominal_score": 0.6918
+      },
+      "timing_us_per_step": 1656.26
+    }
+  }
+}
