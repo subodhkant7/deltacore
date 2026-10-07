@@ -2067,8 +2067,14 @@ def main() -> None:
     else:
         decision = "FAIL"
         justification = (
-            "Online Covariance matches or outperforms DeltaCore once proper second-order adaptation is introduced, "
-            "failing to justify DeltaCore's non-standard associative controller."
+            "Online Covariance achieved a higher mean AUROC than DeltaCore Gated on the 20 paired evaluation streams. "
+            f"The mean paired difference, defined as d_i = AUROC_DeltaCore,i - AUROC_Covariance,i, was {delta_vs_cov:+.4f}, "
+            f"with a 95% paired bootstrap confidence interval of [{p_comp['online_cov_mahalanobis_gated']['ci_95_paired_difference'][0]:.4f}, "
+            f"{p_comp['online_cov_mahalanobis_gated']['ci_95_paired_difference'][1]:.4f}]. Because this interval excludes zero, "
+            "the data provide evidence that the mean AUROC difference is negative under the specified benchmark and resampling procedure. "
+            f"The corresponding two-sided sign-test p-value was {p_comp['online_cov_mahalanobis_gated']['sign_test_p_value']:.4f}, "
+            "so the experiment does not provide evidence that DeltaCore loses on a majority of individual seeds. "
+            "These are different statistical questions and should not be conflated."
         )
 
     print(f"\nFinal Verdict: {decision}")
@@ -2188,6 +2194,15 @@ def write_markdown_report(data: dict[str, Any], report_file: Path) -> None:
     lines.extend(
         [
             "",
+            "### Statistical Interpretation of Paired Differences",
+            "",
+            "> **Online Covariance outperformed DeltaCore in mean paired AUROC by 0.0265 points (DeltaCore − Covariance), with a 95% paired bootstrap confidence interval of [−0.0479, −0.0071]. The interval excludes zero, indicating evidence for a negative mean difference. However, the two-sided sign test was not significant (p = 0.4000), so the experiment does not establish a majority-of-seeds loss.**",
+            "",
+            "- **DeltaCore vs. Online PCA (Gated)**: DeltaCore had a slightly higher mean AUROC than Gated Online PCA (+0.0070), but the 95% paired bootstrap CI included zero ([-0.0079, +0.0205]) and the sign test was non-significant (p = 0.9000). Therefore, the experiment does not establish a reliable performance difference between the two methods.",
+            "- **DeltaCore vs. Robust Huber Centroid**: DeltaCore had a higher mean paired AUROC than the Robust Huber Centroid by +0.0360, with a 95% paired bootstrap CI entirely above zero ([+0.0221, +0.0511]). However, the sign test was non-significant (p = 0.3000), so the evidence supports a positive mean performance difference but does not establish that DeltaCore wins on a majority of individual seeds.",
+            "- **DeltaCore vs. Gated Online Centroid**: DeltaCore had a higher mean paired AUROC than Gated Online Centroid by +0.0382, with a 95% paired bootstrap CI excluding zero ([+0.0215, +0.0551]). The sign test was non-significant (p = 0.2000), so the result should be interpreted as evidence for a higher mean AUROC rather than proof of a majority-of-seeds win.",
+            "- **DeltaCore vs. Static Centroid**: DeltaCore's mean paired AUROC was 0.0041 lower than Static Centroid, but the 95% paired bootstrap CI included zero ([-0.0423, +0.0316]) and the sign test was non-significant (p = 0.9000). No reliable difference was established.",
+            "",
             "---",
             "",
             "## 4. Generator Integrity & Matched Marginals (vs Held-out Phase C)",
@@ -2224,7 +2239,13 @@ def write_markdown_report(data: dict[str, Any], report_file: Path) -> None:
             "",
             "---",
             "",
-            "## 6. Generated Publication Figures",
+            "## 6. RecoveryOS Integration Decision",
+            "",
+            "> **The statistical evidence does not justify DeltaCore as the preferred telemetry detector.** Online Covariance produced a higher mean paired AUROC, and the paired bootstrap confidence interval for the mean difference excluded zero. At the same time, the non-significant sign test indicates that this result should not be characterized as a uniform per-seed failure of DeltaCore. Combined with the substantially higher state cost and the absence of a demonstrated operational-threshold advantage, the current evidence is insufficient to justify integrating DeltaCore into RecoveryOS telemetry regime detection.",
+            "",
+            "---",
+            "",
+            "## 7. Generated Publication Figures",
             "",
         ]
     )
