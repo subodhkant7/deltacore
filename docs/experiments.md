@@ -91,7 +91,7 @@ flowchart TD
 | **Mean Paired Difference ($\text{DC} - \text{Cov}$)** | **-0.0265** | 95% Bootstrap CI: **[-0.0478, -0.0072]** (excludes 0) |
 | **Paired Cohen's $d$** | **-0.58** | Medium negative effect size |
 | **Exact Two-Sided Binomial Sign Test** | **$p = 0.0118$** | DeltaCore won on only 4 of 20 seeds ($p < 0.05$) |
-| **Paired Permutation (Sign-Flip) Test** | **$p = 0.0192$** | Randomization test rejects null ($p < 0.05$) |
+| **Exact Paired Permutation Test** | **$p = 0.0188$** | Evaluated all $2^{20} = 1{,}048{,}576$ sign configurations ($p < 0.05$) |
 | **DeltaCore vs. Gated Online Centroid** | +0.0382 | 95% CI: [+0.0205, +0.0541], $p_{\text{sign}} = 0.0004$ |
 
 ### Scientific Outcome

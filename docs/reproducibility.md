@@ -117,7 +117,7 @@ python experiments/higher_order_regime_shift.py
   - `DeltaCore Gated AUROC`: $0.5711 \pm 0.0801$
   - `Mean Paired Difference`: $-0.0265$ (95% Bootstrap CI: $[-0.0478, -0.0072]$)
   - `Exact Binomial Sign Test`: $p = 0.0118$ (DeltaCore wins 4/20 seeds)
-  - `Paired Permutation Test`: $p = 0.0192$
+  - `Exact Paired Permutation Test`: $p = 0.0188$ (evaluated over all $2^{20} = 1{,}048{,}576$ sign configurations)
   - `Final Verdict`: `FAIL`
 
 ### Pre-Registered Configuration Invariance

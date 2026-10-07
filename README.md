@@ -81,13 +81,13 @@ Across 20 independent paired streams evaluating 5 hard anomaly families with mat
 | **Online Covariance Mean AUROC** | **0.5976 $\pm$ 0.0667** | 95% Bootstrap CI: [0.5697, 0.6271] |
 | **Mean Paired Difference ($\text{DC} - \text{Cov}$)** | **-0.0265** | 95% Paired Bootstrap CI: **[-0.0478, -0.0072]** (excludes zero) |
 | **Exact Binomial Sign Test** | **$p = 0.0118$** | DeltaCore won on only 4 of 20 seeds ($p < 0.05$) |
-| **Paired Permutation (Sign-Flip) Test** | **$p = 0.0192$** | Randomization test confirms negative mean difference ($p < 0.05$) |
+| **Exact Paired Permutation Test** | **$p = 0.0188$** | Evaluated all $2^{20} = 1{,}048{,}576$ sign configurations ($p < 0.05$) |
 | **DeltaCore vs. Online Centroid (Gated)** | +0.0382 | 95% Bootstrap CI: [+0.0205, +0.0541], Exact Sign Test $p = 0.0004$ |
 | **DeltaCore vs. Online PCA (Gated)** | +0.0070 | 95% Bootstrap CI: [-0.0074, +0.0209] (includes zero), $p = 0.8238$ |
 
 ### Scientific Conclusions
 1. **DeltaCore outperformed first-order online centroids** (+0.0382 AUROC, $p = 0.0004$), demonstrating sensitivity to linear feature correlations that centroid models cannot track.
-2. **Online Covariance statistically outperformed DeltaCore** (-0.0265 AUROC, bootstrap CI $[-0.0478, -0.0072]$, sign test $p = 0.0118$, permutation test $p = 0.0192$).
+2. **Online Covariance statistically outperformed DeltaCore** (-0.0265 AUROC, bootstrap CI $[-0.0478, -0.0072]$, sign test $p = 0.0118$, exact permutation test $p = 0.0188$).
 3. **Representation engineering explained higher-order detection**: Representation tier ablations revealed that gains on multi-token anomalies were driven by the feature hashing layer (pair and triple interaction tokens), which benefited classical covariance and centroid methods equally or more.
 4. **Adaptive Anomaly Absorption**: Continuous un-gated adaptation absorbs repeated anomalies within 5–25 steps ($r_{100}/r_1 = 0.0529$, assimilating 94.7% of the anomaly), confirming that score-before-update gating is strictly necessary.
 

@@ -36,7 +36,7 @@ The decision is grounded in the findings of the final multi-seed paired benchmar
 When compared against a proper online second-order baseline (**Online Covariance with regularized Mahalanobis distance**, $4D^2$ state):
 - **Online Covariance** achieved higher mean discriminative accuracy (**$0.5976 \pm 0.0667$** AUROC) than **DeltaCore Gated** (**$0.5711 \pm 0.0801$** AUROC).
 - The mean paired difference ($\text{DeltaCore} - \text{Covariance}$) was **$-0.0265$**, with a **95% paired bootstrap confidence interval of $[-0.0478, -0.0072]$** strictly excluding zero.
-- The exact two-sided binomial sign test yielded **$p = 0.0118$** (DeltaCore won on only 4 of 20 evaluation seeds), and the paired permutation test yielded **$p = 0.0192$**.
+- The exact two-sided binomial sign test yielded **$p = 0.0118$** (DeltaCore won on only 4 of 20 evaluation seeds), and the exact paired sign-flip permutation test yielded **$p = 0.0188$** (evaluating all $2^{20} = 1{,}048{,}576$ sign assignments).
 - Online Covariance demonstrated superior or equivalent discriminative ability without requiring non-standard auto-associative controller dynamics.
 
 ### B. Computational and Memory Overhead is Unjustified

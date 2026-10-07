@@ -36,7 +36,7 @@ While faster than covariance matrix inversion ($44.3\text{ µs}$), DeltaCore inc
 On decisive multi-seed evaluation with matched marginal distributions ($\text{TVD} \le 0.05$):
 - **Online Covariance (Mahalanobis)** achieved **$0.5976$** AUROC.
 - **DeltaCore Gated** achieved **$0.5711$** AUROC.
-- Mean paired difference was **$-0.0265$** (95% Bootstrap CI: $[-0.0478, -0.0072]$, exact sign test $p = 0.0118$, paired permutation $p = 0.0192$).
+- Mean paired difference was **$-0.0265$** (95% Bootstrap CI: $[-0.0478, -0.0072]$, exact sign test $p = 0.0118$, exact paired permutation $p = 0.0188$).
 DeltaCore fails to provide an empirical advantage over proper second-order statistical estimation on identical representations.
 
 ### 4. Representation Dependence

@@ -45,7 +45,7 @@ Across 18 research development phases and 4 rigorous regime-shift benchmarks, De
 DeltaCore's extensive empirical evaluations established clear negative boundaries:
 
 1. **No Superiority to Second-Order Covariance**:
-   - On the decisive higher-order benchmark with matched marginals, **Online Covariance with regularized Mahalanobis distance achieved a higher mean AUROC ($0.5976$) than DeltaCore Gated ($0.5711$)**, with a mean paired difference of $-0.0265$ ($95\%$ bootstrap CI $[-0.0478, -0.0072]$, exact sign test $p = 0.0118$ across 20 seeds).
+   - On the decisive higher-order benchmark with matched marginals, **Online Covariance with regularized Mahalanobis distance achieved a higher mean AUROC ($0.5976$) than DeltaCore Gated ($0.5711$)**, with a mean paired difference of $-0.0265$ ($95\%$ bootstrap CI $[-0.0478, -0.0072]$, exact sign test $p = 0.0118$, exact paired permutation $p = 0.0188$ across 20 seeds).
 2. **No Representation-Independent Advantage**:
    - Gains on complex cross-token anomalies were driven by the feature hasher (pair and triple token interactions), which benefited classical covariance and centroid methods equally or more.
 3. **No Proof of Global Boundedness**:
