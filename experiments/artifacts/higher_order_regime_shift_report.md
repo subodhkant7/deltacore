@@ -1,6 +1,6 @@
 # DeltaCore — Higher-Order Baseline & Evaluation-Correction Gate Report
 
-**Date**: 2026-10-07 15:42:28 UTC  
+**Date**: 2026-10-07 16:00:20 UTC  
 **Benchmark**: `experiments/higher_order_regime_shift.py`  
 **Evaluation Seeds**: 20 seeds (0 to 19)  
 **Primary Decision**: **FAIL**  
@@ -11,7 +11,7 @@
 
 > **DECISION**: **FAIL**  
 >  
-> Online Covariance achieved a higher mean AUROC than DeltaCore Gated on the 20 paired evaluation streams. The mean paired difference, defined as d_i = AUROC_DeltaCore,i - AUROC_Covariance,i, was -0.0265, with a 95% paired bootstrap confidence interval of [-0.0479, -0.0071]. Because this interval excludes zero, the data provide evidence that the mean AUROC difference is negative under the specified benchmark and resampling procedure. The corresponding two-sided sign-test p-value was 0.4000, so the experiment does not provide evidence that DeltaCore loses on a majority of individual seeds. These are different statistical questions and should not be conflated.
+> Online Covariance achieved a higher mean AUROC than DeltaCore Gated on the 20 paired evaluation streams. The mean paired difference, defined as d_i = AUROC_DeltaCore,i - AUROC_Covariance,i, was -0.0265, with a 95% paired bootstrap confidence interval of [-0.0478, -0.0072]. Because this interval excludes zero, the data provide evidence that the mean AUROC difference is negative under the specified benchmark and resampling procedure. The exact two-sided binomial sign test p-value was 0.0118 (DeltaCore won on 4 of 20 seeds), and the paired permutation test p-value was 0.0192.
 
 ---
 
@@ -19,43 +19,43 @@
 
 | Algorithm | AUROC (Mean ± Std) | 95% Bootstrap CI | AUPRC | Operational TPR @ tau | Operational FPR @ tau | Operational F1 | State Memory | Median Score Latency |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Static Centroid** | 0.5753 ± 0.0605 | [0.5497, 0.6025] | 0.3356 | 0.110 | 0.062 | 0.161 | 512 B | 3.7 µs |
-| **Online Centroid (Ungated)** | 0.5315 ± 0.0802 | [0.4992, 0.5690] | 0.2953 | 0.118 | 0.106 | 0.157 | 512 B | 3.0 µs |
-| **Online Centroid (Gated)** | 0.5330 ± 0.0813 | [0.4984, 0.5695] | 0.2990 | 0.178 | 0.146 | 0.209 | 512 B | 3.0 µs |
-| **Robust Huber Centroid** | 0.5351 ± 0.0792 | [0.5025, 0.5728] | 0.2972 | 0.003 | 0.000 | 0.005 | 512 B | 3.0 µs |
-| **Static PCA** | 0.5590 ± 0.0895 | [0.5218, 0.5980] | 0.3329 | 0.208 | 0.131 | 0.255 | 4.0 KB | 6.8 µs |
-| **Online PCA (Ungated)** | 0.5658 ± 0.0911 | [0.5266, 0.6060] | 0.3351 | 0.190 | 0.111 | 0.248 | 4.0 KB | 5.9 µs |
-| **Online PCA (Gated)** | 0.5641 ± 0.0903 | [0.5257, 0.6042] | 0.3339 | 0.202 | 0.124 | 0.254 | 4.0 KB | 6.9 µs |
-| **Online Covariance (Mahalanobis)** | 0.5976 ± 0.0667 | [0.5697, 0.6271] | 0.3491 | 0.997 | 1.000 | 0.399 | 64.0 KB | 44.3 µs |
-| **Pairwise Correlation** | 0.5379 ± 0.0746 | [0.5079, 0.5707] | 0.2978 | 0.480 | 0.439 | 0.334 | 64.0 KB | 13.0 µs |
-| **DeltaCore Continuous** | 0.5709 ± 0.0808 | [0.5362, 0.6080] | 0.3332 | 0.000 | 0.000 | 0.000 | 64.0 KB | 27.8 µs |
-| **DeltaCore Gated** | 0.5711 ± 0.0801 | [0.5364, 0.6079] | 0.3315 | 0.000 | 0.000 | 0.000 | 64.0 KB | 25.9 µs |
+| **Static Centroid** | 0.5753 ± 0.0605 | [0.5488, 0.6018] | 0.3356 | 0.110 | 0.062 | 0.161 | 512 B | 3.7 µs |
+| **Online Centroid (Ungated)** | 0.5315 ± 0.0802 | [0.4970, 0.5687] | 0.2953 | 0.118 | 0.106 | 0.157 | 512 B | 2.9 µs |
+| **Online Centroid (Gated)** | 0.5330 ± 0.0813 | [0.4980, 0.5701] | 0.2990 | 0.178 | 0.146 | 0.209 | 512 B | 3.1 µs |
+| **Robust Huber Centroid** | 0.5351 ± 0.0792 | [0.5009, 0.5717] | 0.2972 | 0.003 | 0.000 | 0.005 | 512 B | 3.0 µs |
+| **Static PCA** | 0.5590 ± 0.0895 | [0.5200, 0.5981] | 0.3329 | 0.208 | 0.131 | 0.255 | 4.0 KB | 6.8 µs |
+| **Online PCA (Ungated)** | 0.5658 ± 0.0911 | [0.5263, 0.6057] | 0.3351 | 0.190 | 0.111 | 0.248 | 4.0 KB | 5.9 µs |
+| **Online PCA (Gated)** | 0.5641 ± 0.0903 | [0.5244, 0.6038] | 0.3339 | 0.202 | 0.124 | 0.254 | 4.0 KB | 6.8 µs |
+| **Online Covariance (Mahalanobis)** | 0.5976 ± 0.0667 | [0.5689, 0.6272] | 0.3491 | 0.997 | 1.000 | 0.399 | 64.0 KB | 43.9 µs |
+| **Pairwise Correlation** | 0.5379 ± 0.0746 | [0.5061, 0.5710] | 0.2978 | 0.480 | 0.439 | 0.334 | 64.0 KB | 13.0 µs |
+| **DeltaCore Continuous** | 0.5709 ± 0.0808 | [0.5360, 0.6073] | 0.3332 | 0.000 | 0.000 | 0.000 | 64.0 KB | 27.9 µs |
+| **DeltaCore Gated** | 0.5711 ± 0.0801 | [0.5365, 0.6071] | 0.3315 | 0.000 | 0.000 | 0.000 | 64.0 KB | 25.9 µs |
 
 ---
 
 ## 3. Paired Statistical Comparison Against DeltaCore Gated
 
-| Comparator Model | Mean Paired Difference | 95% Bootstrap CI | Paired Cohen's d | Sign Test p-value |
-| :--- | :---: | :---: | :---: | :---: |
-| **DeltaCore Gated vs Static Centroid** | -0.0041 | [-0.0423, 0.0316] | -0.05 | 0.9000 |
-| **DeltaCore Gated vs Online Centroid (Ungated)** | +0.0396 | [0.0236, 0.0566] | 1.03 | 0.3000 |
-| **DeltaCore Gated vs Online Centroid (Gated)** | +0.0382 | [0.0215, 0.0551] | 1.01 | 0.2000 |
-| **DeltaCore Gated vs Robust Huber Centroid** | +0.0360 | [0.0221, 0.0511] | 1.11 | 0.3000 |
-| **DeltaCore Gated vs Static PCA** | +0.0121 | [-0.0053, 0.0277] | 0.33 | 0.6000 |
-| **DeltaCore Gated vs Online PCA (Ungated)** | +0.0053 | [-0.0091, 0.0190] | 0.17 | 0.9000 |
-| **DeltaCore Gated vs Online PCA (Gated)** | +0.0070 | [-0.0079, 0.0205] | 0.22 | 0.9000 |
-| **DeltaCore Gated vs Online Covariance (Mahalanobis)** | -0.0265 | [-0.0479, -0.0071] | -0.58 | 0.4000 |
-| **DeltaCore Gated vs Pairwise Correlation** | +0.0332 | [-0.0014, 0.0765] | 0.39 | 0.6000 |
-| **DeltaCore Gated vs DeltaCore Continuous** | +0.0002 | [-0.0009, 0.0013] | 0.09 | 0.9333 |
+| Comparator Model | Mean Paired Difference | 95% Bootstrap CI | Paired Cohen's d | Exact Sign-Test p-value | Paired Permutation p-value |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **DeltaCore Gated vs Static Centroid** | -0.0041 | [-0.0420, 0.0317] | -0.05 | 0.8238 | 0.8352 |
+| **DeltaCore Gated vs Online Centroid (Ungated)** | +0.0396 | [0.0220, 0.0558] | 1.03 | 0.0026 | 0.0006 |
+| **DeltaCore Gated vs Online Centroid (Gated)** | +0.0382 | [0.0205, 0.0541] | 1.01 | 0.0004 | 0.0007 |
+| **DeltaCore Gated vs Robust Huber Centroid** | +0.0360 | [0.0211, 0.0499] | 1.11 | 0.0026 | 0.0003 |
+| **DeltaCore Gated vs Static PCA** | +0.0121 | [-0.0045, 0.0276] | 0.33 | 0.1153 | 0.1690 |
+| **DeltaCore Gated vs Online PCA (Ungated)** | +0.0053 | [-0.0090, 0.0190] | 0.17 | 0.8238 | 0.4772 |
+| **DeltaCore Gated vs Online PCA (Gated)** | +0.0070 | [-0.0074, 0.0209] | 0.22 | 0.8238 | 0.3532 |
+| **DeltaCore Gated vs Online Covariance (Mahalanobis)** | -0.0265 | [-0.0478, -0.0072] | -0.58 | 0.0118 | 0.0192 |
+| **DeltaCore Gated vs Pairwise Correlation** | +0.0332 | [-0.0017, 0.0728] | 0.39 | 0.1153 | 0.0891 |
+| **DeltaCore Gated vs DeltaCore Continuous** | +0.0002 | [-0.0010, 0.0014] | 0.09 | 1.0000 | 0.7410 |
 
 ### Statistical Interpretation of Paired Differences
 
-> **Online Covariance outperformed DeltaCore in mean paired AUROC by 0.0265 points (DeltaCore − Covariance), with a 95% paired bootstrap confidence interval of [−0.0479, −0.0071]. The interval excludes zero, indicating evidence for a negative mean difference. However, the two-sided sign test was not significant (p = 0.4000), so the experiment does not establish a majority-of-seeds loss.**
+> **Online Covariance outperformed DeltaCore in mean paired AUROC by 0.0265 points (DeltaCore − Covariance: −0.0265), with a 95% paired bootstrap confidence interval of [−0.0478, −0.0072]. The interval excludes zero, indicating evidence for a negative mean difference. The exact two-sided binomial sign test yielded p = 0.0118 (DeltaCore won on only 4 of 20 seeds), and the paired permutation test yielded p = 0.0192, confirming that Online Covariance statistically outperforms DeltaCore under both direction-based and randomization-based hypothesis tests.**
 
-- **DeltaCore vs. Online PCA (Gated)**: DeltaCore had a slightly higher mean AUROC than Gated Online PCA (+0.0070), but the 95% paired bootstrap CI included zero ([-0.0079, +0.0205]) and the sign test was non-significant (p = 0.9000). Therefore, the experiment does not establish a reliable performance difference between the two methods.
-- **DeltaCore vs. Robust Huber Centroid**: DeltaCore had a higher mean paired AUROC than the Robust Huber Centroid by +0.0360, with a 95% paired bootstrap CI entirely above zero ([+0.0221, +0.0511]). However, the sign test was non-significant (p = 0.3000), so the evidence supports a positive mean performance difference but does not establish that DeltaCore wins on a majority of individual seeds.
-- **DeltaCore vs. Gated Online Centroid**: DeltaCore had a higher mean paired AUROC than Gated Online Centroid by +0.0382, with a 95% paired bootstrap CI excluding zero ([+0.0215, +0.0551]). The sign test was non-significant (p = 0.2000), so the result should be interpreted as evidence for a higher mean AUROC rather than proof of a majority-of-seeds win.
-- **DeltaCore vs. Static Centroid**: DeltaCore's mean paired AUROC was 0.0041 lower than Static Centroid, but the 95% paired bootstrap CI included zero ([-0.0423, +0.0316]) and the sign test was non-significant (p = 0.9000). No reliable difference was established.
+- **DeltaCore vs. Online PCA (Gated)**: DeltaCore had a slightly higher mean AUROC than Gated Online PCA (+0.0070), but the 95% paired bootstrap CI included zero ([-0.0074, +0.0209]) and the exact sign test (p = 0.8238) and paired permutation test (p = 0.3532) were non-significant. Therefore, the experiment does not establish a reliable performance difference between the two methods.
+- **DeltaCore vs. Robust Huber Centroid**: DeltaCore had a higher mean paired AUROC than the Robust Huber Centroid by +0.0360, with a 95% paired bootstrap CI entirely above zero ([+0.0211, +0.0499]), an exact sign test p = 0.0026 (17 wins out of 20 seeds), and a paired permutation p = 0.0003, establishing a statistically significant advantage over robust first-order centroids.
+- **DeltaCore vs. Gated Online Centroid**: DeltaCore had a higher mean paired AUROC than Gated Online Centroid by +0.0382, with a 95% paired bootstrap CI excluding zero ([+0.0205, +0.0541]), an exact sign test p = 0.0004 (18 wins out of 20 seeds), and a paired permutation p = 0.0007.
+- **DeltaCore vs. Static Centroid**: DeltaCore's mean paired AUROC was 0.0041 lower than Static Centroid, but the 95% paired bootstrap CI included zero ([-0.0420, +0.0317]), the exact sign test was p = 0.8238 (9 wins / 11 losses), and the permutation test was p = 0.8352. No reliable difference was established.
 
 ---
 

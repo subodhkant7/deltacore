@@ -1269,7 +1269,7 @@ def run_paired_multi_seed_evaluation(
         agg_detection[m] = {
             "auroc_mean": float(np.mean(aurocs)),
             "auroc_std": float(np.std(aurocs)),
-            "auroc_ci_95": list(bootstrap_ci(aurocs)),
+            "auroc_ci_95": list(paired_bootstrap_ci(aurocs, n_boot=10000, seed=42)),
             "auprc_mean": float(np.mean(auprcs)),
             "f1_at_thresh_mean": float(np.mean(f1s)),
             "tpr_at_thresh_mean": float(np.mean(tprs)),
@@ -1287,18 +1287,14 @@ def run_paired_multi_seed_evaluation(
         diffs = [dc - b for dc, b in zip(dc_aurocs, base_aurocs, strict=True)]
         mean_diff = float(np.mean(diffs))
         std_diff = float(np.std(diffs))
-        ci_diff = bootstrap_ci(diffs)
+        ci_diff = paired_bootstrap_ci(diffs, n_boot=10000, ci=0.95, seed=42)
         paired_cohen_d = mean_diff / std_diff if std_diff > 1e-12 else 0.0
 
-        # Non-parametric Wilcoxon signed-rank approximation
-        diffs_clean = [d for d in diffs if abs(d) > 1e-12]
-        if diffs_clean:
-            pos_count = sum(1 for d in diffs_clean if d > 0)
-            sign_test_p = (
-                2.0 * min(pos_count, len(diffs_clean) - pos_count) / len(diffs_clean)
-            )
-        else:
-            sign_test_p = 1.0
+        # Exact two-sided binomial sign test on paired differences
+        st_res = exact_binomial_sign_test(diffs)
+
+        # Two-sided paired permutation (sign-flip) randomization test
+        pt_res = paired_permutation_test(diffs, n_permutations=100000, seed=42)
 
         paired_comparisons[m] = {
             "mean_paired_difference": mean_diff,
@@ -1306,7 +1302,10 @@ def run_paired_multi_seed_evaluation(
             "std_paired_difference": std_diff,
             "ci_95_paired_difference": list(ci_diff),
             "paired_cohens_d": float(paired_cohen_d),
-            "sign_test_p_value": float(sign_test_p),
+            "sign_test_p_value": float(st_res["p_value"]),
+            "sign_test_details": st_res,
+            "permutation_test_p_value": float(pt_res["permutation_p_value"]),
+            "permutation_test_details": pt_res,
         }
 
     # Aggregated adaptation delays
@@ -1334,11 +1333,83 @@ def run_paired_multi_seed_evaluation(
     }
 
 
-def bootstrap_ci(
-    values: list[float], n_boot: int = 1000, ci: float = 0.95
+def exact_binomial_sign_test(diffs: Sequence[float]) -> dict[str, Any]:
+    """Compute exact two-sided binomial sign test for paired differences.
+
+    H0: P(d_i > 0) = 0.5 among non-zero differences.
+    Test statistic k = count of positive differences out of n non-zero differences.
+    Two-sided p-value = 2 * sum_{j=0}^{min(k, n-k)} C(n, j) * 0.5^n.
+    """
+    clean = [float(d) for d in diffs if abs(d) > 1e-12]
+    n = len(clean)
+    if n == 0:
+        return {
+            "n_total": len(diffs),
+            "n_nonzero": 0,
+            "n_positive": 0,
+            "n_negative": 0,
+            "p_value": 1.0,
+        }
+    pos = sum(1 for d in clean if d > 0)
+    neg = n - pos
+    min_k = min(pos, neg)
+    p_val = min(1.0, 2.0 * sum(math.comb(n, j) for j in range(min_k + 1)) * (0.5**n))
+    return {
+        "n_total": len(diffs),
+        "n_nonzero": n,
+        "n_positive": pos,
+        "n_negative": neg,
+        "p_value": float(p_val),
+    }
+
+
+def paired_permutation_test(
+    diffs: Sequence[float],
+    n_permutations: int = 100000,
+    seed: int = 42,
+) -> dict[str, Any]:
+    """Compute two-sided paired permutation (sign-flip) test for mean paired difference.
+
+    Under H0: E[d_i] = 0, the sign of each paired difference is independently +/- with probability 0.5.
+    Estimates Monte Carlo p-value over n_permutations random sign flip configurations.
+    """
+    diffs_arr = np.array(diffs, dtype=np.float64)
+    obs_mean = float(np.mean(diffs_arr))
+    if len(diffs_arr) == 0 or np.all(np.abs(diffs_arr) < 1e-12):
+        return {
+            "observed_mean": obs_mean,
+            "permutation_p_value": 1.0,
+            "n_permutations": n_permutations,
+            "seed": seed,
+            "specification": "two-sided",
+        }
+    rng = np.random.default_rng(seed)
+    signs = rng.choice([-1.0, 1.0], size=(n_permutations, len(diffs_arr)))
+    perm_means = np.mean(signs * diffs_arr, axis=1)
+    p_val = float(np.mean(np.abs(perm_means) >= np.abs(obs_mean) - 1e-12))
+    return {
+        "observed_mean": obs_mean,
+        "permutation_p_value": p_val,
+        "n_permutations": n_permutations,
+        "seed": seed,
+        "specification": "two-sided",
+    }
+
+
+def paired_bootstrap_ci(
+    diffs: Sequence[float],
+    n_boot: int = 10000,
+    ci: float = 0.95,
+    seed: int = 42,
 ) -> tuple[float, float]:
-    rng = np.random.default_rng(42)
-    arr = np.array(values)
+    """Compute paired percentile bootstrap confidence interval for mean difference.
+
+    Resamples the paired units (seeds) with replacement, preserving paired dependencies.
+    """
+    rng = np.random.default_rng(seed)
+    arr = np.array(diffs, dtype=np.float64)
+    if len(arr) == 0:
+        return 0.0, 0.0
     boot_means = [
         float(np.mean(rng.choice(arr, size=len(arr), replace=True)))
         for _ in range(n_boot)
@@ -2072,9 +2143,10 @@ def main() -> None:
             f"with a 95% paired bootstrap confidence interval of [{p_comp['online_cov_mahalanobis_gated']['ci_95_paired_difference'][0]:.4f}, "
             f"{p_comp['online_cov_mahalanobis_gated']['ci_95_paired_difference'][1]:.4f}]. Because this interval excludes zero, "
             "the data provide evidence that the mean AUROC difference is negative under the specified benchmark and resampling procedure. "
-            f"The corresponding two-sided sign-test p-value was {p_comp['online_cov_mahalanobis_gated']['sign_test_p_value']:.4f}, "
-            "so the experiment does not provide evidence that DeltaCore loses on a majority of individual seeds. "
-            "These are different statistical questions and should not be conflated."
+            f"The exact two-sided binomial sign test p-value was {p_comp['online_cov_mahalanobis_gated']['sign_test_p_value']:.4f} "
+            f"(DeltaCore won on {p_comp['online_cov_mahalanobis_gated']['sign_test_details']['n_positive']} of "
+            f"{p_comp['online_cov_mahalanobis_gated']['sign_test_details']['n_nonzero']} seeds), and the paired permutation test "
+            f"p-value was {p_comp['online_cov_mahalanobis_gated']['permutation_test_p_value']:.4f}."
         )
 
     print(f"\nFinal Verdict: {decision}")
@@ -2177,8 +2249,8 @@ def write_markdown_report(data: dict[str, Any], report_file: Path) -> None:
             "",
             "## 3. Paired Statistical Comparison Against DeltaCore Gated",
             "",
-            "| Comparator Model | Mean Paired Difference | 95% Bootstrap CI | Paired Cohen's d | Sign Test p-value |",
-            "| :--- | :---: | :---: | :---: | :---: |",
+            "| Comparator Model | Mean Paired Difference | 95% Bootstrap CI | Paired Cohen's d | Exact Sign-Test p-value | Paired Permutation p-value |",
+            "| :--- | :---: | :---: | :---: | :---: | :---: |",
         ]
     )
 
@@ -2188,7 +2260,7 @@ def write_markdown_report(data: dict[str, Any], report_file: Path) -> None:
             lines.append(
                 f"| **DeltaCore Gated vs {name}** | {p['mean_paired_difference']:+.4f} | "
                 f"[{p['ci_95_paired_difference'][0]:.4f}, {p['ci_95_paired_difference'][1]:.4f}] | "
-                f"{p['paired_cohens_d']:.2f} | {p['sign_test_p_value']:.4f} |"
+                f"{p['paired_cohens_d']:.2f} | {p['sign_test_p_value']:.4f} | {p['permutation_test_p_value']:.4f} |"
             )
 
     lines.extend(
@@ -2196,12 +2268,12 @@ def write_markdown_report(data: dict[str, Any], report_file: Path) -> None:
             "",
             "### Statistical Interpretation of Paired Differences",
             "",
-            "> **Online Covariance outperformed DeltaCore in mean paired AUROC by 0.0265 points (DeltaCore − Covariance), with a 95% paired bootstrap confidence interval of [−0.0479, −0.0071]. The interval excludes zero, indicating evidence for a negative mean difference. However, the two-sided sign test was not significant (p = 0.4000), so the experiment does not establish a majority-of-seeds loss.**",
+            "> **Online Covariance outperformed DeltaCore in mean paired AUROC by 0.0265 points (DeltaCore − Covariance: −0.0265), with a 95% paired bootstrap confidence interval of [−0.0478, −0.0072]. The interval excludes zero, indicating evidence for a negative mean difference. The exact two-sided binomial sign test yielded p = 0.0118 (DeltaCore won on only 4 of 20 seeds), and the paired permutation test yielded p = 0.0192, confirming that Online Covariance statistically outperforms DeltaCore under both direction-based and randomization-based hypothesis tests.**",
             "",
-            "- **DeltaCore vs. Online PCA (Gated)**: DeltaCore had a slightly higher mean AUROC than Gated Online PCA (+0.0070), but the 95% paired bootstrap CI included zero ([-0.0079, +0.0205]) and the sign test was non-significant (p = 0.9000). Therefore, the experiment does not establish a reliable performance difference between the two methods.",
-            "- **DeltaCore vs. Robust Huber Centroid**: DeltaCore had a higher mean paired AUROC than the Robust Huber Centroid by +0.0360, with a 95% paired bootstrap CI entirely above zero ([+0.0221, +0.0511]). However, the sign test was non-significant (p = 0.3000), so the evidence supports a positive mean performance difference but does not establish that DeltaCore wins on a majority of individual seeds.",
-            "- **DeltaCore vs. Gated Online Centroid**: DeltaCore had a higher mean paired AUROC than Gated Online Centroid by +0.0382, with a 95% paired bootstrap CI excluding zero ([+0.0215, +0.0551]). The sign test was non-significant (p = 0.2000), so the result should be interpreted as evidence for a higher mean AUROC rather than proof of a majority-of-seeds win.",
-            "- **DeltaCore vs. Static Centroid**: DeltaCore's mean paired AUROC was 0.0041 lower than Static Centroid, but the 95% paired bootstrap CI included zero ([-0.0423, +0.0316]) and the sign test was non-significant (p = 0.9000). No reliable difference was established.",
+            "- **DeltaCore vs. Online PCA (Gated)**: DeltaCore had a slightly higher mean AUROC than Gated Online PCA (+0.0070), but the 95% paired bootstrap CI included zero ([-0.0074, +0.0209]) and the exact sign test (p = 0.8238) and paired permutation test (p = 0.3532) were non-significant. Therefore, the experiment does not establish a reliable performance difference between the two methods.",
+            "- **DeltaCore vs. Robust Huber Centroid**: DeltaCore had a higher mean paired AUROC than the Robust Huber Centroid by +0.0360, with a 95% paired bootstrap CI entirely above zero ([+0.0211, +0.0499]), an exact sign test p = 0.0026 (17 wins out of 20 seeds), and a paired permutation p = 0.0003, establishing a statistically significant advantage over robust first-order centroids.",
+            "- **DeltaCore vs. Gated Online Centroid**: DeltaCore had a higher mean paired AUROC than Gated Online Centroid by +0.0382, with a 95% paired bootstrap CI excluding zero ([+0.0205, +0.0541]), an exact sign test p = 0.0004 (18 wins out of 20 seeds), and a paired permutation p = 0.0007.",
+            "- **DeltaCore vs. Static Centroid**: DeltaCore's mean paired AUROC was 0.0041 lower than Static Centroid, but the 95% paired bootstrap CI included zero ([-0.0420, +0.0317]), the exact sign test was p = 0.8238 (9 wins / 11 losses), and the permutation test was p = 0.8352. No reliable difference was established.",
             "",
             "---",
             "",
