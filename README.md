@@ -126,13 +126,68 @@ For development and testing tools:
 pip install -e ".[dev]"
 ```
 
+### Quickstart: Canonical Adaptive Controller
+
+DeltaCore exposes one canonical stateful controller (`AdaptiveController`) with strict score-before-update semantics, Lyapunov contractive bounding, and verified state persistence:
+
+```python
+import torch
+from deltacore import AdaptiveController, ControllerConfig, DeterministicFeatureHasher
+
+# 1. Initialize controller and feature hasher
+hasher = DeterministicFeatureHasher(dim=64, normalize=True)
+config = ControllerConfig(dim=64, eta0=0.03, rho=1.50)
+controller = AdaptiveController(config)
+
+# 2. Encode structured telemetry event into R^D
+event = {
+    "service": "checkout",
+    "operation": "process_payment",
+    "provider": "stripe",
+    "http_status": 200,
+    "transport": "http2",
+    "outcome": "success",
+}
+x_t = hasher.encode(event)
+
+# 3. Score before update (non-mutating query)
+score_res = controller.score(x_t)
+print(f"Pre-update reconstruction residual: {score_res.reconstruction_residual:.4f}")
+
+# 4. Adaptive step (evaluates against M_{t-1}, then updates M_t)
+step_res = controller.step(x_t, adapt=True)
+print(f"Updated state norm: {step_res.state_norm:.4f}")
+
+# 5. Save & restore state
+controller.save_state("checkpoint.json")
+controller.load_state("checkpoint.json")
+```
+
+For full specifications and epistemic boundaries, see:
+- [Mathematical Contract](docs/mathematical_contract.md): Authoritative equation specifications, stability bounds, and temporal ordering.
+- [Scientific Boundaries & Limitations](docs/limitations.md): Explicit analysis of auto-associative limits, PCA non-equivalence, and anomaly absorption risks.
+
+### Running Examples & Benchmarks
+
+Minimal end-to-end smoke example:
+```bash
+python examples/basic_adaptation.py
+```
+
+Auto-associative regime shift benchmark vs. baselines:
+```bash
+python experiments/autoassociative_regime_shift.py
+```
+
 ---
 
 ## Development
 
 DeltaCore enforces strict engineering practices and dependency hygiene. Before contributing, please review:
-- [AGENTS.md](file:///Users/urjasoft/Documents/DeltaCore/AGENTS.md): Guidelines for automated agents and contributors.
-- [PROJECT_CONSTITUTION.md](file:///Users/urjasoft/Documents/DeltaCore/docs/PROJECT_CONSTITUTION.md): Core philosophical principles.
+- [AGENTS.md](AGENTS.md): Guidelines for automated agents and contributors.
+- [PROJECT_CONSTITUTION.md](docs/PROJECT_CONSTITUTION.md): Core philosophical principles.
+- [docs/mathematical_contract.md](docs/mathematical_contract.md): Strict mathematical contracts.
+- [docs/limitations.md](docs/limitations.md): Known failure modes and prohibited claims.
 
 ### Code Formatting & Linting
 ```bash
@@ -178,6 +233,8 @@ Development proceeds across strict phase gates:
 - **Phase 15**: Adaptive Regime Transfer & Cross-Domain Robustness
 - **Phase 16**: Unseen Shift Robustness & Adaptive Safety
 - **Phase 17**: Transfer to a Genuinely Different Task Formulation
+- **Phase 18**: Unseen Classification Regime Transfer & Falsification
+- **Pre-RecoveryOS Stabilization**: Canonical Public API, Telemetry Hasher Bridge, Score-Before-Update Semantics, & Baseline Comparisons
 
 For full phase objectives and exit criteria, see [ROADMAP.md](file:///Users/urjasoft/Documents/DeltaCore/docs/ROADMAP.md).
 

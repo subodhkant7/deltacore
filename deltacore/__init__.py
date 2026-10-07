@@ -4,6 +4,11 @@ A modular, research-oriented toolkit for systems that adapt their internal
 state during inference.
 """
 
+from deltacore.controller import (
+    AdaptiveController,
+    ControllerConfig,
+    ControllerStepResult,
+)
 from deltacore.memory import AssociativeMemory, FiveMemoryState, read
 from deltacore.scans import (
     AdaptiveScanResult,
@@ -27,6 +32,11 @@ from deltacore.stability import (
     SafeStepSizeController,
     StabilityConstraintResult,
     UnconstrainedController,
+)
+from deltacore.telemetry import (
+    CollisionStats,
+    DeterministicFeatureHasher,
+    TelemetryHasherConfig,
 )
 from deltacore.updates import (
     AdaptiveDeltaRule,
@@ -54,10 +64,16 @@ from deltacore.updates import (
     TargetGenerator,
 )
 
-__version__ = "0.0.1.dev0"
+__version__ = "0.1.0"
 
 __all__: list[str] = [
     "__version__",
+    "AdaptiveController",
+    "ControllerConfig",
+    "ControllerStepResult",
+    "DeterministicFeatureHasher",
+    "TelemetryHasherConfig",
+    "CollisionStats",
     "AssociativeMemory",
     "FiveMemoryState",
     "read",
